@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>EATING 이팅</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="jquery.mobile.inline-svg-1.4.5.min.css">
+
+   <script src="jquery-1.11.3.min.js"></script>
+   <script src="jquery.mobile-1.4.5.js"></script>
+
+   <link rel="stylesheet" type="text/css" href="table.css">
+
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
+</head>
+<body>
+   <section data-role="page" style="background-color:#FFF9E7;" id="kor">
+      <header data-role="header" style="background-image:url(bg/intro.png)">
+			<a href="#navigation_k" data-rel="popup" data-position-to="window" data-transition="slidedown" style="background-image:url(bg/choice.png)"><br><br><br><img src="icon/menu.png" height="50px"><br><br><br></a>
+			<h1><br><a href="main.html" data-ajax='false'><img src="char/logo.png" height="120px"></a></h1>
+			<a href="https://www.youtube.com/" data-ajax='false' style="background-image:url(bg/choice.png)"><br><br><br><img src="icon/search.png" height="50px"><br><br><br></a>
+		</header>
+      <nav data-role="navbar">
+         <ul>
+            <li><a href="#" class="ui-btn-active ui-state-persist">한식</a></li>
+            <li><a href="#chi">중식</a></li>
+            <li><a href="#jap">일식</a></li>
+            <li><a href="#wes">양식</a></li>
+            <li><a href="#dis">후식</a></li>
+         </ul>
+      </nav>
+      <article data-role="popup">
+         <div data-role="popup" data-overlay-theme="b" id="navigation_k" class="ui-content" style="background-image:url(bg/button.png);">
+            <div data-role="header" style="background-image:url(bg/button.png);">
+               <h1>EATING</h1>
+               <a href="#" data-rel="back" data-iconpos="notext" data-icon="delete" class="ui-btn-right"></a>
+            </div>
+            <div data-role="content" style="background-image:url(bg/button.png);">
+               <div data-inset="true" data-role="collapsible" data-iconpos="none" data-collapsed="false">
+                  <h3>MENU</h3>
+                  <ul class="uu" data-role="listview" data-filter="true" data-filter-placeholder="검색어를 입력하세요">
+                     <li data-role="list-divider" style="background-color: #ffdf80;">GO</li>
+                     <li data-filtertext="명동교자 송죽장 킷사서울 윕성수 플러피도넛"><a href="seoul.html" data-ajax='false' style="background-color:#FFF9E7;">서울</a></li>
+                     <li data-filtertext="기린왕곱창 도마29 양자강 다이닝슬로우라이프 게이블루프커피"><a href="daegu.html" data-ajax='false' style="background-color:#FFF9E7;">대구</a></li>
+                     <li data-filtertext="토담바다장어 해목 복성반점 매드독스 웨이브온커피"><a href="busan.html" data-ajax='false' style="background-color:#FFF9E7;">부산</a></li>
+                     <li data-filtertext="세진회관 가츠연 아중각 가마 그날의온도"><a href="jeonju.html" data-ajax='false' style="background-color:#FFF9E7;">전주</a></li>
+                     <li data-filtertext="정동진초당순두부 대관령다이닝스시 연곡반점 강릉수제버거 카페툇마루"><a href="gangneung.html" data-ajax='false' style="background-color:#FFF9E7;">강릉</a></li>
+                     <li data-filtertext="목스키친 고쿠텐 섬소나이 칠돈가 하이엔드제주"><a href="jeju.html" data-ajax='false' style="background-color:#FFF9E7;">제주</a></li>
+                     <li data-role="list-divider" style="background-color: #ffdf80;">DO</li>
+                     <li style="background-color:#ffecb3;"><b>상황별</b></li>
+                     <li data-filtertext="조개술찜 갈릭 간장치킨 소고기 간장떡볶이 차돌박이라면 매콤 순대볶음"><a href="midnight_snack.html" data-ajax='false' style="background-color:#FFF9E7;">야식</a></li>
+                     <li data-filtertext="라면죽 김치볶음밥 짜파구리 뚝배기치즈밥 김치스팸마요 덮밥"><a href="single_meal.html" data-ajax='false' style="background-color:#FFF9E7;">자취 간편식</a></li>
+                     <li data-filtertext="쭈꾸미 샤브샤브 훈제오리 무쌈말이 밀푀유나베 돼지갈비찜 연어 크림치즈롤"><a href="party.html" data-ajax='false' style="background-color:#FFF9E7;">손님 초대</a></li>
+                     <li data-filtertext="명란두부찌개 전찌개 진주땡초김밥 김치 만두전골 당면계란만두"><a href="leftover_food.html" data-ajax='false' style="background-color:#FFF9E7;">냉장고 털이</a></li>
+                     <li data-filtertext="레몬드레싱 연어샐러드 단호박 에그슬럿 무화과 그래놀라 요거트 렌틸콩 수란 샐러드 월남쌈"><a href="diet.html" data-ajax='false' style="background-color:#FFF9E7;">다이어트</a></li>
+                     <li style="background-color:#ffecb3;"><b>국가별</b></li>
+                     <li data-filtertext="프랑스 라타투이 이탈리아 라자냐 터키 케밥 인도 탄두리치킨 중국 마라탕 베트남 분짜 호주 미트파이 일본 스키야키 미국 시카고피자 멕시코 파히타"><a href="country.html" data-ajax='false' style="background-color:#FFF9E7;">지도 선택</a></li><!--국가별-->
+                     <li data-role="list-divider" style="background-color: #ffdf80;">WATCH</li>
+                     <li><a href="ranking.html" data-ajax='false' style="background-color:#FFF9E7;">순위별</a></li>
+                     <li data-filtertext="김치찜 톳전복밥 차돌된장찌개 로제 찜닭 떡볶이 로제찜닭 로제떡볶이 비빔밥 갈비찜 마라탕 짜장면 군만두 차돌짬뽕 크림새우 마라샹궈 탕수육 초밥 우동 새우튀김 라멘 텐동 규카츠 오므라이스 타코야끼 새우크림파스타 통베이컨 시카고 딥디쉬 치즈폭탄 피자 로제리조또 해쉬브라운 베이컨크림파스타 파스타 감바스 빠네 크림파스타 모짜렐라치즈 새우 베이컨"><a href="type.html" data-ajax='false' style="background-color:#FFF9E7;">종류별</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </article>
+      <article data-role="content">
+         <div class="ui-grid-a" >
+            <div class="ui-block-a">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr>
+                        <td class="img">
+                           <a href="https://www.youtube.com/watch?v=Gu2ofUGgmZY"><img src="https://i.ytimg.com/vi/Gu2ofUGgmZY/maxresdefault.jpg" style="
+                           border: 3px solid black" /></a>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div class="ui-block-b">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr class="a">
+                        <td><a href="https://www.youtube.com/watch?v=Gu2ofUGgmZY">김치찜에 계란14알 호로록!</a></td>
+                     </tr>
+                     <tr class="b">
+                        <td>조회수 190,399회 • 2021. 5. 4.</td>
+                     </tr>
+                     <tr class="c">
+                        <td><a href="https://www.youtube.com/channel/UC-Bsa2ivAGWq7bsSPrPGFVA">
+                          <img src="https://yt3.ggpht.com/ytc/AAUvwniWXMKo2rp8gnwibO9YL48TaaaJ_Cf-gWm3Mscw4g=s900-c-k-c0x00ffffff-no-rj"/>입짧은햇님</a></td>
+                       </tr>
+                       <tr class="d" >
+                        <td>저도 가끔은 남이 해준 김치찜을 먹고 싶답니당 ㅎㅎㅎ 에뛰드에서 보내주신 대따 큰케이크👍</td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <br>
+         <div class="ui-grid-a" >
+            <div class="ui-block-a">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr>
+                        <td class="img">
+                           <a href="https://www.youtube.com/watch?v=tv5jFD4jxhU"><img src="https://i.ytimg.com/vi/tv5jFD4jxhU/maxresdefault.jpg" style="border: 3px solid black" /></a>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div class="ui-block-b">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr class="a">
+                        <td><a href="https://www.youtube.com/watch?v=tv5jFD4jxhU">햇님표 톳전복밥과 차돌된장찌개 먹방</a></td>
+                     </tr>
+                     <tr class="b">
+                        <td>조회수 201,115회 • 2021. 4. 28.</td>
+                     </tr>
+                     <tr class="c">
+                        <td><a href="https://www.youtube.com/channel/UC-Bsa2ivAGWq7bsSPrPGFVA">
+                          <img src="https://yt3.ggpht.com/ytc/AAUvwniWXMKo2rp8gnwibO9YL48TaaaJ_Cf-gWm3Mscw4g=s900-c-k-c0x00ffffff-no-rj"/>입짧은햇님</a></td>
+                       </tr>
+                       <tr class="d" >
+                        <td>톳전복밥 톳과 손질한 전복을 넣고 밥을 했어요! 둘다 인터넷 구매했습니다.전복은 12미 정도 들어갔어용</td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <br>
+         <div class="ui-grid-a" >
+            <div class="ui-block-a">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr>
+                        <td class="img">
+                           <a href="https://www.youtube.com/watch?v=RYiwj0lltGU"><img src="https://i.ytimg.com/vi/RYiwj0lltGU/maxresdefault.jpg" style="border: 3px solid black"/></a>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div class="ui-block-b">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr class="a">
+                        <td><a href="https://www.youtube.com/watch?v=RYiwj0lltGU">꾸덕꾸덕한 두찜 로제찜닭 먹방🧡</a></td>
+                     </tr>
+                     <tr class="b">
+                        <td>조회수 1,307,480회 • 2021. 3. 12.</td>
+                     </tr>
+                     <tr class="c">
+                        <td><a href="https://www.youtube.com/channel/UCb-y7YXK75lcU76lyFwBDgQ">
+                          <img src="https://yt3.ggpht.com/ytc/AAUvwnipS46FCM5hqOvwFSTalhQMmLzhxbNTVO0cQyGgeA=s900-c-k-c0x00ffffff-no-rj"/>  Sangyoon</a></td>
+                       </tr>
+                       <tr class="d" >
+                        <td>🧡 꾸덕꾸덕한 두찜 로제찜닭 먹방 🧡</td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <br>
+         <div class="ui-grid-a" >
+            <div class="ui-block-a">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr>
+                        <td class="img">
+                           <a href="https://www.youtube.com/watch?v=FzJxsAUtL7I"><img src="https://i.ytimg.com/vi/FzJxsAUtL7I/maxresdefault.jpg" style="border: 3px solid black"/></a>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div class="ui-block-b">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr class="a">
+                        <td><a href="https://www.youtube.com/watch?v=FzJxsAUtL7I">🌶️꾸덕 꾸덕 배떡 로제떡볶이 먹방💕</a></td>
+                     </tr>
+                     <tr class="b">
+                        <td>조회수 451,290회 • 2021. 4. 3.</td>
+                     </tr>
+                     <tr class="c">
+                        <td><a href="https://www.youtube.com/channel/UC1J8cQsaT6hdTtYOTiZy3LQ">
+                          <img src="https://yt3.ggpht.com/ytc/AAUvwnjJdq7S1yfiqgW0lkamvMi9nnN7Jj2XBfQXMnx_VA=s900-c-k-c0x00ffffff-no-rj"/>JINI YUM</a></td>
+                       </tr>
+                       <tr class="d" >
+                        <td>🌶️안녕 얌얌이들~! 오늘 드디어 요청이 많았던 배떡 로제떡볶이를 가져왔지모얌!🌶️</td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <br>
+         <div class="ui-grid-a" >
+            <div class="ui-block-a">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr>
+                        <td class="img">
+                           <a href="https://www.youtube.com/watch?v=aA4TtwlvlG4"><img src="https://i.ytimg.com/vi/aA4TtwlvlG4/maxresdefault.jpg" style="border: 3px solid black"/></a>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div class="ui-block-b">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr class="a">
+                        <td><a href="https://www.youtube.com/watch?v=lFxukj2OMJ0">비빔밥 먹방 & 갈비찜 먹방!!</a></td>
+                     </tr>
+                     <tr class="b">
+                        <td>조회수 200,710회 • 2021. 2. 15.</td>
+                     </tr>
+                     <tr class="c">
+                        <td><a href=" https://www.youtube.com/channel/UCHJPlIINqj9q8G2TBDickPg">
+                          <img src="https://yt3.ggpht.com/ytc/AAUvwnhREHHnuumv0z919hMRwMpXzWhEbgW0OIUNG-da=s900-c-k-c0x00ffffff-no-rj"/>배블리</a></td>
+                       </tr>
+                       <tr class="d" >
+                        <td>#갈비찜먹방 #비빔밥먹방 #한식먹방 안녕하세요! 배블리입니다. 오늘은 비빔밥과 갈비찜을 준비했습니다.</td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <footer data-role="footer" align="center" data-position="fixed" style="background-image:url(bg/intro.png)">
+            Copyright ⓒ 2021 Eating
+         </footer>
+      </article>
+   </section>
+   <section data-role="page" style="background-color:#FFF9E7;" style="background-color:#FFF9E7;" id="chi">
+      <header data-role="header" style="background-image:url(bg/intro.png)">
+			<a href="#navigation_c" data-rel="popup" data-position-to="window" data-transition="slidedown" style="background-image:url(bg/choice.png)"><br><br><br><img src="icon/menu.png" height="50px"><br><br><br></a>
+			<h1><br><a href="main.html" data-ajax='false'><img src="char/logo.png" height="120px"></a></h1>
+			<a href="https://www.youtube.com/" data-ajax='false' style="background-image:url(bg/choice.png)"><br><br><br><img src="icon/search.png" height="50px"><br><br><br></a>
+		</header>
+      <nav data-role="navbar">
+         <ul>
+            <li><a href="#kor">한식</a></li>
+            <li><a href="#" class="ui-btn-active ui-state-persist">중식</a></li>
+            <li><a href="#jap">일식</a></li>
+            <li><a href="#wes">양식</a></li>
+            <li><a href="#dis">후식</a></li>
+         </ul>
+      </nav>
+      <article data-role="popup">
+         <div data-role="popup" data-overlay-theme="b" id="navigation_c" class="ui-content" style="background-image:url(bg/button.png);">
+            <div data-role="header" style="background-image:url(bg/button.png);">
+               <h1>EATING</h1>
+               <a href="#" data-rel="back" data-iconpos="notext" data-icon="delete" class="ui-btn-right"></a>
+            </div>
+            <div data-role="content" style="background-image:url(bg/button.png);">
+               <div data-inset="true" data-role="collapsible" data-iconpos="none" data-collapsed="false">
+                  <h3>MENU</h3>
+                  <ul class="uu" data-role="listview" data-filter="true" data-filter-placeholder="검색어를 입력하세요">
+                     <li data-role="list-divider" style="background-color: #ffdf80;">GO</li>
+                     <li data-filtertext="명동교자 송죽장 킷사서울 윕성수 플러피도넛"><a href="seoul.html" data-ajax='false' style="background-color:#FFF9E7;">서울</a></li>
+                     <li data-filtertext="기린왕곱창 도마29 양자강 다이닝슬로우라이프 게이블루프커피"><a href="daegu.html" data-ajax='false' style="background-color:#FFF9E7;">대구</a></li>
+                     <li data-filtertext="토담바다장어 해목 복성반점 매드독스 웨이브온커피"><a href="busan.html" data-ajax='false' style="background-color:#FFF9E7;">부산</a></li>
+                     <li data-filtertext="세진회관 가츠연 아중각 가마 그날의온도"><a href="jeonju.html" data-ajax='false' style="background-color:#FFF9E7;">전주</a></li>
+                     <li data-filtertext="정동진초당순두부 대관령다이닝스시 연곡반점 강릉수제버거 카페툇마루"><a href="gangneung.html" data-ajax='false' style="background-color:#FFF9E7;">강릉</a></li>
+                     <li data-filtertext="목스키친 고쿠텐 섬소나이 칠돈가 하이엔드제주"><a href="jeju.html" data-ajax='false' style="background-color:#FFF9E7;">제주</a></li>
+                     <li data-role="list-divider" style="background-color: #ffdf80;">DO</li>
+                     <li style="background-color:#ffecb3;"><b>상황별</b></li>
+                     <li data-filtertext="조개술찜 갈릭 간장치킨 소고기 간장떡볶이 차돌박이라면 매콤 순대볶음"><a href="midnight_snack.html" data-ajax='false' style="background-color:#FFF9E7;">야식</a></li>
+                     <li data-filtertext="라면죽 김치볶음밥 짜파구리 뚝배기치즈밥 김치스팸마요 덮밥"><a href="single_meal.html" data-ajax='false' style="background-color:#FFF9E7;">자취 간편식</a></li>
+                     <li data-filtertext="쭈꾸미 샤브샤브 훈제오리 무쌈말이 밀푀유나베 돼지갈비찜 연어 크림치즈롤"><a href="party.html" data-ajax='false' style="background-color:#FFF9E7;">손님 초대</a></li>
+                     <li data-filtertext="명란두부찌개 전찌개 진주땡초김밥 김치 만두전골 당면계란만두"><a href="leftover_food.html" data-ajax='false' style="background-color:#FFF9E7;">냉장고 털이</a></li>
+                     <li data-filtertext="레몬드레싱 연어샐러드 단호박 에그슬럿 무화과 그래놀라 요거트 렌틸콩 수란 샐러드 월남쌈"><a href="diet.html" data-ajax='false' style="background-color:#FFF9E7;">다이어트</a></li>
+                     <li style="background-color:#ffecb3;"><b>국가별</b></li>
+                     <li data-filtertext="프랑스 라타투이 이탈리아 라자냐 터키 케밥 인도 탄두리치킨 중국 마라탕 베트남 분짜 호주 미트파이 일본 스키야키 미국 시카고피자 멕시코 파히타"><a href="country.html" data-ajax='false' style="background-color:#FFF9E7;">지도 선택</a></li><!--국가별-->
+                     <li data-role="list-divider" style="background-color: #ffdf80;">WATCH</li>
+                     <li><a href="ranking.html" data-ajax='false' style="background-color:#FFF9E7;">순위별</a></li>
+                     <li data-filtertext="김치찜 톳전복밥 차돌된장찌개 로제 찜닭 떡볶이 로제찜닭 로제떡볶이 비빔밥 갈비찜 마라탕 짜장면 군만두 차돌짬뽕 크림새우 마라샹궈 탕수육 초밥 우동 새우튀김 라멘 텐동 규카츠 오므라이스 타코야끼 새우크림파스타 통베이컨 시카고 딥디쉬 치즈폭탄 피자 로제리조또 해쉬브라운 베이컨크림파스타 파스타 감바스 빠네 크림파스타 모짜렐라치즈 새우 베이컨"><a href="type.html" data-ajax='false' style="background-color:#FFF9E7;">종류별</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </article>
+      <article data-role="content">
+         <div class="ui-grid-a" >
+            <div class="ui-block-a">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr>
+                        <td class="img">
+                           <a href="https://www.youtube.com/watch?v=lFxukj2OMJ0"><img src="https://i.ytimg.com/vi/lFxukj2OMJ0/maxresdefault.jpg" style="border: 3px solid black;"/></a>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div class="ui-block-b">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr class="a">
+                        <td><a href="https://www.youtube.com/watch?v=lFxukj2OMJ0">AMSR 마라탕 먹방(마라탕 만들기)</a></td>
+                     </tr>
+                     <tr class="b">
+                        <td>조회수 7,898,524회 • 2019. 10. 4.</td>
+                     </tr>
+                     <tr class="c">
+                        <td><a href="https://www.youtube.com/channel/UCxtLc0Jqq3SKBWlIXM_OC9g">
+                           <img src="https://yt3.ggpht.com/ytc/AAUvwni6e0k3AKxblCzI8cm4lenq2hv0j5GJXu3ivEMtrg=s900-c-k-c0x00ffffff-no-rj"/>Hongyu ASMR 홍유</a></td>
+                        </tr>
+                        <tr class="d" >
+                          <td>💕구독자님의 요청으로 더 맛있게 끓인 마라탕을 준비했어요!💕</td>
+                       </tr>
+                    </table>
+                 </div>
+              </div>
+           </div>
+           <br>
+           <div class="ui-grid-a" >
+            <div class="ui-block-a">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr>
+                        <td class="img">
+                           <a href="https://www.youtube.com/watch?v=NSNIpKtT_dY"><img src="https://i.ytimg.com/vi/NSNIpKtT_dY/maxresdefault.jpg" style="border: 3px solid black;"/></a>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div class="ui-block-b">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr class="a">
+                        <td><a href="https://www.youtube.com/watch?v=NSNIpKtT_dY">차돌짬뽕과 크림새우에 후식까지 먹방편~!</a></td>
+                     </tr>
+                     <tr class="b">
+                        <td>조회수 635,850회 • 2020. 12. 19.</td>
+                     </tr>
+                     <tr class="c">
+                        <td><a href="https://www.youtube.com/channel/UC-Bsa2ivAGWq7bsSPrPGFVA">
+                         <img src="https://yt3.ggpht.com/ytc/AAUvwniWXMKo2rp8gnwibO9YL48TaaaJ_Cf-gWm3Mscw4g=s900-c-k-c0x00ffffff-no-rj"/>입짧은햇님</a></td>
+                      </tr>
+                      <tr class="d" >
+                        <td>※'도원'차돌박이짬뽕 X 3 30,000원, 크림새우 중짜 33,000원, 특밥 8,000원, 후식 : '홈플러스' 목동점...</td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <br>
+         <div class="ui-grid-a" >
+            <div class="ui-block-a">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr>
+                        <td class="img">
+                           <a href="  https://www.youtube.com/watch?v=wSCLilamABI"><img src="https://i.ytimg.com/vi/wSCLilamABI/maxresdefault.jpg" style="border: 3px solid black;"/></a>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div class="ui-block-b">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr class="a">
+                        <td><a href="  https://www.youtube.com/watch?v=wSCLilamABI">마라샹궈 (분모자,소고기,새우) 리얼사운드 먹방</a></td>
+                     </tr>
+                     <tr class="b">
+                        <td>조회수 199,259회 • 2020. 12. 11.</td>
+                     </tr>
+                     <tr class="c">
+                        <td><a href="https://www.youtube.com/channel/UC2JxtR36BUxTR1d6pZ5IsEw">
+                         <img src="https://yt3.ggpht.com/ytc/AAUvwnh0Ksy4BFk7YS8ET8Nj-mKcK6KzKOcrXYPhVAzkQw=s900-c-k-c0x00ffffff-no-rj"/>나랑 ASMR</a></td>
+                      </tr>
+                      <tr class="d" >
+                        <td>❣오늘 준비한 음식은 마라샹궈 입니다❣</td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <br>
+         <div class="ui-grid-a" >
+            <div class="ui-block-a">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr>
+                        <td class="img">
+                           <a href="https://www.youtube.com/watch?v=H6atm-EIVqo"><img src="https://i.ytimg.com/vi/H6atm-EIVqo/maxresdefault.jpg" style="border: 3px solid black;"/></a>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div class="ui-block-b">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr class="a">
+                        <td><a href="https://www.youtube.com/watch?v=H6atm-EIVqo">괴물짜장에 이어 괴물탕수육 뿌수고 왔습니다.</a></td>
+                     </tr>
+                     <tr class="b">
+                        <td>조회수 775,456회 • 2018. 11. 8.</td>
+                     </tr>
+                     <tr class="c">
+                        <td><a href="https://www.youtube.com/channel/UCq9MDndXc1y3he3uPZLPskQ">
+                         <img src="https://yt3.ggpht.com/ytc/AAUvwniTC6AmfUnI-nprDeyEdqohU5JCdoafM2opK9XSWA=s900-c-k-c0x00ffffff-no-rj"/>나름TV</a></td>
+                      </tr>
+                      <tr class="d" >
+                        <td>한입에 와구와구!! 나름이의 다람쥐식 먹방!!♥</td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <br>
+         <div class="ui-grid-a" >
+            <div class="ui-block-a">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr>
+                        <td class="img">
+                           <a href="https://www.youtube.com/watch?v=JfG93JVUAiw"><img src="https://i.ytimg.com/vi/JfG93JVUAiw/maxresdefault.jpg" style="border: 3px solid black;"/></a>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div class="ui-block-b">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr class="a">
+                        <td><a href="https://www.youtube.com/watch?v=JfG93JVUAiw">리얼먹방:) 짜장면 때깔보소....★ft.군만두,파김치</a></td>
+                     </tr>
+                     <tr class="b">
+                        <td>조회수 14,753,468회 • 2020. 3. 5.</td>
+                     </tr>
+                     <tr class="c">
+                        <td><a href="https://www.youtube.com/channel/UCPKNKldggioffXPkSmjs5lQ">
+                         <img src="  https://yt3.ggpht.com/ytc/AAUvwnihYaa9kSVlSJrJYsh8n2GutEzzKqGsOOf-JcD9FQ=s900-c-k-c0x00ffffff-no-rj"/>[햄지]Hamzy</a></td>
+                      </tr>
+                      <tr class="d" >
+                        <td>파김치 얻어온 기념으로 짜장면먹방.....</td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <footer data-role="footer" align="center" data-position="fixed" style="background-image:url(bg/intro.png)">
+            Copyright ⓒ 2021 Eating
+         </footer>
+      </article>
+   </section>
+   <section data-role="page" style="background-color:#FFF9E7;" style="background-color:#FFF9E7;" id="jap">
+      <header data-role="header" style="background-image:url(bg/intro.png)">
+			<a href="#navigation_j" data-rel="popup" data-position-to="window" data-transition="slidedown" style="background-image:url(bg/choice.png)"><br><br><br><img src="icon/menu.png" height="50px"><br><br><br></a>
+			<h1><br><a href="main.html" data-ajax='false'><img src="char/logo.png" height="120px"></a></h1>
+			<a href="https://www.youtube.com/" data-ajax='false' style="background-image:url(bg/choice.png)"><br><br><br><img src="icon/search.png" height="50px"><br><br><br></a>
+		</header>
+      <nav data-role="navbar">
+         <ul>
+            <li><a href="#kor">한식</a></li>
+            <li><a href="#chi">중식</a></li>
+            <li><a href="#" class="ui-btn-active ui-state-persist">일식</a></li>
+            <li><a href="#wes">양식</a></li>
+            <li><a href="#dis">후식</a></li>
+         </ul>
+      </nav>
+      <article data-role="popup">
+         <div data-role="popup" data-overlay-theme="b" id="navigation_j" class="ui-content" style="background-image:url(bg/button.png);">
+            <div data-role="header" style="background-image:url(bg/button.png);">
+               <h1>EATING</h1>
+               <a href="#" data-rel="back" data-iconpos="notext" data-icon="delete" class="ui-btn-right"></a>
+            </div>
+            <div data-role="content" style="background-image:url(bg/button.png);">
+               <div data-inset="true" data-role="collapsible" data-iconpos="none" data-collapsed="false">
+                  <h3>MENU</h3>
+                  <ul class="uu" data-role="listview" data-filter="true" data-filter-placeholder="검색어를 입력하세요">
+                     <li data-role="list-divider" style="background-color: #ffdf80;">GO</li>
+                     <li data-filtertext="명동교자 송죽장 킷사서울 윕성수 플러피도넛"><a href="seoul.html" data-ajax='false' style="background-color:#FFF9E7;">서울</a></li>
+                     <li data-filtertext="기린왕곱창 도마29 양자강 다이닝슬로우라이프 게이블루프커피"><a href="daegu.html" data-ajax='false' style="background-color:#FFF9E7;">대구</a></li>
+                     <li data-filtertext="토담바다장어 해목 복성반점 매드독스 웨이브온커피"><a href="busan.html" data-ajax='false' style="background-color:#FFF9E7;">부산</a></li>
+                     <li data-filtertext="세진회관 가츠연 아중각 가마 그날의온도"><a href="jeonju.html" data-ajax='false' style="background-color:#FFF9E7;">전주</a></li>
+                     <li data-filtertext="정동진초당순두부 대관령다이닝스시 연곡반점 강릉수제버거 카페툇마루"><a href="gangneung.html" data-ajax='false' style="background-color:#FFF9E7;">강릉</a></li>
+                     <li data-filtertext="목스키친 고쿠텐 섬소나이 칠돈가 하이엔드제주"><a href="jeju.html" data-ajax='false' style="background-color:#FFF9E7;">제주</a></li>
+                     <li data-role="list-divider" style="background-color: #ffdf80;">DO</li>
+                     <li style="background-color:#ffecb3;"><b>상황별</b></li>
+                     <li data-filtertext="조개술찜 갈릭 간장치킨 소고기 간장떡볶이 차돌박이라면 매콤 순대볶음"><a href="midnight_snack.html" data-ajax='false' style="background-color:#FFF9E7;">야식</a></li>
+                     <li data-filtertext="라면죽 김치볶음밥 짜파구리 뚝배기치즈밥 김치스팸마요 덮밥"><a href="single_meal.html" data-ajax='false' style="background-color:#FFF9E7;">자취 간편식</a></li>
+                     <li data-filtertext="쭈꾸미 샤브샤브 훈제오리 무쌈말이 밀푀유나베 돼지갈비찜 연어 크림치즈롤"><a href="party.html" data-ajax='false' style="background-color:#FFF9E7;">손님 초대</a></li>
+                     <li data-filtertext="명란두부찌개 전찌개 진주땡초김밥 김치 만두전골 당면계란만두"><a href="leftover_food.html" data-ajax='false' style="background-color:#FFF9E7;">냉장고 털이</a></li>
+                     <li data-filtertext="레몬드레싱 연어샐러드 단호박 에그슬럿 무화과 그래놀라 요거트 렌틸콩 수란 샐러드 월남쌈"><a href="diet.html" data-ajax='false' style="background-color:#FFF9E7;">다이어트</a></li>
+                     <li style="background-color:#ffecb3;"><b>국가별</b></li>
+                     <li data-filtertext="프랑스 라타투이 이탈리아 라자냐 터키 케밥 인도 탄두리치킨 중국 마라탕 베트남 분짜 호주 미트파이 일본 스키야키 미국 시카고피자 멕시코 파히타"><a href="country.html" data-ajax='false' style="background-color:#FFF9E7;">지도 선택</a></li><!--국가별-->
+                     <li data-role="list-divider" style="background-color: #ffdf80;">WATCH</li>
+                     <li><a href="ranking.html" data-ajax='false' style="background-color:#FFF9E7;">순위별</a></li>
+                     <li data-filtertext="김치찜 톳전복밥 차돌된장찌개 로제 찜닭 떡볶이 로제찜닭 로제떡볶이 비빔밥 갈비찜 마라탕 짜장면 군만두 차돌짬뽕 크림새우 마라샹궈 탕수육 초밥 우동 새우튀김 라멘 텐동 규카츠 오므라이스 타코야끼 새우크림파스타 통베이컨 시카고 딥디쉬 치즈폭탄 피자 로제리조또 해쉬브라운 베이컨크림파스타 파스타 감바스 빠네 크림파스타 모짜렐라치즈 새우 베이컨"><a href="type.html" data-ajax='false' style="background-color:#FFF9E7;">종류별</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </article> 
+      <article data-role="content">
+         <div class="ui-grid-a" >
+            <div class="ui-block-a">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr>
+                        <td class="img">
+                           <a href="https://www.youtube.com/watch?v=ZX_hcFPYt_M"><img src="https://i.ytimg.com/vi/ZX_hcFPYt_M/maxresdefault.jpg" style="border: 3px solid black;" /></a>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div class="ui-block-b">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr class="a">
+                        <td><a href="https://www.youtube.com/watch?v=ZX_hcFPYt_M">초밥 우동 새우튀김 먹방 🍣</a></td>
+                     </tr>
+                     <tr class="b">
+                        <td>조회수 18,958회•2021. 1. 29.</td>
+                     </tr>
+                     <tr class="c">
+                        <td><a href="https://www.youtube.com/channel/UCIz25Ewr6B-DcW5KJgRrWSw">
+                          <img src="https://yt3.ggpht.com/ytc/AAUvwngBtLn67_2dXQS7knRC0LCEL2b_Mp55K1DTbLSZ=s900-c-k-c0x00ffffff-no-rj"/>  클로이</a></td>
+                       </tr>
+                       <tr class="d" >
+                         <td>오늘은 초밥, 우동, 새우튀김입니다!</td>
+                      </tr>
+                   </table>
+                </div>
+             </div>
+          </div>
+          <br>
+          <div class="ui-grid-a" >
+            <div class="ui-block-a">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr>
+                        <td class="img">
+                           <a href="https://www.youtube.com/watch?v=CQ1dfdWny3Y"><img src="https://i.ytimg.com/vi/CQ1dfdWny3Y/maxresdefault.jpg" style="border: 3px solid black;" /></a>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div class="ui-block-b">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr class="a">
+                        <td><a href="https://www.youtube.com/watch?v=CQ1dfdWny3Y">일본 이치란 라멘 🔥20배🔥 매운맛 먹방</a></td>
+                     </tr>
+                     <tr class="b">
+                        <td>조회수 388,145회 • 2019. 5. 20.</td>
+                     </tr>
+                     <tr class="c">
+                        <td><a href=" https://www.youtube.com/channel/UCI3-5FX4IrRyniAiUnK1BWQ">
+                          <img src="https://yt3.ggpht.com/ytc/AAUvwnj2KsTvobzgay_z23zyMC_BmA6aHpceh4gS_yJy=s900-c-k-c0x00ffffff-no-rj"/>  Leeby리비</a></td>
+                       </tr>
+                       <tr class="d" >
+                        <td>💗Instagram → leeby.eun💗<br/>새로운 영상을 받아보시려면 구독🌟</td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <br>
+         <div class="ui-grid-a" >
+            <div class="ui-block-a">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr>
+                        <td class="img">
+                           <a href="https://www.youtube.com/watch?v=5votYRaEz9g"><img src="https://i.ytimg.com/vi/5votYRaEz9g/maxresdefault.jpg" style="border: 3px solid black;" /></a>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div class="ui-block-b">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr class="a">
+                        <td><a href="https://www.youtube.com/watch?v=5votYRaEz9g">텐동 전메뉴 정복하기 먹방!</a></td>
+                     </tr>
+                     <tr class="b">
+                        <td>조회수 233,413회 • 최초 공개: 2021. 4. 29.</td>
+                     </tr>
+                     <tr class="c">
+                        <td><a href="https://www.youtube.com/channel/UCysVk8dzvSydsFklSu96HSg">
+                          <img src="https://yt3.ggpht.com/ytc/AAUvwnjyRCeCzrquC0zZ34bcb7aEmKm25ypLB_t1g1U4=s900-c-k-c0x00ffffff-no-rj"/>  광마니</a></td>
+                       </tr>
+                       <tr class="d" >
+                        <td>이번에 다녀온 곳은 '서울 강남구 신사동'에 위치한 텐동전문점 '형훈텐동'입니다.</td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <br>
+         <div class="ui-grid-a" >
+            <div class="ui-block-a">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr>
+                        <td class="img">
+                           <a href="  https://www.youtube.com/watch?v=INajBV0GQOc"><img src="https://i.ytimg.com/vi/INajBV0GQOc/maxresdefault.jpg" style="border: 3px solid black;" /></a>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div class="ui-block-b">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr class="a">
+                        <td><a href="  https://www.youtube.com/watch?v=INajBV0GQOc">규카츠 오므라이스 직접 만들어서 먹방!</a></td>
+                     </tr>
+                     <tr class="b">
+                        <td>조회수 568,843회 • 2020. 11. 17.</td>
+                     </tr>
+                     <tr class="c">
+                        <td><a href="https://www.youtube.com/channel/UCxYYbzOCCeFwAl80gDJjaag">
+                          <img src="https://yt3.ggpht.com/ytc/AAUvwnheK4eZKVMF218xj2MtvjIwtzAs5R94dCsgEj3U=s900-c-k-c0x00ffffff-no-rj"/>  JINI YUM</a></td>
+                       </tr>
+                       <tr class="d" >
+                        <td>안녕하세요! 오늘 먹방은 개인적으로 정말 좋아하는 규카츠에에요!</td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <br>
+         <div class="ui-grid-a" >
+            <div class="ui-block-a">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr>
+                        <td class="img">
+                           <a href="https://www.youtube.com/watch?v=8qx_aFYePRs"><img src="https://i.ytimg.com/vi/8qx_aFYePRs/maxresdefault.jpg" style="border: 3px solid black;" /></a>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div class="ui-block-b">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr class="a">
+                        <td><a href="https://www.youtube.com/watch?v=8qx_aFYePRs">타코야끼에 체다치즈 핵불닭소스 먹방</a></td>
+                     </tr>
+                     <tr class="b">
+                        <td>조회수 582,767회 • 2020. 9. 20.</td>
+                     </tr>
+                     <tr class="c">
+                        <td><a href="https://www.youtube.com/channel/UCbzI92w5vWa6mEj1dACfy6g">
+                          <img src="https://yt3.ggpht.com/ytc/AAUvwnj7Icpp6QMp9dwQDWDL6eFY5d8w-Va9oTvtHLkLpA=s900-c-k-c0x00ffffff-no-rj"/>  푸메Fume</a></td>
+                       </tr>
+                       <tr class="d" >
+                        <td>안녕하세요 푸메라니안 여러분🙇🏻‍♀️ 오늘은 타코야끼로 소원성취 했습니다 ❤️</td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <footer data-role="footer" align="center" data-position="fixed" style="background-image:url(bg/intro.png)">
+            Copyright ⓒ 2021 Eating
+         </footer>
+      </article>
+   </section>
+   <section data-role="page" style="background-color:#FFF9E7;" style="background-color:#FFF9E7;" id="wes">
+      <header data-role="header" style="background-image:url(bg/intro.png)">
+			<a href="#navigation_w" data-rel="popup" data-position-to="window" data-transition="slidedown" style="background-image:url(bg/choice.png)"><br><br><br><img src="icon/menu.png" height="50px"><br><br><br></a>
+			<h1><br><a href="main.html" data-ajax='false'><img src="char/logo.png" height="120px"></a></h1>
+			<a href="https://www.youtube.com/" data-ajax='false' style="background-image:url(bg/choice.png)"><br><br><br><img src="icon/search.png" height="50px"><br><br><br></a>
+		</header>
+      <nav data-role="navbar">
+         <ul>
+            <li><a href="#kor">한식</a></li>
+            <li><a href="#chi">중식</a></li>
+            <li><a href="#jap">일식</a></li>
+            <li><a href="#" class="ui-btn-active ui-state-persist">양식</a></li>
+            <li><a href="#dis">후식</a></li>
+         </ul>
+      </nav>
+      <article data-role="popup">
+         <div data-role="popup" data-overlay-theme="b" id="navigation_w" class="ui-content" style="background-image:url(bg/button.png);">
+            <div data-role="header" style="background-image:url(bg/button.png);">
+               <h1>EATING</h1>
+               <a href="#" data-rel="back" data-iconpos="notext" data-icon="delete" class="ui-btn-right"></a>
+            </div>
+            <div data-role="content" style="background-image:url(bg/button.png);">
+               <div data-inset="true" data-role="collapsible" data-iconpos="none" data-collapsed="false">
+                  <h3>MENU</h3>
+                  <ul class="uu" data-role="listview" data-filter="true" data-filter-placeholder="검색어를 입력하세요">
+                     <li data-role="list-divider" style="background-color: #ffdf80;">GO</li>
+                     <li data-filtertext="명동교자 송죽장 킷사서울 윕성수 플러피도넛"><a href="seoul.html" data-ajax='false' style="background-color:#FFF9E7;">서울</a></li>
+                     <li data-filtertext="기린왕곱창 도마29 양자강 다이닝슬로우라이프 게이블루프커피"><a href="daegu.html" data-ajax='false' style="background-color:#FFF9E7;">대구</a></li>
+                     <li data-filtertext="토담바다장어 해목 복성반점 매드독스 웨이브온커피"><a href="busan.html" data-ajax='false' style="background-color:#FFF9E7;">부산</a></li>
+                     <li data-filtertext="세진회관 가츠연 아중각 가마 그날의온도"><a href="jeonju.html" data-ajax='false' style="background-color:#FFF9E7;">전주</a></li>
+                     <li data-filtertext="정동진초당순두부 대관령다이닝스시 연곡반점 강릉수제버거 카페툇마루"><a href="gangneung.html" data-ajax='false' style="background-color:#FFF9E7;">강릉</a></li>
+                     <li data-filtertext="목스키친 고쿠텐 섬소나이 칠돈가 하이엔드제주"><a href="jeju.html" data-ajax='false' style="background-color:#FFF9E7;">제주</a></li>
+                     <li data-role="list-divider" style="background-color: #ffdf80;">DO</li>
+                     <li style="background-color:#ffecb3;"><b>상황별</b></li>
+                     <li data-filtertext="조개술찜 갈릭 간장치킨 소고기 간장떡볶이 차돌박이라면 매콤 순대볶음"><a href="midnight_snack.html" data-ajax='false' style="background-color:#FFF9E7;">야식</a></li>
+                     <li data-filtertext="라면죽 김치볶음밥 짜파구리 뚝배기치즈밥 김치스팸마요 덮밥"><a href="single_meal.html" data-ajax='false' style="background-color:#FFF9E7;">자취 간편식</a></li>
+                     <li data-filtertext="쭈꾸미 샤브샤브 훈제오리 무쌈말이 밀푀유나베 돼지갈비찜 연어 크림치즈롤"><a href="party.html" data-ajax='false' style="background-color:#FFF9E7;">손님 초대</a></li>
+                     <li data-filtertext="명란두부찌개 전찌개 진주땡초김밥 김치 만두전골 당면계란만두"><a href="leftover_food.html" data-ajax='false' style="background-color:#FFF9E7;">냉장고 털이</a></li>
+                     <li data-filtertext="레몬드레싱 연어샐러드 단호박 에그슬럿 무화과 그래놀라 요거트 렌틸콩 수란 샐러드 월남쌈"><a href="diet.html" data-ajax='false' style="background-color:#FFF9E7;">다이어트</a></li>
+                     <li style="background-color:#ffecb3;"><b>국가별</b></li>
+                     <li data-filtertext="프랑스 라타투이 이탈리아 라자냐 터키 케밥 인도 탄두리치킨 중국 마라탕 베트남 분짜 호주 미트파이 일본 스키야키 미국 시카고피자 멕시코 파히타"><a href="country.html" data-ajax='false' style="background-color:#FFF9E7;">지도 선택</a></li><!--국가별-->
+                     <li data-role="list-divider" style="background-color: #ffdf80;">WATCH</li>
+                     <li><a href="ranking.html" data-ajax='false' style="background-color:#FFF9E7;">순위별</a></li>
+                     <li data-filtertext="김치찜 톳전복밥 차돌된장찌개 로제 찜닭 떡볶이 로제찜닭 로제떡볶이 비빔밥 갈비찜 마라탕 짜장면 군만두 차돌짬뽕 크림새우 마라샹궈 탕수육 초밥 우동 새우튀김 라멘 텐동 규카츠 오므라이스 타코야끼 새우크림파스타 통베이컨 시카고 딥디쉬 치즈폭탄 피자 로제리조또 해쉬브라운 베이컨크림파스타 파스타 감바스 빠네 크림파스타 모짜렐라치즈 새우 베이컨"><a href="type.html" data-ajax='false' style="background-color:#FFF9E7;">종류별</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </article>
+      <article data-role="content">
+         <div class="ui-grid-a" >
+            <div class="ui-block-a">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr>
+                        <td class="img">
+                           <a href="https://www.youtube.com/watch?v=LI3_pNHLwFU"><img src="https://i.ytimg.com/vi/LI3_pNHLwFU/maxresdefault.jpg" style="border: 3px solid black;" /></a>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div class="ui-block-b">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr class="a">
+                        <td><a href="https://www.youtube.com/watch?v=LI3_pNHLwFU">새우크림파스타와 통베이컨 먹방</a></td>
+                     </tr>
+                     <tr class="b">
+                        <td>조회수 3,081,430회 • 2019. 8. 8.</td>
+                     </tr>
+                     <tr class="c">
+                        <td><a href="https://www.youtube.com/channel/UCxtLc0Jqq3SKBWlIXM_OC9g">
+                           <img src="https://yt3.ggpht.com/ytc/AAUvwni6e0k3AKxblCzI8cm4lenq2hv0j5GJXu3ivEMtrg=s900-c-k-c0x00ffffff-no-rj"/>  홍유</a>
+                        </td>
+                     </tr>
+                     <tr class="d">
+                        <td>ion 💕안녕하세요! 오늘은 꾸덕꾸덕한 새우양송이 크림파스타와 통베이컨을 준비했어요!💕</td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <br>
+         <div class="ui-grid-a" >
+            <div class="ui-block-a">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr>
+                        <td class="img"><a href="https://www.youtube.com/watch?v=-jXGHI7bku4"><img src="https://i.ytimg.com/vi/-jXGHI7bku4/maxresdefault.jpg" style="border: 3px solid black;" /></a>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div class="ui-block-b">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr class="a">
+                        <td><a href="https://www.youtube.com/watch?v=-jXGHI7bku4">ASMR 시카고 딥디쉬 치즈폭탄 피자 먹방🍕</a></td>
+                     </tr>
+                     <tr class="b">
+                        <td>조회수 841,750회 • 2019. 12. 3.</td>
+                     </tr>
+                     <tr class="c">
+                        <td><a href="https://www.youtube.com/channel/UCc7v5yYC_mviB1_fLuB-GRw">
+                         <img src="https://yt3.ggpht.com/ytc/AAUvwniLQx80P-Anbgf1xR_0_NZ6KpXbptveXDxHyLFG6Q=s900-c-k-c0x00ffffff-no-rj"/>  MINEE EATS</a></td>
+                      </tr>
+                      <tr class="d" >
+                        <td>⭐️구독해서 미니별이 되어주세요 https://www.youtube.com/mineeeats</td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <br>
+         <div class="ui-grid-a" >
+            <div class="ui-block-a">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr>
+                        <td class="img">
+                           <a href="https://www.youtube.com/watch?v=_H-Bm5_8Auw"><img src="https://i.ytimg.com/vi/_H-Bm5_8Auw/maxresdefault.jpg" style="border: 3px solid black;" /></a>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div class="ui-block-b">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr class="a">
+                        <td><a href="https://www.youtube.com/watch?v=_H-Bm5_8Auw">꾸덕꾸덕 로제리조또 & 바삭바삭 해쉬브라운 먹방</a></td>
+                     </tr>
+                     <tr class="b">
+                        <td>조회수 1,566,582회 • 2021. 1. 11.</td>
+                     </tr>
+                     <tr class="c">
+                        <td><a href="https://www.youtube.com/channel/UCJDDUcBtJYT1yRX9pR4Q0ug">
+                         <img src="https://yt3.ggpht.com/ytc/AAUvwnhfRqKuj3KhMVoDZh3U237UtM9rs--Gk-G-vWBo=s900-c-k-c0x00ffffff-no-rj"/>  애정</a></td>
+                      </tr>
+                      <tr class="d" >
+                        <td>안녕하세요 애정입니다😊 오늘은 로제리조또와 해쉬브라운을 준비했어요!🤤</td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <br>
+         <div class="ui-grid-a" >
+            <div class="ui-block-a">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr>
+                        <td class="img">
+                           <a href="https://www.youtube.com/watch?v=ZS_U8REp9ds"><img src="https://i.ytimg.com/vi/ZS_U8REp9ds/maxresdefault.jpg" style="border: 3px solid black;" /></a>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div class="ui-block-b">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr class="a">
+                        <td><a href="https://www.youtube.com/watch?v=ZS_U8REp9ds">한번씩 땡기는 베이컨크림파스타와 새우듬뿍 감바스 먹방~!!</a></td>
+                     </tr>
+                     <tr class="b">
+                        <td>조회수 299,022회•2020. 12. 4.</td>
+                     </tr>
+                     <tr class="c">
+                        <td><a href="https://www.youtube.com/channel/UC-i2ywiuvjvpTy2zW-tXfkw">
+                         <img src="https://yt3.ggpht.com/ytc/AAUvwniPjevuyJlvi1O8ETio0uZ2NOdBkDBTN5B61skn=s900-c-k-c0x00ffffff-no-rj"/>  떵개떵</a></td>
+                      </tr>
+                      <tr class="d" >
+                        <td>문의메일 ddeonggae@sandboxnetwork.net</td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <br>
+         <div class="ui-grid-a" >
+            <div class="ui-block-a">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr>
+                        <td class="img">
+                           <a href="https://www.youtube.com/watch?v=g1c_LmeDzrU"><img src=" https://i.ytimg.com/vi/g1c_LmeDzrU/maxresdefault.jpg" style="border: 3px solid black;" /></a>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div class="ui-block-b">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr class="a">
+                        <td><a href="https://www.youtube.com/watch?v=g1c_LmeDzrU">치즈폭포 빠네 크림파스타에 모짜렐라치즈 새우 베이컨 먹방!</a></td>
+                     </tr>
+                     <tr class="b">
+                        <td>조회수 989,631회•2020. 3. 18.</td>
+                     </tr>
+                     <tr class="c">
+                        <td><a href="https://www.youtube.com/channel/UCBIoXzDldCnpbM_7uyG0_Tg">
+                         <img src="https://yt3.ggpht.com/ytc/AAUvwngjiTCKvMKrMLOVw9n-NGwq1P8NM0zmZbyyM1Ot-g=s900-c-k-c0x00ffffff-no-rj"/>  HONG SOUND</a></td>
+                      </tr>
+                      <tr class="d" >
+                        <td>스위스 라끌렛 치즈를 녹여 치즈폭포 빠네 크림파스타를 먹어봤습니다!</td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <footer data-role="footer" align="center" data-position="fixed" style="background-image:url(bg/intro.png)">
+            Copyright ⓒ 2021 Eating
+         </footer>
+      </article>
+   </section>
+   <section data-role="page" style="background-color:#FFF9E7;" style="background-color:#FFF9E7;" id="dis">
+      <header data-role="header" style="background-image:url(bg/intro.png)">
+			<a href="#navigation_d" data-rel="popup" data-position-to="window" data-transition="slidedown" style="background-image:url(bg/choice.png)"><br><br><br><img src="icon/menu.png" height="50px"><br><br><br></a>
+			<h1><br><a href="main.html" data-ajax='false'><img src="char/logo.png" height="120px"></a></h1>
+			<a href="https://www.youtube.com/" data-ajax='false' style="background-image:url(bg/choice.png)"><br><br><br><img src="icon/search.png" height="50px"><br><br><br></a>
+		</header>
+      <nav data-role="navbar">
+         <ul>
+            <li><a href="#kor">한식</a></li>
+            <li><a href="#chi">중식</a></li>
+            <li><a href="#jap">일식</a></li>
+            <li><a href="#wes">양식</a></li>
+            <li><a href="#" class="ui-btn-active ui-state-persist">후식</a></li>
+         </ul>
+      </nav>
+      <article data-role="popup">
+         <div data-role="popup" data-overlay-theme="b" id="navigation_d" class="ui-content" style="background-image:url(bg/button.png);">
+            <div data-role="header" style="background-image:url(bg/button.png);">
+               <h1>EATING</h1>
+               <a href="#" data-rel="back" data-iconpos="notext" data-icon="delete" class="ui-btn-right"></a>
+            </div>
+            <div data-role="content" style="background-image:url(bg/button.png);">
+               <div data-inset="true" data-role="collapsible" data-iconpos="none" data-collapsed="false">
+                  <h3>MENU</h3>
+                  <ul class="uu" data-role="listview" data-filter="true" data-filter-placeholder="검색어를 입력하세요">
+                     <li data-role="list-divider" style="background-color: #ffdf80;">GO</li>
+                     <li data-filtertext="명동교자 송죽장 킷사서울 윕성수 플러피도넛"><a href="seoul.html" data-ajax='false' style="background-color:#FFF9E7;">서울</a></li>
+                     <li data-filtertext="기린왕곱창 도마29 양자강 다이닝슬로우라이프 게이블루프커피"><a href="daegu.html" data-ajax='false' style="background-color:#FFF9E7;">대구</a></li>
+                     <li data-filtertext="토담바다장어 해목 복성반점 매드독스 웨이브온커피"><a href="busan.html" data-ajax='false' style="background-color:#FFF9E7;">부산</a></li>
+                     <li data-filtertext="세진회관 가츠연 아중각 가마 그날의온도"><a href="jeonju.html" data-ajax='false' style="background-color:#FFF9E7;">전주</a></li>
+                     <li data-filtertext="정동진초당순두부 대관령다이닝스시 연곡반점 강릉수제버거 카페툇마루"><a href="gangneung.html" data-ajax='false' style="background-color:#FFF9E7;">강릉</a></li>
+                     <li data-filtertext="목스키친 고쿠텐 섬소나이 칠돈가 하이엔드제주"><a href="jeju.html" data-ajax='false' style="background-color:#FFF9E7;">제주</a></li>
+                     <li data-role="list-divider" style="background-color: #ffdf80;">DO</li>
+                     <li style="background-color:#ffecb3;"><b>상황별</b></li>
+                     <li data-filtertext="조개술찜 갈릭 간장치킨 소고기 간장떡볶이 차돌박이라면 매콤 순대볶음"><a href="midnight_snack.html" data-ajax='false' style="background-color:#FFF9E7;">야식</a></li>
+                     <li data-filtertext="라면죽 김치볶음밥 짜파구리 뚝배기치즈밥 김치스팸마요 덮밥"><a href="single_meal.html" data-ajax='false' style="background-color:#FFF9E7;">자취 간편식</a></li>
+                     <li data-filtertext="쭈꾸미 샤브샤브 훈제오리 무쌈말이 밀푀유나베 돼지갈비찜 연어 크림치즈롤"><a href="party.html" data-ajax='false' style="background-color:#FFF9E7;">손님 초대</a></li>
+                     <li data-filtertext="명란두부찌개 전찌개 진주땡초김밥 김치 만두전골 당면계란만두"><a href="leftover_food.html" data-ajax='false' style="background-color:#FFF9E7;">냉장고 털이</a></li>
+                     <li data-filtertext="레몬드레싱 연어샐러드 단호박 에그슬럿 무화과 그래놀라 요거트 렌틸콩 수란 샐러드 월남쌈"><a href="diet.html" data-ajax='false' style="background-color:#FFF9E7;">다이어트</a></li>
+                     <li style="background-color:#ffecb3;"><b>국가별</b></li>
+                     <li data-filtertext="프랑스 라타투이 이탈리아 라자냐 터키 케밥 인도 탄두리치킨 중국 마라탕 베트남 분짜 호주 미트파이 일본 스키야키 미국 시카고피자 멕시코 파히타"><a href="country.html" data-ajax='false' style="background-color:#FFF9E7;">지도 선택</a></li><!--국가별-->
+                     <li data-role="list-divider" style="background-color: #ffdf80;">WATCH</li>
+                     <li><a href="ranking.html" data-ajax='false' style="background-color:#FFF9E7;">순위별</a></li>
+                     <li data-filtertext="김치찜 톳전복밥 차돌된장찌개 로제 찜닭 떡볶이 로제찜닭 로제떡볶이 비빔밥 갈비찜 마라탕 짜장면 군만두 차돌짬뽕 크림새우 마라샹궈 탕수육 초밥 우동 새우튀김 라멘 텐동 규카츠 오므라이스 타코야끼 새우크림파스타 통베이컨 시카고 딥디쉬 치즈폭탄 피자 로제리조또 해쉬브라운 베이컨크림파스타 파스타 감바스 빠네 크림파스타 모짜렐라치즈 새우 베이컨"><a href="type.html" data-ajax='false' style="background-color:#FFF9E7;">종류별</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </article>
+      <article data-role="content">
+         <div class="ui-grid-a" >
+            <div class="ui-block-a">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr>
+                        <td class="img">
+                           <a href="https://www.youtube.com/watch?v=8vnlFY6P9zc"><img src="https://i.ytimg.com/vi/8vnlFY6P9zc/maxresdefault.jpg" style="border: 3px solid black;" /></a>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div class="ui-block-b">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr class="a">
+                        <td><a href="https://www.youtube.com/watch?v=8vnlFY6P9zc">쩡소님표 에그타르트와 휘낭시에로 후식먹방~!</a></td>
+                     </tr>
+                     <tr class="b">
+                        <td>조회수 102,632회 • 2019. 12. 17.</td>
+                     </tr>
+                     <tr class="c">
+                        <td><a href="https://www.youtube.com/channel/UC-Bsa2ivAGWq7bsSPrPGFVA">
+                          <img src="https://yt3.ggpht.com/ytc/AAUvwniWXMKo2rp8gnwibO9YL48TaaaJ_Cf-gWm3Mscw4g=s900-c-k-c0x00ffffff-no-rj"/>  입짧은햇님</a></td>
+                       </tr>
+                       <tr class="d" >
+                         <td>쩡소쩡소님 께서 만들어 주신 에그타르트와 휘낭시에 함냐함냐!!👍</td>
+                      </tr>
+                   </table>
+                </div>
+             </div>
+          </div>
+          <br>
+          <div class="ui-grid-a" >
+            <div class="ui-block-a">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr>
+                        <td class="img">
+                           <a href="https://www.youtube.com/watch?v=fqmAhbyy1sU"><img src="https://i.ytimg.com/vi/fqmAhbyy1sU/maxresdefault.jpg" style="border: 3px solid black;" /></a>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div class="ui-block-b">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr class="a">
+                        <td><a href="https://www.youtube.com/watch?v=fqmAhbyy1sU">흑임자크림가득번 쿠키슈 디저트 먹방</a></td>
+                     </tr>
+                     <tr class="b">
+                        <td>조회수 484,744회 • 2021. 2. 27.</td>
+                     </tr>
+                     <tr class="c">
+                        <td><a href="https://www.youtube.com/channel/UCwsFLjczPWiiWBS9_cdSQIQ">
+                          <img src="https://yt3.ggpht.com/ytc/AAUvwnhZ1oo4FIBRHUWiSxg4IQeohFaPJCKIM6Nq__YbAw=s900-c-k-c0x00ffffff-no-rj"/>  교광TV</a></td>
+                       </tr>
+                       <tr class="d" >
+                        <td>안녕하세요 교광입니다 오늘도 시청해주셔서 감사합니다😊</td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <br>
+         <div class="ui-grid-a" >
+            <div class="ui-block-a">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr>
+                        <td class="img">
+                           <a href="https://www.youtube.com/watch?v=HSpZVipz9IY"><img src="https://i.ytimg.com/vi/HSpZVipz9IY/maxresdefault.jpg" style="border: 3px solid black;" /></a>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div class="ui-block-b">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr class="a">
+                        <td><a href="https://www.youtube.com/watch?v=HSpZVipz9IY">크림이 흘러넘치는 스쿱당 마카롱 리얼사운드 먹방!</a></td>
+                     </tr>
+                     <tr class="b">
+                        <td>조회수 2,593,447회 • 2018. 9. 14.</td>
+                     </tr>
+                     <tr class="c">
+                        <td><a href="https://www.youtube.com/channel/UCBIoXzDldCnpbM_7uyG0_Tg">
+                          <img src="https://yt3.ggpht.com/ytc/AAUvwngjiTCKvMKrMLOVw9n-NGwq1P8NM0zmZbyyM1Ot-g=s900-c-k-c0x00ffffff-no-rj"/>  HONG SOUND</a></td>
+                       </tr>
+                       <tr class="d" >
+                        <td>더스쿱님의 스쿱당에서 판매하는 마카롱들을 먹어봤어요!</td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <br>
+         <div class="ui-grid-a" >
+            <div class="ui-block-a">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr>
+                        <td class="img">
+                           <a href="https://www.youtube.com/watch?v=YSOZ0T2vHRQ"><img src="https://i.ytimg.com/vi/YSOZ0T2vHRQ/maxresdefault.jpg" style="border: 3px solid black;" /></a>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div class="ui-block-b">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr class="a">
+                        <td><a href="https://www.youtube.com/watch?v=YSOZ0T2vHRQ">진주 마롱 수플레 팬케이크 딸기 크림브륄레 티라미수 팬케이크 디저트 먹방</a></td>
+                     </tr>
+                     <tr class="b">
+                        <td>조회수 335,634회 • 2020. 12. 21.</td>
+                     </tr>
+                     <tr class="c">
+                        <td><a href="https://www.youtube.com/channel/UC-pXaRbTkhOnOUjsv96QHMg">
+                          <img src="https://yt3.ggpht.com/ytc/AAUvwniJMD3pKJTRUp2VFXkT42KZPLikhndfmLcDYAIQzw=s900-c-k-c0x00ffffff-no-rj"/>  코저트</a></td>
+                       </tr>
+                       <tr class="d" >
+                        <td>#디저트먹방 #수플레팬케이크 #팬케이크</td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <br>
+         <div class="ui-grid-a" >
+            <div class="ui-block-a">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr>
+                        <td class="img">
+                           <a href="https://www.youtube.com/watch?v=hROa3ilu7Aw"><img src="https://i.ytimg.com/vi/hROa3ilu7Aw/maxresdefault.jpg" style="border: 3px solid black;" /></a>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div class="ui-block-b">
+               <div class="ui-bar ui-bar-a">
+                  <table>
+                     <tr class="a">
+                        <td><a href="https://www.youtube.com/watch?v=hROa3ilu7Aw">뚜레쥬르 어몽어스케이크 먹방~!!</a></td>
+                     </tr>
+                     <tr class="b">
+                        <td>조회수 247,212회 • 2021. 5. 1.</td>
+                     </tr>
+                     <tr class="c">
+                        <td><a href="https://www.youtube.com/channel/UC-i2ywiuvjvpTy2zW-tXfkw">
+                          <img src="https://yt3.ggpht.com/ytc/AAUvwniPjevuyJlvi1O8ETio0uZ2NOdBkDBTN5B61skn=s900-c-k-c0x00ffffff-no-rj"/>  떵개떵</a></td>
+                       </tr>
+                       <tr class="d" >
+                        <td>문의메일ddeonggae@sandboxnetwork.net</td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <footer data-role="footer" align="center" data-position="fixed" style="background-image:url(bg/intro.png)">
+            Copyright ⓒ 2021 Eating
+         </footer>
+      </article>
+   </section>
+</body>
+</html>

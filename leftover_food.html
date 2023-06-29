@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EATING 이팅</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="jquery.mobile.inline-svg-1.4.5.min.css">
+
+	<script src="jquery-1.11.3.min.js"></script>
+	<script src="jquery.mobile-1.4.5.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="table.css">
+	<link rel="stylesheet" type="text/css" href="font.css">
+	<link href="http://fonts.googleapis.com/earlyaccess/jejuhallasan.css" rel="stylesheet">
+
+	<script src="like.js"></script>
+	<script src="likelist.js"></script>
+
+</head>
+<body onload="init(); loadlist_recipe();">
+	<section data-role="page" align="center" style="background-color:#FFF9E7;">
+		<header data-role="header" style="background-image:url(bg/intro.png)">
+			<a href="#navigation" data-rel="popup" data-position-to="window" data-transition="slidedown" style="background-image:url(bg/choice.png)"><br><br><br><img src="icon/menu.png" height="50px"><br><br><br></a>
+			<h1><br><a href="main.html" data-ajax='false'><img src="char/logo.png" height="120px"></a></h1>
+			<a href="#like" data-rel="popup" data-position-to="window" data-transition="flow" style="background-image:url(bg/choice.png)"><br><br><br><img src="icon/like.png" height="50px"><br><br><br></a>
+		</header>
+		<article data-role="popup">
+			<div data-role="popup" data-overlay-theme="b" id="navigation" class="ui-content" style="background-image:url(bg/button.png);">
+				<div data-role="header" style="background-image:url(bg/button.png);">
+					<h1>EATING</h1>
+					<a href="#" data-rel="back" data-iconpos="notext" data-icon="delete" class="ui-btn-right"></a>
+				</div>
+				<div data-role="content" style="background-image:url(bg/button.png);">
+					<div data-inset="true" data-role="collapsible" data-iconpos="none" data-collapsed="false">
+						<h3>MENU</h3>
+						<ul class="uu" data-role="listview" data-filter="true" data-filter-placeholder="검색어를 입력하세요">
+							<li data-role="list-divider" style="background-color: #ffdf80;">GO</li>
+							<li data-filtertext="명동교자 송죽장 킷사서울 윕성수 플러피도넛"><a href="seoul.html" data-ajax='false' style="background-color:#FFF9E7;">서울</a></li>
+							<li data-filtertext="기린왕곱창 도마29 양자강 다이닝슬로우라이프 게이블루프커피"><a href="daegu.html" data-ajax='false' style="background-color:#FFF9E7;">대구</a></li>
+							<li data-filtertext="토담바다장어 해목 복성반점 매드독스 웨이브온커피"><a href="busan.html" data-ajax='false' style="background-color:#FFF9E7;">부산</a></li>
+							<li data-filtertext="세진회관 가츠연 아중각 가마 그날의온도"><a href="jeonju.html" data-ajax='false' style="background-color:#FFF9E7;">전주</a></li>
+							<li data-filtertext="정동진초당순두부 대관령다이닝스시 연곡반점 강릉수제버거 카페툇마루"><a href="gangneung.html" data-ajax='false' style="background-color:#FFF9E7;">강릉</a></li>
+							<li data-filtertext="목스키친 고쿠텐 섬소나이 칠돈가 하이엔드제주"><a href="jeju.html" data-ajax='false' style="background-color:#FFF9E7;">제주</a></li>
+							<li data-role="list-divider" style="background-color: #ffdf80;">DO</li>
+							<li style="background-color:#ffecb3;"><b>상황별</b></li>
+							<li data-filtertext="조개술찜 갈릭 간장치킨 소고기 간장떡볶이 차돌박이라면 매콤 순대볶음"><a href="midnight_snack.html" data-ajax='false' style="background-color:#FFF9E7;">야식</a></li>
+							<li data-filtertext="라면죽 김치볶음밥 짜파구리 뚝배기치즈밥 김치스팸마요 덮밥"><a href="single_meal.html" data-ajax='false' style="background-color:#FFF9E7;">자취 간편식</a></li>
+							<li data-filtertext="쭈꾸미 샤브샤브 훈제오리 무쌈말이 밀푀유나베 돼지갈비찜 연어 크림치즈롤"><a href="party.html" data-ajax='false' style="background-color:#FFF9E7;">손님 초대</a></li>
+							<li data-filtertext="명란두부찌개 전찌개 진주땡초김밥 김치 만두전골 당면계란만두"><a href="leftover_food.html" data-ajax='false' style="background-color:#FFF9E7;">냉장고 털이</a></li>
+							<li data-filtertext="레몬드레싱 연어샐러드 단호박 에그슬럿 무화과 그래놀라 요거트 렌틸콩 수란 샐러드 월남쌈"><a href="diet.html" data-ajax='false' style="background-color:#FFF9E7;">다이어트</a></li>
+							<li style="background-color:#ffecb3;"><b>국가별</b></li>
+							<li data-filtertext="프랑스 라타투이 이탈리아 라자냐 터키 케밥 인도 탄두리치킨 중국 마라탕 베트남 분짜 호주 미트파이 일본 스키야키 미국 시카고피자 멕시코 파히타"><a href="country.html" data-ajax='false' style="background-color:#FFF9E7;">지도 선택</a></li><!--국가별-->
+							<li data-role="list-divider" style="background-color: #ffdf80;">WATCH</li>
+							<li><a href="ranking.html" data-ajax='false' style="background-color:#FFF9E7;">순위별</a></li>
+							<li data-filtertext="김치찜 톳전복밥 차돌된장찌개 로제 찜닭 떡볶이 로제찜닭 로제떡볶이 비빔밥 갈비찜 마라탕 짜장면 군만두 차돌짬뽕 크림새우 마라샹궈 탕수육 초밥 우동 새우튀김 라멘 텐동 규카츠 오므라이스 타코야끼 새우크림파스타 통베이컨 시카고 딥디쉬 치즈폭탄 피자 로제리조또 해쉬브라운 베이컨크림파스타 파스타 감바스 빠네 크림파스타 모짜렐라치즈 새우 베이컨"><a href="type.html" data-ajax='false' style="background-color:#FFF9E7;">종류별</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div data-role="popup" data-overlay-theme="b" id="like" align="center" style="min-width:300px; ">
+				<div id="list" style="width:100%; align-content: center;">
+					<table style="border:10px dashed #ffcc66; black; background-color: #FEE68B; width: 100%; text-align: center; font-family:'Stylish', sans-serif; font-size: 27px; font-weight: 600; color: #9E8600;" id="recipe_likes"></table>
+				</div>
+			</div>
+		</article>
+		<article data-role="content">
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<div class="ui-bar ui-bar-a">
+						<table class="img">
+							<tr><td class="food_image"><img src="https://scontent-ssn1-1.xx.fbcdn.net/v/t1.6435-9/196948438_611969433097186_2283606000307562668_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=mZXEfb1saIcAX_ZrvJL&_nc_ht=scontent-ssn1-1.xx&oh=2fe1e4e0c326000924c8f0f0f84c75b2&oe=60E47905"/></td></tr>
+						</table>
+					</div>
+				</div>
+				<div class="ui-block-b">
+					<div class="ui-bar ui-bar-a">
+						<table class="info_do">
+							<tr>
+								<td colspan="4" style="font-size: 37px; font-weight: 500; font-family: 'Nanum Pen Script'; text-align: center;">명란두부찌개</td>
+							</tr>
+							<tr>
+								<td><img src="icon/difficulty.png"/></td>
+								<td width="20%">초급</td>
+								<td width="10%"><img src="icon/cooking_time.png"/></td>
+								<td>30분 이내</td>
+							</tr>
+							<tr>
+								<td><img src="icon/ingredient.png"/></td>
+								<td colspan="3" style="font-size: 15px">명란젓 100g, 두부 200g, 애호박 1/2개, 다진마늘, 대파, 홍고추</td>
+							</tr>
+							<tr>
+								<td colspan="4" style="font-family: 'Nanum Pen Script'">#명란두부찌개 #명란요리 #두부요리 #찌개요리 #집밥 #냉털</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<img src="icon/b_like.png" class="l1 like" name="명란두부찌개" onclick="l1_like()" style="width: 50px;"/>
+								</td>
+								<td colspan="2">찜</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<div class="ui-bar ui-bar-a">
+						<button onclick="location.href='https://in.naver.com/orange_black_box/howto/235369183146656#235369183146656'"><img src="icon/video.png"></button>
+					</div>
+				</div>
+				<div class="ui-block-b">
+					<div class="ui-bar ui-bar-a">
+						<button onclick="location.href='https://blog.naver.com/hee81hoo/222119742070'"><img src="icon/blog.png"></button>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<div class="ui-bar ui-bar-a">
+						<table class="img">
+							<tr><td class="food_image"><img src="https://scontent-ssn1-1.xx.fbcdn.net/v/t1.6435-9/195378758_611969379763858_7643528916939008402_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=7MR3XbbO8HwAX_pefIn&_nc_ht=scontent-ssn1-1.xx&oh=5079d1a9c22207bf9fd28c9bfc63540b&oe=60E46388"/></td></tr>
+						</table>
+					</div>
+				</div>
+				<div class="ui-block-b">
+					<div class="ui-bar ui-bar-a">
+						<table class="info_do">
+							<tr>
+								<td colspan="4" style="font-size: 37px; font-weight: 500; font-family: 'Nanum Pen Script'; text-align: center;">전찌개</td>
+							</tr>
+							<tr>
+								<td><img src="icon/difficulty.png"/></td>
+								<td width="20%">중급</td>
+								<td width="10%"><img src="icon/cooking_time.png"/></td>
+								<td>1시간 이내</td>
+							</tr>
+							<tr>
+								<td><img src="icon/ingredient.png"/></td>
+								<td colspan="3" style="font-size: 15px">전 500g, 김치 400g, 양파 1/2개, 대파, 고춧가루, 간장</td>
+							</tr>
+							<tr>
+								<td colspan="4" style="font-family: 'Nanum Pen Script'">#전찌개 #명절전찌개 #명절남은음식요리 #추석남은음식요리</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<img src="icon/b_like.png" class="l2 like" name="전찌개" onclick="l2_like()" style="width: 50px;"/>
+								</td>
+								<td colspan="2">찜</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<div class="ui-bar ui-bar-a">
+						<button onclick="location.href='https://in.naver.com/orange_black_box/howto/231843182142112#231843182142112'"><img src="icon/video.png"></button>
+					</div>
+				</div>
+				<div class="ui-block-b">
+					<div class="ui-bar ui-bar-a">
+						<button onclick="location.href='https://blog.naver.com/hee81hoo?Redirect=Log&logNo=222102440304&from=postView'"><img src="icon/blog.png"></button>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<div class="ui-bar ui-bar-a">
+						<table class="img">
+							<tr><td class="food_image"><img src="https://scontent-ssn1-1.xx.fbcdn.net/v/t1.6435-9/194734773_611970006430462_4271288132158907603_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=Z7Dofe_4qtIAX-FWhLO&_nc_ht=scontent-ssn1-1.xx&oh=c83c28943e37a387392e86e3003b2f0e&oe=60E44125"/></td></tr>
+						</table>
+					</div>
+				</div>
+				<div class="ui-block-b">
+					<div class="ui-bar ui-bar-a">
+						<table class="info_do">
+							<tr>
+								<td colspan="4" style="font-size: 37px; font-weight: 500; font-family: 'Nanum Pen Script'; text-align: center;">진주땡초김밥</td>
+							</tr>
+							<tr>
+								<td><img src="icon/difficulty.png"/></td>
+								<td width="20%">초급</td>
+								<td width="10%"><img src="icon/cooking_time.png"/></td>
+								<td>30분 이내</td>
+							</tr>
+							<tr>
+								<td><img src="icon/ingredient.png"/></td>
+								<td colspan="3" style="font-size: 15px">청양고추, 당근 1/3개, 넓적어묵 4장, 단무지, 김밥김, 참기름, 통깨</td>
+							</tr>
+							<tr>
+								<td colspan="4" style="font-family: 'Nanum Pen Script'">#진주땡초김밥 #땡초김밥 #청양고추김밥 #이색김밥 #김밥 #매콤요리</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<img src="icon/b_like.png" class="l3 like" name="진주땡초김밥" onclick="l3_like()" style="width: 50px;"/>
+								</td>
+								<td colspan="2">찜</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<div class="ui-bar ui-bar-a">
+						<button onclick="location.href='https://in.naver.com/enregistrer/howto/289538205639328'"><img src="icon/video.png"></button>
+					</div>
+				</div>
+				<div class="ui-block-b">
+					<div class="ui-bar ui-bar-a">
+						<button onclick="location.href='https://in.naver.com/enregistrer/challenge/276454618755104/276454398956320'"><img src="icon/blog.png"></button>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<div class="ui-bar ui-bar-a">
+						<table class="img">
+							<tr><td class="food_image"><img src="https://scontent-ssn1-1.xx.fbcdn.net/v/t1.6435-9/195580984_611970039763792_6757878309963759863_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=vzTmC-6EC70AX9RMPVt&_nc_ht=scontent-ssn1-1.xx&oh=35663fb6b9d8cf158d5c0603f09a38f4&oe=60E1D234"/></td></tr>
+						</table>
+					</div>
+				</div>
+				<div class="ui-block-b">
+					<div class="ui-bar ui-bar-a">
+						<table class="info_do">
+							<tr>
+								<td colspan="4" style="font-size: 37px; font-weight: 500; font-family: 'Nanum Pen Script'; text-align: center;">김치만두전골</td>
+							</tr>
+							<tr>
+								<td><img src="icon/difficulty.png"/></td>
+								<td width="20%">초급</td>
+								<td width="10%"><img src="icon/cooking_time.png"/></td>
+								<td>30분 이내</td>
+							</tr>
+							<tr>
+								<td><img src="icon/ingredient.png"/></td>
+								<td colspan="3" style="font-size: 15px">만두, 양파 1/2개, 대파, 익은 김치 한 줌, 김치국물, 고춧가루, 국간장</td>
+							</tr>
+							<tr>
+								<td colspan="4" style="font-family: 'Nanum Pen Script'">#김치만두전골 #만두요리 #김치요리 #해장음식 #남은음식요리 #냉장고털이</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<img src="icon/b_like.png" class="l4 like" name="김치만두전골" onclick="l4_like()" style="width: 50px;"/>
+								</td>
+								<td colspan="2">찜</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<div class="ui-bar ui-bar-a">
+						<button onclick="location.href='https://in.naver.com/enregistrer/howto/230447535968960#230447535968960'"><img src="icon/video.png"></button>
+					</div>
+				</div>
+				<div class="ui-block-b">
+					<div class="ui-bar ui-bar-a">
+						<button onclick="location.href='https://blog.naver.com/enregistrer/222069304110'"><img src="icon/blog.png"></button>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<div class="ui-bar ui-bar-a">
+						<table class="img">
+							<tr><td class="food_image"><img src="https://scontent-ssn1-1.xx.fbcdn.net/v/t1.6435-9/198420135_611969409763855_7361607928337024369_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=vs5XWtvaUqEAX-gSuYI&_nc_oc=AQmNMaPTXHa_jsR5pFzUh_tZab5KqeWB7oeLoknlUflmLPVv6EPv4cPfGpXC07R2_rQ&_nc_ht=scontent-ssn1-1.xx&oh=034cfafa1f9bd9e9083dff9dbff103b3&oe=60E56F66"/></td></tr>
+						</table>
+					</div>
+				</div>
+				<div class="ui-block-b">
+					<div class="ui-bar ui-bar-a">
+						<table class="info_do">
+							<tr>
+								<td colspan="4" style="font-size: 37px; font-weight: 500; font-family: 'Nanum Pen Script'; text-align: center;">당면계란만두</td>
+							</tr>
+							<tr>
+								<td><img src="icon/difficulty.png"/></td>
+								<td width="20%">초급</td>
+								<td width="10%"><img src="icon/cooking_time.png"/></td>
+								<td>30분 이내</td>
+							</tr>
+							<tr>
+								<td><img src="icon/ingredient.png"/></td>
+								<td colspan="3" style="font-size: 15px">계란, 당면, 대파, 진간장, 참기름, 설탕, 소금, 후추</td>
+							</tr>
+							<tr>
+								<td colspan="4" style="font-family: 'Nanum Pen Script'">#당면계란만두 #남은잡채요리 #계란만두 #부침 #간식 #반찬 #안주</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<img src="icon/b_like.png" class="l5 like" name="당면계란만두" onclick="l5_like()" style="width: 50px;"/>
+								</td>
+								<td colspan="2">찜</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<div class="ui-bar ui-bar-a">
+						<button onclick="location.href='https://in.naver.com/enregistrer/howto/280027994358464#280027994358464'"><img src="icon/video.png"></button>
+					</div>
+				</div>
+				<div class="ui-block-b">
+					<div class="ui-bar ui-bar-a">
+						<button onclick="location.href='https://in.naver.com/enregistrer/challenge/266639966442368/266639055892032'"><img src="icon/blog.png"></button>
+					</div>
+				</div>
+			</div>
+			<footer data-role="footer" data-position="fixed" style="background-image:url(bg/intro.png)">
+				Copyright ⓒ 2021 Eating
+			</footer>
+		</article>
+	</section>
+</body>
+</html>

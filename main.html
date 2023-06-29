@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EATING 이팅</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="center.css">
+
+	<script src="map.js"></script>
+	<script src="jquery.rwdImageMaps.min.js"></script>
+	<script>
+		$(document).ready(function(e) {
+			$('img[usemap]').rwdImageMaps();
+		});
+	</script>
+
+	<style>
+		img[usemap] {
+			border: none;
+			height: auto;
+			max-width: 100%;
+			width: auto;
+		}
+	</style>
+
+</head>
+<body style="background-image:url(bg/main.png)">
+	<div data-role="page" class="center">
+		<img src="char/main.png" usemap="#image-map" name="point" style="width: 90%;">
+		<map name="image-map">
+			<area href="go_intro.html" coords="250,101,87" shape="circle" onmouseover="if(document.images) point.src='char/go_m-over.png'" onmouseout="if(document.images) point.src='char/main.png'">
+			<area href="watch_intro.html" coords="92,371,88" shape="circle" onmouseover="if(document.images) point.src='char/watch_m-over.png'" onmouseout="if(document.images) point.src='char/main.png'">
+			<area href="do_intro.html" coords="379,377,93" shape="circle" onmouseover="if(document.images) point.src='char/do_m-over.png'" onmouseout="if(document.images) point.src='char/main.png'">
+		</map>
+	</div>
+</body>
+</html>

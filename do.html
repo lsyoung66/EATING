@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EATING 이팅</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="center.css">
+
+	<script src="map.js"></script>
+	<script src="jquery.rwdImageMaps.min.js"></script>
+	<script>
+		$(document).ready(function(e) {
+			$('img[usemap]').rwdImageMaps();
+		});
+	</script>
+
+	<style>
+		img[usemap] {
+			border: none;
+			height: auto;
+			max-width: 100%;
+			width: auto;
+		}
+	</style>
+
+</head>
+<body style="background-image:url(bg/choice.png)">
+	<div data-role="page" class="center">
+		<img src="char/do_choice.png" usemap="#image-map" name="point" style="width: 90%;"/>
+		<map name="image-map">
+			<area href="main.html" coords="773,1245,271" shape="circle" onmouseover="if(document.images) point.src='char/do_main.png'" onmouseout="if(document.images) point.src='char/do_choice.png'">
+			<area href="situation.html" coords="293,904,264" shape="circle" onmouseover="if(document.images) point.src='char/do_situation.png'" onmouseout="if(document.images) point.src='char/do_choice.png'">
+			<area href="country.html" coords="1242,900,263" shape="circle" onmouseover="if(document.images) point.src='char/do_country.png'" onmouseout="if(document.images) point.src='char/do_choice.png'">
+		</map>
+	</div>
+</body>
+</html>

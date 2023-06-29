@@ -1,0 +1,124 @@
+table {
+	width: 100%;
+	height: 220px;
+}
+
+.food_image img {
+	height: 237px;
+	width: 100%;
+	border-radius: 20px;
+	border: 3px solid black;
+}
+
+.img img {
+	height: 217px;
+	width: 100%;
+	border-radius: 20px;
+	border: 3px solid black;
+}
+
+.world_food img {
+	height: 200px;
+	width: 100%;
+	border-radius: 20px;
+	border: 3px solid black;
+}
+
+.info_go td {
+	text-align: left;
+	font-size: 21px;
+	font-weight: 600;
+	font-family: 'Stylish', sans-serif;
+}
+
+.info_do td {
+	text-align: left;
+	font-size: 17px;
+	font-weight: 100;
+	font-family: 'Jeju Hallasan', sans-serif;
+}
+
+.info_do_world {
+	width: 80%;
+	height: 30px;
+	align-content: center;
+}
+
+.info_do_world td {
+	text-align: left;
+	font-size: 17px;
+	font-weight: 100;
+	font-family: 'Jeju Hallasan', sans-serif;
+}
+
+td img {
+	width: 30px;
+}
+
+div {
+	background-image: url(bg/table.png);
+}
+
+div > button {
+	background-image:url(bg/button.png);
+}
+
+button img {
+	width: 45px;
+}
+
+nav a {
+	background-image:url(bg/button.png);
+}
+
+a:link{
+	text-decoration-line: none;
+	text-decoration: none;
+}
+
+.a a{
+	font-size: 25px;
+	line-height: 1;
+	color: black !important;
+	font-family: 'Do Hyeon', sans-serif;
+}
+
+
+.b td{
+	filter:alpha(opacity=60);
+	opacity:0.6;
+	-moz-opacity:0.6;
+	font-size:12px;
+	line-height: 0.4;
+	font-family: 'Do Hyeon', sans-serif;
+}
+
+.c img{
+	height: 50px; width: 50px;
+	vertical-align:middle;
+	padding: 10px;
+	border-radius: 50px;
+}
+
+.c td{
+	font-size: 15px;
+}
+
+.c a{
+	color: black !important;
+	font-family: 'Do Hyeon', sans-serif;
+}
+
+.d td{
+	font-weight: 300;
+	font-size: 15px;
+}
+
+.uu a, li{
+	font-size: 13px;
+}
+
+.ui-btn-active{
+   background-image:url(bg/btn_color.png);
+   color: black !important;
+}

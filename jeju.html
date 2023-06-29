@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EATING 이팅</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="jquery.mobile.inline-svg-1.4.5.min.css">
+	
+	<script src="jquery-1.11.3.min.js"></script>
+	<script src="jquery.mobile-1.4.5.js"></script>
+
+	<script src="map.js"></script>
+	<script src="jquery.rwdImageMaps.min.js"></script>
+	<script>
+		$(document).ready(function(e) {
+			$('img[usemap]').rwdImageMaps();
+		});
+	</script>
+
+	<style>
+		img[usemap] {
+			border: none;
+			height: auto;
+			max-width: 100%;
+			width: auto;
+		}
+	</style>
+
+	<script src="like.js"></script>
+	<script src="likelist.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="table.css">
+	<link rel="stylesheet" type="text/css" href="font.css">
+
+</head>
+<body onload="init(); loadlist();">
+	<section data-role="page" align="center" style="background-color:#FFF9E7;">
+		<header data-role="header" style="background-image:url(bg/intro.png)">
+			<a href="#navigation" data-rel="popup" data-position-to="window" data-transition="slidedown" style="background-image:url(bg/choice.png)"><br><br><br><img src="icon/menu.png" height="50px"><br><br><br></a>
+			<h1><br><a href="main.html" data-ajax='false'><img src="char/logo.png" height="120px"></a></h1>
+			<a href="#like" data-rel="popup" data-position-to="window" data-transition="flow" style="background-image:url(bg/choice.png)"><br><br><br><img src="icon/like.png" height="50px"><br><br><br></a>
+		</header>
+		<article data-role="content">
+			<img src="map/jeju.png" usemap="#jeju-map">
+			<map name="jeju-map">
+				<area alt="한식" title="한식" href="http://m.xn--o39ao1ms5x.com/" coords="285,247,68" shape="circle">
+				<area alt="중식" title="중식" href="https://www.instagram.com/udo_islandguy/?utm_medium=copy_link" coords="771,93,819,182" shape="rect">
+				<area alt="일식" title="일식" href="https://www.instagram.com/gokuten_jeju_seogwipo/?utm_medium=copy_link" coords="405,311,501,447" shape="rect">
+				<area alt="양식" title="양식" href="jeju_western.html" coords="525,271,598,243,670,226,683,247,670,290,707,333,692,372,649,376,631,352,611,310,551,292" shape="poly">
+				<area alt="디저트" title="디저트" href="https://www.instagram.com/hiendjeju/?utm_medium=copy_link" coords="433,218,78" shape="circle">
+			</map>
+		</article>
+		<article data-role="popup">
+			<div data-role="popup" data-overlay-theme="b" id="navigation" class="ui-content" style="background-image:url(bg/button.png);">
+				<div data-role="header" style="background-image:url(bg/button.png);">
+					<h1>EATING</h1>
+					<a href="#" data-rel="back" data-iconpos="notext" data-icon="delete" class="ui-btn-right"></a>
+				</div>
+				<div data-role="content" style="background-image:url(bg/button.png);">
+					<div data-inset="true" data-role="collapsible" data-iconpos="none" data-collapsed="false">
+						<h3>MENU</h3>
+						<ul class="uu" data-role="listview" data-filter="true" data-filter-placeholder="검색어를 입력하세요">
+							<li data-role="list-divider" style="background-color: #ffdf80;">GO</li>
+							<li data-filtertext="명동교자 송죽장 킷사서울 윕성수 플러피도넛"><a href="seoul.html" data-ajax='false' style="background-color:#FFF9E7;">서울</a></li>
+							<li data-filtertext="기린왕곱창 도마29 양자강 다이닝슬로우라이프 게이블루프커피"><a href="daegu.html" data-ajax='false' style="background-color:#FFF9E7;">대구</a></li>
+							<li data-filtertext="토담바다장어 해목 복성반점 매드독스 웨이브온커피"><a href="busan.html" data-ajax='false' style="background-color:#FFF9E7;">부산</a></li>
+							<li data-filtertext="세진회관 가츠연 아중각 가마 그날의온도"><a href="jeonju.html" data-ajax='false' style="background-color:#FFF9E7;">전주</a></li>
+							<li data-filtertext="정동진초당순두부 대관령다이닝스시 연곡반점 강릉수제버거 카페툇마루"><a href="gangneung.html" data-ajax='false' style="background-color:#FFF9E7;">강릉</a></li>
+							<li data-filtertext="목스키친 고쿠텐 섬소나이 칠돈가 하이엔드제주"><a href="jeju.html" data-ajax='false' style="background-color:#FFF9E7;">제주</a></li>
+							<li data-role="list-divider" style="background-color: #ffdf80;">DO</li>
+							<li style="background-color:#ffecb3;"><b>상황별</b></li>
+							<li data-filtertext="조개술찜 갈릭 간장치킨 소고기 간장떡볶이 차돌박이라면 매콤 순대볶음"><a href="midnight_snack.html" data-ajax='false' style="background-color:#FFF9E7;">야식</a></li>
+							<li data-filtertext="라면죽 김치볶음밥 짜파구리 뚝배기치즈밥 김치스팸마요 덮밥"><a href="single_meal.html" data-ajax='false' style="background-color:#FFF9E7;">자취 간편식</a></li>
+							<li data-filtertext="쭈꾸미 샤브샤브 훈제오리 무쌈말이 밀푀유나베 돼지갈비찜 연어 크림치즈롤"><a href="party.html" data-ajax='false' style="background-color:#FFF9E7;">손님 초대</a></li>
+							<li data-filtertext="명란두부찌개 전찌개 진주땡초김밥 김치 만두전골 당면계란만두"><a href="leftover_food.html" data-ajax='false' style="background-color:#FFF9E7;">냉장고 털이</a></li>
+							<li data-filtertext="레몬드레싱 연어샐러드 단호박 에그슬럿 무화과 그래놀라 요거트 렌틸콩 수란 샐러드 월남쌈"><a href="diet.html" data-ajax='false' style="background-color:#FFF9E7;">다이어트</a></li>
+							<li style="background-color:#ffecb3;"><b>국가별</b></li>
+							<li data-filtertext="프랑스 라타투이 이탈리아 라자냐 터키 케밥 인도 탄두리치킨 중국 마라탕 베트남 분짜 호주 미트파이 일본 스키야키 미국 시카고피자 멕시코 파히타"><a href="country.html" data-ajax='false' style="background-color:#FFF9E7;">지도 선택</a></li><!--국가별-->
+							<li data-role="list-divider" style="background-color: #ffdf80;">WATCH</li>
+							<li><a href="ranking.html" data-ajax='false' style="background-color:#FFF9E7;">순위별</a></li>
+							<li data-filtertext="김치찜 톳전복밥 차돌된장찌개 로제 찜닭 떡볶이 로제찜닭 로제떡볶이 비빔밥 갈비찜 마라탕 짜장면 군만두 차돌짬뽕 크림새우 마라샹궈 탕수육 초밥 우동 새우튀김 라멘 텐동 규카츠 오므라이스 타코야끼 새우크림파스타 통베이컨 시카고 딥디쉬 치즈폭탄 피자 로제리조또 해쉬브라운 베이컨크림파스타 파스타 감바스 빠네 크림파스타 모짜렐라치즈 새우 베이컨"><a href="type.html" data-ajax='false' style="background-color:#FFF9E7;">종류별</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div data-role="popup" data-overlay-theme="b" id="like" align="center" style="min-width:300px; ">
+				<div id="list" style="width:100%; align-content: center;">
+					<table style="border:10px dashed #ffcc66; black; background-color: #FEE68B; width: 100%; text-align: center; font-family:'Stylish', sans-serif; font-size: 27px; font-weight: 600; color: #9E8600;" id="likes"></table>
+				</div>
+			</div>
+		</article>
+		<article data-role="content">
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<div class="ui-bar ui-bar-a">
+						<table>
+							<tr><td class="food_image"><img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20210521_210%2F16215641242898hWOy_JPEG%2Fupload_c10cd9d4fc780ba486b7b25b8e975c4e.jpeg"/></td></tr>
+						</table>
+					</div>
+				</div>
+				<div class="ui-block-b">
+					<div class="ui-bar ui-bar-a">
+						<table class="info_go">
+							<tr>
+								<td colspan="2" style="width: 50%; font-family:'Nanum Pen Script'; font-size: 33px; font-weight: 100;">목스키친</td>
+								<td style="width: 60%; opacity:0.8; font-size:13px;">리조또 필라프</td>
+							</tr>
+							<tr>
+								<td colspan="4"><p style="color: red; display: inline;">★</p>&nbsp;4.48</td>
+							</tr>
+							<tr>
+								<td colspan="4">제주 서귀포시 표선면 일주동로6455번길 21 1층</td>
+							</tr>
+							<tr>
+								<td colspan="4"><a href="#open_H1" data-rel="popup">영업시간</a></td>
+								<div data-role="popup" id="open_H1">
+									<ul data-role="listview" data-inset="true">
+										<li data-role="list-divider">영업시간</li>
+										<li>매일 11:00 - 20:00</li>
+										<li>재료소진시 조기마감</li>
+										<li data-role="list-divider" style="color:blue;">Break Time</li>
+										<li style="color:blue;">15:00 - 16:00</li>
+										<li data-role="list-divider" style="color: #1EA4FF;">Last order</li>
+										<li style="color: #1EA4FF;">19:00</li>
+									</ul>
+								</div>
+							</tr>
+							<tr>
+								<td style="width: 30%;">
+									<img src="icon/b_like.png" class="jeju_western like" name="목스키친" onclick="jeju_western_like()" style="width: 50px;"/>
+								</td>
+								<td colspan="3">찜</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<div class="ui-bar ui-bar-a">
+						<button data-icon="phone" onclick="document.location.href='tel:0507-1354-0828'">0507-1354-0828</button>
+					</div>
+				</div>
+				<div class="ui-block-b">
+					<div class="ui-bar ui-bar-a">
+						<button onclick="location.href='jeju_western.html'">More</button>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<div class="ui-bar ui-bar-a">
+						<table>
+							<tr><td class="food_image"><img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210418_7%2F1618697371452kcMrG_JPEG%2FpvKHWDW7d9Ptt4kp7MiHr9AJ.jpg"/></td></tr>
+						</table>
+					</div>
+				</div>
+				<div class="ui-block-b">
+					<div class="ui-bar ui-bar-a">
+						<table class="info_go">
+							<tr>
+								<td colspan="2" style="width: 50%; font-family:'Nanum Pen Script'; font-size: 33px; font-weight: 100;">고쿠텐</td>
+								<td style="width: 60%; opacity:0.8; font-size:13px;">텐동</td>
+							</tr>
+							<tr>
+								<td colspan="4"><p style="color: red; display: inline;">★</p>&nbsp; 4.52</td>
+							</tr>
+							<tr>
+								<td colspan="4">제주 서귀포시 막숙포로40번길 5 법환헤븐빌딩 1층</td>
+							</tr>
+							<tr>
+								<td colspan="4"><a href="#open_H2" data-rel="popup">영업시간</a></td>
+								<div data-role="popup" id="open_H2">
+									<ul data-role="listview" data-inset="true">
+										<li data-role="list-divider"><span style="color:red;">휴무</span></li>
+										<li><span style="color:red;">월요일</span></li>
+										<li data-role="list-divider">영업시간</li>
+										<li>화요일 	11:00 - 20:30</li>
+										<li>수요일	11:00 - 20:30</li>
+										<li>목요일	11:00 - 20:30</li>
+										<li>금요일	11:00 - 20:30</li>
+										<li>토요일	11:00 - 20:30</li>
+										<li>일요일	11:00 - 20:30</li>
+										<li data-role="list-divider" style="color:blue;">Break Time</li>
+										<li style="color:blue;">15:00 - 17:00</li>
+									</ul>
+								</div>
+							</tr>
+							<tr>
+								<td style="width: 30%;">
+									<img src="icon/b_like.png" class="jeju_japanese like" name="고쿠텐" onclick="jeju_japanese_like()" style="width: 50px;"/>
+								</td>
+								<td colspan="3">찜</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<div class="ui-bar ui-bar-a">
+						<button data-icon="phone" onclick="document.location.href='tel:0507-1495-1049'">0507-1495-1049</button>
+					</div>
+				</div>
+				<div class="ui-block-b">
+					<div class="ui-bar ui-bar-a">
+						<button onclick="location.href='https://www.instagram.com/gokuten_jeju_seogwipo/?utm_medium=copy_link'">More</button>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<div class="ui-bar ui-bar-a">
+						<table>
+							<tr><td class="food_image"><img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20201130_62%2F1606689642548J6lkQ_JPEG%2Fupload_c70ca11e9d2fe9e399c3002290b43bd3.jpg"/></td></tr>
+						</table>
+					</div>
+				</div>
+				<div class="ui-block-b">
+					<div class="ui-bar ui-bar-a">
+						<table class="info_go">
+							<tr>
+								<td colspan="2" style="width: 50%; font-family:'Nanum Pen Script'; font-size: 33px; font-weight: 100;">섬소나이</td>
+								<td style="width: 60%; opacity:0.8; font-size:13px;">짬뽕 피자</td>
+							</tr>
+							<tr>
+								<td colspan="4"><p style="color: red; display: inline;">★</p>&nbsp; 4.59</td>
+							</tr>
+							<tr>
+								<td colspan="4">제주 제주시 우도면 우도해안길 814</td>
+							</tr>
+							<tr>
+								<td colspan="4"><a href="#open_H3" data-rel="popup">영업시간</a></td>
+								<div data-role="popup" id="open_H3">
+									<ul data-role="listview" data-inset="true">
+										<li data-role="list-divider">영업시간</li>
+										<li>매일 09:30 - 17:00</li>
+									</ul>
+								</div>
+							</tr>
+							<tr>
+								<td style="width: 30%;">
+									<img src="icon/b_like.png" class="jeju_chinese like" name="섬소나이" onclick="jeju_chinese_like()" style="width: 50px;"/>
+								</td>
+								<td colspan="3">찜</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<div class="ui-bar ui-bar-a">
+						<button data-icon="phone" onclick="document.location.href='tel:064-784-2918'">064-784-2918</button>
+					</div>
+				</div>
+				<div class="ui-block-b">
+					<div class="ui-bar ui-bar-a">
+						<button onclick="location.href='https://www.instagram.com/udo_islandguy/?utm_medium=copy_link'">More</button>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<div class="ui-bar ui-bar-a">
+						<table>
+							<tr><td class="food_image"><img src="https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20161130_91%2F1480488692998i40Y8_JPEG%2F177080558152839_0.jpeg"/></td></tr>
+						</table>
+					</div>
+				</div>
+				<div class="ui-block-b">
+					<div class="ui-bar ui-bar-a">
+						<table class="info_go">
+							<tr>
+								<td colspan="2" style="width: 50%; font-family:'Nanum Pen Script'; font-size: 33px; font-weight: 100;">칠돈가</td>
+								<td style="width: 60%; opacity:0.8; font-size:13px;">흙돼지</td>
+							</tr>
+							<tr>
+								<td colspan="4"><p style="color: red; display: inline;">★</p>&nbsp; 4.43</td>
+							</tr>
+							<tr>
+								<td colspan="4">제주 제주시 서천길 1</td>
+							</tr>
+							<tr>
+								<td colspan="4"><a href="#open_H4" data-rel="popup">영업시간</a></td>
+								<div data-role="popup" id="open_H4">
+									<ul data-role="listview" data-inset="true">
+										<li data-role="list-divider">영업시간</li>
+										<li>매일 13:30 - 22:00</li>
+									</ul>
+								</div>
+							</tr>
+							<tr>
+								<td style="width: 30%;">
+									<img src="icon/b_like.png" class="jeju_korean like" name="칠돈가" onclick="jeju_korean_like()" style="width: 50px;"/>
+								</td>
+								<td colspan="3">찜</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<div class="ui-bar ui-bar-a">
+						<button data-icon="phone" onclick="document.location.href='tel:064-727-9092'">064-727-9092</button>
+					</div>
+				</div>
+				<div class="ui-block-b">
+					<div class="ui-bar ui-bar-a">
+						<button onclick="location.href='http://m.xn--o39ao1ms5x.com/'">More</button>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<div class="ui-bar ui-bar-a">
+						<table>
+							<tr><td class="food_image"><img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA0MTZfMTQz%2FMDAxNjE4NTQxOTk2MzIx.4aGyMuEVk02MpjSyttT9a905LJU4R_pkWOkOd3Rdbtcg.ktVbrz6DoC_AW4MAW3OoYgTtTb2y0tVPHu7QcTo5tZgg.JPEG.kimmj2324%2FIMG_0496.jpg"/></td></tr>
+						</table>
+					</div>
+				</div>
+				<div class="ui-block-b">
+					<div class="ui-bar ui-bar-a">
+						<table class="info_go">
+							<tr>
+								<td colspan="2" style="width: 50%; font-family:'Nanum Pen Script'; font-size: 33px; font-weight: 100;">하이엔드제주</td>
+								<td style="width: 60%; opacity:0.8; font-size:13px;">음료 젤라또</td>
+							</tr>
+							<tr>
+								<td colspan="4"><p style="color: red; display: inline;">★</p>&nbsp; 4.25</td>
+							</tr>
+							<tr>
+								<td colspan="4">제주 제주시 애월읍 애월북서길 56</td>
+							</tr>
+							<tr>
+								<td colspan="4"><a href="#open_H5" data-rel="popup">영업시간</a></td>
+								<div data-role="popup" id="open_H5">
+									<ul data-role="listview" data-inset="true">
+										<li data-role="list-divider">영업시간</li>
+										<li>매일 09:00 - 22:00</li>
+										<li data-role="list-divider" style="color: #1EA4FF">Last order</li>
+										<li style="color: #1EA4FF">21:20</li>
+									</ul>
+								</div>
+							</tr>
+							<tr>
+								<td style="width: 30%;">
+									<img src="icon/b_like.png" class="jeju_dessert like" name="하이엔드제주" onclick="jeju_dessert_like()" style="width: 50px;"/>
+								</td>
+								<td colspan="3">찜</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<div class="ui-bar ui-bar-a">
+						<button data-icon="phone" onclick="document.location.href='tel:0507-1443-4433'">0507-1443-4433</button>
+					</div>
+				</div>
+				<div class="ui-block-b">
+					<div class="ui-bar ui-bar-a">
+						<button onclick="location.href='https://www.instagram.com/hiendjeju/?utm_medium=copy_link'">More</button>
+					</div>
+				</div>
+			</div>
+		</article>
+		<footer data-role="footer" data-position="fixed" style="background-image:url(bg/intro.png)">
+			Copyright ⓒ 2021 Eating
+		</footer>
+	</section>
+</body>
+</html>

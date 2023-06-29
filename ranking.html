@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EATING 이팅</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="jquery.mobile.inline-svg-1.4.5.min.css">
+
+	<script src="jquery-1.11.3.min.js"></script>
+	<script src="jquery.mobile-1.4.5.js"></script>
+
+</head>
+<body>
+	<section data-role="page" align="center" style="background-color:#FFF9E7;">
+		<header data-role="header" style="background-image:url(bg/intro.png)">
+			<a href="#navigation" data-rel="popup" data-position-to="window" data-transition="slidedown" style="background-image:url(bg/choice.png)"><br><br><br><img src="icon/menu.png" height="50px"><br><br><br></a>
+			<h1><br><a href="main.html" data-ajax='false'><img src="char/logo.png" height="120px"></a></h1>
+			<a href="https://www.youtube.com/" data-ajax='false' style="background-image:url(bg/choice.png)"><br><br><br><img src="icon/search.png" height="50px"><br><br><br></a>
+		</header>
+		<article data-role="popup">
+			<div data-role="popup" data-overlay-theme="b" id="navigation" class="ui-content" style="background-image:url(bg/button.png);">
+				<div data-role="header" style="background-image:url(bg/button.png);">
+					<h1>EATING</h1>
+					<a href="#" data-rel="back" data-iconpos="notext" data-icon="delete" class="ui-btn-right"></a>
+				</div>
+				<div data-role="content" style="background-image:url(bg/button.png);">
+					<div data-inset="true" data-role="collapsible" data-iconpos="none" data-collapsed="false">
+						<h3>MENU</h3>
+						<ul class="uu" data-role="listview" data-filter="true" data-filter-placeholder="검색어를 입력하세요">
+							<li data-role="list-divider" style="background-color: #ffdf80;">GO</li>
+							<li data-filtertext="명동교자 송죽장 킷사서울 윕성수 플러피도넛"><a href="seoul.html" data-ajax='false' style="background-color:#FFF9E7;">서울</a></li>
+							<li data-filtertext="기린왕곱창 도마29 양자강 다이닝슬로우라이프 게이블루프커피"><a href="daegu.html" data-ajax='false' style="background-color:#FFF9E7;">대구</a></li>
+							<li data-filtertext="토담바다장어 해목 복성반점 매드독스 웨이브온커피"><a href="busan.html" data-ajax='false' style="background-color:#FFF9E7;">부산</a></li>
+							<li data-filtertext="세진회관 가츠연 아중각 가마 그날의온도"><a href="jeonju.html" data-ajax='false' style="background-color:#FFF9E7;">전주</a></li>
+							<li data-filtertext="정동진초당순두부 대관령다이닝스시 연곡반점 강릉수제버거 카페툇마루"><a href="gangneung.html" data-ajax='false' style="background-color:#FFF9E7;">강릉</a></li>
+							<li data-filtertext="목스키친 고쿠텐 섬소나이 칠돈가 하이엔드제주"><a href="jeju.html" data-ajax='false' style="background-color:#FFF9E7;">제주</a></li>
+							<li data-role="list-divider" style="background-color: #ffdf80;">DO</li>
+							<li style="background-color:#ffecb3;"><b>상황별</b></li>
+							<li data-filtertext="조개술찜 갈릭 간장치킨 소고기 간장떡볶이 차돌박이라면 매콤 순대볶음"><a href="midnight_snack.html" data-ajax='false' style="background-color:#FFF9E7;">야식</a></li>
+							<li data-filtertext="라면죽 김치볶음밥 짜파구리 뚝배기치즈밥 김치스팸마요 덮밥"><a href="single_meal.html" data-ajax='false' style="background-color:#FFF9E7;">자취 간편식</a></li>
+							<li data-filtertext="쭈꾸미 샤브샤브 훈제오리 무쌈말이 밀푀유나베 돼지갈비찜 연어 크림치즈롤"><a href="party.html" data-ajax='false' style="background-color:#FFF9E7;">손님 초대</a></li>
+							<li data-filtertext="명란두부찌개 전찌개 진주땡초김밥 김치 만두전골 당면계란만두"><a href="leftover_food.html" data-ajax='false' style="background-color:#FFF9E7;">냉장고 털이</a></li>
+							<li data-filtertext="레몬드레싱 연어샐러드 단호박 에그슬럿 무화과 그래놀라 요거트 렌틸콩 수란 샐러드 월남쌈"><a href="diet.html" data-ajax='false' style="background-color:#FFF9E7;">다이어트</a></li>
+							<li style="background-color:#ffecb3;"><b>국가별</b></li>
+							<li data-filtertext="프랑스 라타투이 이탈리아 라자냐 터키 케밥 인도 탄두리치킨 중국 마라탕 베트남 분짜 호주 미트파이 일본 스키야키 미국 시카고피자 멕시코 파히타"><a href="country.html" data-ajax='false' style="background-color:#FFF9E7;">지도 선택</a></li><!--국가별-->
+							<li data-role="list-divider" style="background-color: #ffdf80;">WATCH</li>
+							<li><a href="ranking.html" data-ajax='false' style="background-color:#FFF9E7;">순위별</a></li>
+							<li data-filtertext="김치찜 톳전복밥 차돌된장찌개 로제 찜닭 떡볶이 로제찜닭 로제떡볶이 비빔밥 갈비찜 마라탕 짜장면 군만두 차돌짬뽕 크림새우 마라샹궈 탕수육 초밥 우동 새우튀김 라멘 텐동 규카츠 오므라이스 타코야끼 새우크림파스타 통베이컨 시카고 딥디쉬 치즈폭탄 피자 로제리조또 해쉬브라운 베이컨크림파스타 파스타 감바스 빠네 크림파스타 모짜렐라치즈 새우 베이컨"><a href="type.html" data-ajax='false' style="background-color:#FFF9E7;">종류별</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</article>
+		<article data-role="content">
+			<div class="content-1" data-inset="true" data-role="collapsible" data-iconpos="none" data-collapsed="false">
+				<h1>🌸🧡💛💚💙💜1위💜💙💚💛🧡🌸</h1>
+				<div class="ui-grid-solo" style="background-image:url(bg/button.png);">
+					<h3 style="font-size: 27px; color: green;">[햄지]Hamzy</h3>
+					<a href="https://www.youtube.com/c/HamzyASMR/videos">
+						<img src="https://yt3.ggpht.com/ytc/AAUvwnihYaa9kSVlSJrJYsh8n2GutEzzKqGsOOf-JcD9FQ=s900-c-k-c0x00ffffff-no-rj" style="width: 200px; height: 200px; border-radius: 100%;">
+					</a>
+					<p style="font-size:12px;">
+						<strong>
+							❤ 대리만족1000%%% [햄지]Hamzy's 먹방 ❤<br>
+							문의 : hjh35550@gmail.com
+						</strong>
+					</p>
+				</div>
+			</div>
+			<div class="content-2">
+				<ul data-inset="true" data-role="listview">
+					<li>
+						<a href="https://www.youtube.com/c/HamzyASMR/videos">
+							<img src="https://yt3.ggpht.com/ytc/AAUvwnihYaa9kSVlSJrJYsh8n2GutEzzKqGsOOf-JcD9FQ=s900-c-k-c0x00ffffff-no-rj"/>
+							<h3>[햄지]Hamzy</h3>
+							<p>
+								❤ 대리만족1000%%% [햄지]Hamzy's 먹방 ❤<br>
+								문의 : hjh35550@gmail.com
+							</p>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.youtube.com/channel/UC2B5onlYkZ7IaVekR9yIB6w">
+							<img src="https://yt3.ggpht.com/ytc/AAUvwngpMh3XREL6NTIEpVzNLsFKaYa5dTAa8856EP4E6Q=s900-c-k-c0x00ffffff-no-rj"/>
+							<h3>GONGSAM TABLE 이공삼</h3>
+							<p>
+								안녕하세요!! :)<br>
+								맛있는 음식이 가득한 GONG SAM TABLE 이공삼 입니다!!<br>
+								먹음직스러운 리얼사운드 먹방 영상을 만들고 있어요!!🙋
+							</p>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.youtube.com/channel/UC4PpFUrfT2Pou7OwpVF0MUQ">
+							<img src="https://yt3.ggpht.com/ytc/AAUvwnjE5LB8naDyeH6OhEuopxDOaVv2lqYo_MVLLvmy2Q=s900-c-k-c0x00ffffff-no-rj"/>
+							<h3>쏘영 Ssoyoung</h3>
+							<p>
+								안녕하세요 쏘영 Ssoyoung입니다!<br>
+								많은 관심과 사랑 부탁드려요!<br>
+								구독과 좋아요, 댓글은 사랑입니다♡<br>
+							</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="content-3">
+				<div data-role="collapsible" data-collapsed="true" data-theme="b">
+					<h3>More Channel</h3>
+					<ul data-role="listview">
+						<div data-inset="true" data-role="collapsible" data-mini="true" data-iconpos="right" data-collapsed="false">
+							<h3>설기양SULGI</h3>
+							<ul data-role="listview">
+								<li>
+									<a href="https://www.youtube.com/channel/UCIafb9ExBkh4WsCOagZssZA">
+										<img src="https://yt3.ggpht.com/ytc/AAUvwniCchiU0mbn8c0cdUqN7_5XIC4w6zVEYdLn2a_Wfg=s900-c-k-c0x00ffffff-no-rj" />
+										<h3>설기양SULGI</h3>
+										<p>
+											리얼사운드 먹방을 올리는 설기양입니다 :)<br>
+											메뉴추천도 좋고 어떤 피드백이든 감사히 듣겠습니다<br>
+											제 영상을 보시는 분들 모두 고마워요 사랑해요♡<br>
+										</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div data-inset="true" data-role="collapsible" data-mini="true" data-iconpos="right" data-collapsed="false">
+							<h3>ddeong-gae 떵개떵</h3>
+							<ul data-role="listview">
+								<li>
+									<a href="https://www.youtube.com/channel/UC-i2ywiuvjvpTy2zW-tXfkw">
+										<img src="https://yt3.ggpht.com/ytc/AAUvwniPjevuyJlvi1O8ETio0uZ2NOdBkDBTN5B61skn=s900-c-k-c0x00ffffff-no-rj"/>
+										<h3>ddeong-gae 떵개떵</h3>
+										<p>ddeonggae@sandboxnetwork.net
+										</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div data-role="collapsible-set">
+							<div data-inset="true" data-role="collapsible" data-mini="true" data-iconpos="right">
+								<h3>[Dorothy]도로시</h3>
+								<ul data-role="listview">
+									<li>
+										<a href="https://www.youtube.com/channel/UCWUwriihuQ_ybNrAOqbg3yg">
+											<img src="https://yt3.ggpht.com/ytc/AAUvwnhrn174wxp-7EeYwA64Csjy1p-gUN6K49xvEc9X=s900-c-k-c0x00ffffff-no-rj"/>
+											<h3>[Dorothy]도로시</h3>
+											<p>Dorothy[도로시]
+											</p>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div data-inset="true" data-role="collapsible" data-mini="true" data-iconpos="right">
+								<h3>까니짱 [ G-NI ]</h3>
+								<ul data-role="listview">
+									<li>
+										<a href="https://www.youtube.com/channel/UC2wZJuuD_WA9ps2FORco1EQ">
+											<img src="https://yt3.ggpht.com/ytc/AAUvwngkTrsilTWUBJ-tKOOEY866D7o2RWAedxAN9wrO=s900-c-k-c0x00ffffff-no-rj"/>
+											<h3>까니짱 [ G-NI ]</h3>
+											<p>까니짱의 ASMR, 일상, 레시피, 부부 먹방 컨텐츠를 즐겨주세요~(^^*)
+											</p>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div data-inset="true" data-role="collapsible" data-mini="true" data-iconpos="right">
+								<h3>푸메Fume</h3>
+								<ul data-role="listview">
+									<li>
+										<a href="https://www.youtube.com/channel/UCbzI92w5vWa6mEj1dACfy6g">
+											<img src="https://yt3.ggpht.com/ytc/AAUvwnj7Icpp6QMp9dwQDWDL6eFY5d8w-Va9oTvtHLkLpA=s900-c-k-c0x00ffffff-no-rj"/>
+											<h3>푸메Fume</h3>
+											<p>
+												따뜻한 응원 정말 감사합니다! 🥰<br>Love Eating! Hope you enjoy my video!
+											</p>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div data-inset="true" data-role="collapsible" data-mini="true" data-iconpos="right">
+								<h3>유디티TV</h3>
+								<ul data-role="listview">
+									<li>
+										<a href="https://www.youtube.com/channel/UC0ZqpSq-OIpOITZ7U16-Xeg">
+											<img src="https://yt3.ggpht.com/ytc/AAUvwnjtrk0ym2DUESUOqQ89HqrQKU8M4gw0rOJsCMlTmw=s900-c-k-c0x00ffffff-no-rj"/>
+											<h3>유디티TV</h3>
+											<p>Share your videos with friends, family, and the world
+											</p>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div data-inset="true" data-role="collapsible" data-mini="true" data-iconpos="right">
+								<h3>교광TV</h3>
+								<ul data-role="listview">
+									<li>
+										<a href="https://www.youtube.com/channel/UCwsFLjczPWiiWBS9_cdSQIQ">
+											<img src="https://yt3.ggpht.com/ytc/AAUvwnhZ1oo4FIBRHUWiSxg4IQeohFaPJCKIM6Nq__YbAw=s900-c-k-c0x00ffffff-no-rj"/>
+											<h3>교광TV</h3>
+											<p>안녕하세요 여러분 교광TV에 교광입니다.<br> 제 유튜브채널에는 asmr 먹방,일상 등 영상들을 업로드중입니다.<br>앞으로 점점 더 좋은영상 맛있는 음식들로 찾아 뵙겠습니다^^ <br>좋아요와 구독 오랜시청은 저에게 큰 힘이 됩니다♥
+											</p>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div data-inset="true" data-role="collapsible" data-mini="true" data-iconpos="right">
+								<h3>보경 Bokyoung</h3>
+								<ul data-role="listview">
+									<li>
+										<a href="https://www.youtube.com/channel/UCALl6UrYtJndCXo2p6hANPQ">
+											<img src="https://yt3.ggpht.com/ytc/AAUvwnjog5ztrYPLysF2ZilMCMPofrPdFWuGgf9J3j3dFQ=s900-c-k-c0x00ffffff-no-rj"/>
+											<h3>보경 Bokyoung</h3>
+											<p>안녕하세요~ 보경이에요 ^^<br>쿡방과 먹방 일상브이로그를 공유합니다.
+											</p>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div data-inset="true" data-role="collapsible" data-mini="true" data-iconpos="right">
+								<h3>공대생 변승주 DS</h3>
+								<ul data-role="listview">
+									<li>
+										<a href="https://www.youtube.com/channel/UChE5nZAIhWS5vYTRjsUgRpQ">
+											<img src="https://yt3.ggpht.com/ytc/AAUvwnjm0lqNKweJaFqxvIBK4mYkpdcoQlug7dS1e1Hm=s900-c-k-c0x00ffffff-no-rj"/>
+											<h3>공대생 변승주 DS</h3>
+											<p>똥싸는 시간을 보다 더 즐겁게
+												<br>똥탐엔 역시 공대생 채널
+											</p>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div data-inset="true" data-role="collapsible" data-mini="true" data-iconpos="right">
+								<h3>엔조이커플enjoycouple</h3>
+								<ul data-role="listview">
+									<li>
+										<a href="https://www.youtube.com/channel/UC-i2ywiuvjvpTy2zW-tXfkw">
+											<img src="https://yt3.ggpht.com/ytc/AAUvwnj2iblKulSvcrid4O9ZVzXO-1EJapK2-I2n_a7Nlw=s900-c-k-c0x00ffffff-no-rj"/>
+											<h3>엔조이커플enjoycouple</h3>
+											<p>재생목록을 클릭하시면 엔조이커플 영상을 보다 쉽게 정주행하실 수 있습니다^^<br>개그맨 손민수 & 임라라 연애, 개그, 먹방, 데이트 영상<br>대한민국 보다 많은 사람들이 눈치보지 말고 비교하지 말고 즐기면서 사랑하는 그날까지 열...
+											</p>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div data-inset="true" data-role="collapsible" data-mini="true" data-iconpos="right">
+								<h3>애정 Aejeong</h3>
+								<ul data-role="listview">
+									<li>
+										<a href="https://www.youtube.com/channel/UCJDDUcBtJYT1yRX9pR4Q0ug">
+											<img src="https://yt3.ggpht.com/ytc/AAUvwnhfRqKuj3KhMVoDZh3U237UtM9rs--Gk-G-vWBo=s900-c-k-c0x00ffffff-no-rj"/>
+											<h3>애정 Aejeong</h3>
+											<p>	늘 감사합니다.^^♥<br>Enjoy the video and have fun.<br>thank you :D
+											</p>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div data-inset="true" data-role="collapsible" data-mini="true" data-iconpos="right">
+								<h3>흥삼이네 Heungsam's Family</h3>
+								<ul data-role="listview">
+									<li>
+										<a href="https://www.youtube.com/channel/UC5XuQ-xiWAB6f-qu6gJMDBQ">
+											<img src="https://yt3.ggpht.com/ytc/AAUvwngbVGW70AygxRySUNwh4emEvs4ShnM3QxFpFZ1vQg=s900-c-k-c0x00ffffff-no-rj"/>
+											<h3>흥삼이네 Heungsam's Family</h3>
+											<p>옥탑에서 요리&먹방을 진행하는 [흥삼]입니다.<br>부족한 요리실력으로 뭐든 만들어 먹는 쿡방!!<br>야외 맛집탐방 & 대용량 도전먹방까지~
+											</p>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div data-inset="true" data-role="collapsible" data-mini="true" data-iconpos="right">
+								<h3>입짧은햇님</h3>
+								<ul data-role="listview">
+									<li>
+										<a href="https://www.youtube.com/channel/UC-Bsa2ivAGWq7bsSPrPGFVA">
+											<img src="https://yt3.ggpht.com/ytc/AAUvwniWXMKo2rp8gnwibO9YL48TaaaJ_Cf-gWm3Mscw4g=s900-c-k-c0x00ffffff-no-rj"/>
+											<h3>입짧은햇님</h3>
+											<p>Share your videos with friends, family, and the world
+											</p>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div data-inset="true" data-role="collapsible" data-mini="true" data-iconpos="right" >
+								<h3>Yasigi Muk-Bang 야식이</h3>
+								<ul data-role="listview">
+									<li>
+										<a href="https://www.youtube.com/channel/UCsNVs68quFJMaDmR6frfUsQ">
+											<img src="https://yt3.ggpht.com/ytc/AAUvwngNwBPcF4-7aP0YO3FDUdqMOT-fqmqS3u3rhMs8Wg=s900-c-k-c0x00ffffff-no-rj"/>
+											<h3>Yasigi Muk-Bang 야식이</h3>
+											<p>Hello. It's Yasigi.Thanks for whatching Yasigi.<br>Please be happy always. Eat delicious foods a lot as well.
+											</p>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div  data-inset="true" data-role="collapsible" data-mini="true" data-iconpos="right">
+								<h3>heebab 히밥</h3>
+								<ul data-role="listview">
+									<li>
+										<a href="https://www.youtube.com/channel/UCA6KBBX8cLwYZNepxlE_7SA">
+											<img src="https://yt3.ggpht.com/ytc/AAUvwngyroyF3uuiAzfzCYbEJMVsZt1sqMAHblnQAbA_5Q=s900-c-k-c0x00ffffff-no-rj"/>
+											<h3>heebab 히밥</h3>
+											<p>
+												Eating is the symbol of life. Hibab's eating show YouTube!<br>I'm looking for various kinds of challenge mukbangs<br> and various kinds of food in the world. 🥳<br>
+											</p>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</ul>		
+				</div>
+			</div>
+		</article>			
+		<footer data-role="footer" data-position="fixed" style="background-image:url(bg/intro.png)">
+			Copyright ⓒ 2021 Eating
+		</footer>
+	</section>
+</body>
+</html>

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EATING 이팅</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="jquery.mobile.inline-svg-1.4.5.min.css">
+
+	<script src="jquery-1.11.3.min.js"></script>
+	<script src="jquery.mobile-1.4.5.js"></script>
+
+	<style type="text/css">
+	li a {
+		background-image: url(bg/button.png);
+	}
+	.ui-btn-active{
+		background-image:url(bg/btn_color.png);
+		color: black !important;
+	}
+</style>
+
+<script src="like.js"></script>
+<script src="likelist.js"></script>
+
+<link rel="stylesheet" type="text/css" href="font.css">
+<script src="slide_banner1.js"></script>
+<script src="slide_banner2.js"></script>
+<link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+
+</head>
+<body onload="init(); loadlist();">
+	<section data-role="page" align="center" style="background-color:#FFF9E7;">
+		<header data-role="header" style="background-image:url(bg/intro.png)">
+			<a href="#navigation" data-rel="popup" data-position-to="window" data-transition="slidedown" style="background-image:url(bg/choice.png)"><br><br><br><img src="icon/menu.png" height="50px"><br><br><br></a>
+			<h1><br><a href="main.html" data-ajax='false'><img src="char/logo.png" height="120px"></a></h1>
+			<a href="#like" data-rel="popup" data-position-to="window" data-transition="flow" style="background-image:url(bg/choice.png)"><br><br><br><img src="icon/like.png" height="50px"><br><br><br></a>
+		</header>
+		<article data-role="popup">
+			<div data-role="popup" data-overlay-theme="b" id="navigation" class="ui-content" style="background-image:url(bg/button.png);">
+				<div data-role="header" style="background-image:url(bg/button.png);">
+					<h1>EATING</h1>
+					<a href="#" data-rel="back" data-iconpos="notext" data-icon="delete" class="ui-btn-right"></a>
+				</div>
+				<div data-role="content" style="background-image:url(bg/button.png);">
+					<div data-inset="true" data-role="collapsible" data-iconpos="none" data-collapsed="false">
+						<h3>MENU</h3>
+						<ul class="uu" data-role="listview" data-filter="true" data-filter-placeholder="검색어를 입력하세요">
+							<li data-role="list-divider" style="background-color: #ffdf80;">GO</li>
+							<li data-filtertext="명동교자 송죽장 킷사서울 윕성수 플러피도넛"><a href="seoul.html" data-ajax='false' style="background-color:#FFF9E7;">서울</a></li>
+							<li data-filtertext="기린왕곱창 도마29 양자강 다이닝슬로우라이프 게이블루프커피"><a href="daegu.html" data-ajax='false' style="background-color:#FFF9E7;">대구</a></li>
+							<li data-filtertext="토담바다장어 해목 복성반점 매드독스 웨이브온커피"><a href="busan.html" data-ajax='false' style="background-color:#FFF9E7;">부산</a></li>
+							<li data-filtertext="세진회관 가츠연 아중각 가마 그날의온도"><a href="jeonju.html" data-ajax='false' style="background-color:#FFF9E7;">전주</a></li>
+							<li data-filtertext="정동진초당순두부 대관령다이닝스시 연곡반점 강릉수제버거 카페툇마루"><a href="gangneung.html" data-ajax='false' style="background-color:#FFF9E7;">강릉</a></li>
+							<li data-filtertext="목스키친 고쿠텐 섬소나이 칠돈가 하이엔드제주"><a href="jeju.html" data-ajax='false' style="background-color:#FFF9E7;">제주</a></li>
+							<li data-role="list-divider" style="background-color: #ffdf80;">DO</li>
+							<li style="background-color:#ffecb3;"><b>상황별</b></li>
+							<li data-filtertext="조개술찜 갈릭 간장치킨 소고기 간장떡볶이 차돌박이라면 매콤 순대볶음"><a href="midnight_snack.html" data-ajax='false' style="background-color:#FFF9E7;">야식</a></li>
+							<li data-filtertext="라면죽 김치볶음밥 짜파구리 뚝배기치즈밥 김치스팸마요 덮밥"><a href="single_meal.html" data-ajax='false' style="background-color:#FFF9E7;">자취 간편식</a></li>
+							<li data-filtertext="쭈꾸미 샤브샤브 훈제오리 무쌈말이 밀푀유나베 돼지갈비찜 연어 크림치즈롤"><a href="party.html" data-ajax='false' style="background-color:#FFF9E7;">손님 초대</a></li>
+							<li data-filtertext="명란두부찌개 전찌개 진주땡초김밥 김치 만두전골 당면계란만두"><a href="leftover_food.html" data-ajax='false' style="background-color:#FFF9E7;">냉장고 털이</a></li>
+							<li data-filtertext="레몬드레싱 연어샐러드 단호박 에그슬럿 무화과 그래놀라 요거트 렌틸콩 수란 샐러드 월남쌈"><a href="diet.html" data-ajax='false' style="background-color:#FFF9E7;">다이어트</a></li>
+							<li style="background-color:#ffecb3;"><b>국가별</b></li>
+							<li data-filtertext="프랑스 라타투이 이탈리아 라자냐 터키 케밥 인도 탄두리치킨 중국 마라탕 베트남 분짜 호주 미트파이 일본 스키야키 미국 시카고피자 멕시코 파히타"><a href="country.html" data-ajax='false' style="background-color:#FFF9E7;">지도 선택</a></li><!--국가별-->
+							<li data-role="list-divider" style="background-color: #ffdf80;">WATCH</li>
+							<li><a href="ranking.html" data-ajax='false' style="background-color:#FFF9E7;">순위별</a></li>
+							<li data-filtertext="김치찜 톳전복밥 차돌된장찌개 로제 찜닭 떡볶이 로제찜닭 로제떡볶이 비빔밥 갈비찜 마라탕 짜장면 군만두 차돌짬뽕 크림새우 마라샹궈 탕수육 초밥 우동 새우튀김 라멘 텐동 규카츠 오므라이스 타코야끼 새우크림파스타 통베이컨 시카고 딥디쉬 치즈폭탄 피자 로제리조또 해쉬브라운 베이컨크림파스타 파스타 감바스 빠네 크림파스타 모짜렐라치즈 새우 베이컨"><a href="type.html" data-ajax='false' style="background-color:#FFF9E7;">종류별</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div data-role="popup" data-overlay-theme="b" id="like" align="center" style="min-width:300px; ">
+				<div id="list" style="width:100%; align-content: center;">
+					<table style="border:10px dashed #ffcc66; black; background-color: #FEE68B; width: 100%; text-align: center; font-family:'Stylish', sans-serif; font-size: 27px; font-weight: 600; color: #9E8600;" id="likes"></table>
+				</div>
+			</div>
+		</article>
+		<article data-role="content">
+			<div class="ui-grid-solo">
+				<div align="center">
+					<div class="fotorama">
+						<img src="https://scontent-ssn1-1.xx.fbcdn.net/v/t1.6435-9/194999131_612046143089515_5736334780730230647_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=730e14&_nc_ohc=u_PGDeocZroAX9WESg-&_nc_ht=scontent-ssn1-1.xx&oh=c2cd39e59fa45321bc9434f1573333b0&oe=60E23587" width="100%"/>
+						<img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20210305_5%2F1614911742174Fry9k_JPEG%2Fupload_15af8d2ed17452bbbb28c07e8f2be01d.jpeg"/>
+						<img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20210220_255%2F1613804572875TFTMX_JPEG%2Fupload_1b2ffead39e6d2b260f43cda15f4bee5.jpg/">
+						<img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20210204_44%2F1612413049863ifCgS_JPEG%2Fupload_8940fe42223e22feb3845656369f8443.jpeg/">
+						<img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20201028_287%2F16038534070624W6Qp_JPEG%2Fupload_6e6b2782b3a51e06f9a3f977f9dbc033.jpg/">
+						<img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAyMjRfMTA3%2FMDAxNjE0MTI5ODI0MDE5.ROTEPaMgq3cWC1QZy7Gv3RoyxLUy8KqFm_S18EJBKuMg.RWGq66OCrnR42dN-s7kG5WfNQVK2EK_7lXZcxZ0o0b0g.JPEG.inpce%2F20210224%25A3%25DF101755.jpg"/>
+						<img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fimage.nmv.naver.net%2Fblog_2021_05_12_1009%2Ff5826425-b2e5-11eb-aa58-505dac8c37f3_01.jpg"/>
+						<img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA1MTJfMjA1%2FMDAxNjIwNzk3ODA5NTIy.h9a04DgOUUZofbtXBYQUNcWdySbRu8e66zfIgF8EOB4g._UKuCDq4mI0FaI-azarDU5sHVZooqzfUdB4R2oJ5ojQg.JPEG.30338%2FR0051022.JPG"/>
+						<img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA2MDJfNDMg%2FMDAxNjIyNjE4MzUzMzQ4.NoRMdktz9wr8T1Zi0YmlMcC2ytqym_TaGqbshfs_jYUg.y0zIeMVr8mKK-a6W2GrnTR0dZZF767d4z-dD_zKMPcog.JPEG.qhgk21%2FKakaoTalk_20210602_094149141_17.jpg/">
+					</div>
+				</div>
+				<div>
+					<p style="font-family:'Stylish', sans-serif; font-size: 37px; font-weight: 600; color: #6B8609;">목 스 키 친</p>
+				</div>
+			</div>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<div class="ui-bar ui-bar-a" style="background-image:url(bg/table.png)">
+						<button data-icon="phone" onclick="document.location.href='tel:0507-1354-0828'" style="background-image:url(bg/button.png)">0507-1354-0828</button>
+					</div>
+				</div>
+				<div class="ui-block-b">
+					<div class="ui-bar ui-bar-a" style="background-image:url(bg/table.png)">
+						<button data-iconpos="right" data-icon="home" onclick="location.href='https://www.instagram.com/jeju_is_always_good/?utm_medium=copy_link'" style="background-image:url(bg/button.png)">Homepage</button>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div data-role="navbar" data-iconpos="bottom">
+				<ul>
+					<li><a href="#menu" data-icon="grid">MENU</a></li>
+					<li><a href="#review" data-icon="star">REVIEW</a></li>
+					<li><a href="#route" data-icon="location">HowToGo</a></li>
+				</ul>
+			</div>
+			<div data-role="content">
+				<table style="width: 100%;">
+					<tr>
+						<td rowspan="3" width="37%">
+							<img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAyMjVfMTQ4%2FMDAxNTgyNTg0OTExMTAz.bydlZ6l40faawkdvFp8Azo1GPZb9OiSUVcZBoAsOZdMg.QO3guw8Z3mBvJdVlpSGEieGOgcCoFmICT2GtELQtnRAg.JPEG.m0w95%2F9.jpg" style="border-radius: 30px; border: 3px solid black; width:100%;" />
+						</td>
+						<td height="15%"></td>
+					</tr>
+					<tr>
+						<td style="font-family: 'Nanum Pen Script', sans-serif; font-size: 33px; text-align: left; color: #858F00;">&nbsp;&nbsp;제주많은 필라프</td>
+					</tr>
+					<tr>
+						<td style="font-family: 'Nanum Pen Script', sans-serif; font-size: 27px; text-align: left; color: #EA202C">&nbsp;&nbsp;&nbsp;17,000원</td>
+					</tr>
+				</table>
+				<br>
+				<table style="width: 100%;">
+					<tr>
+						<td rowspan="3" width="37%">
+							<img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTA1MThfODQg%2FMDAxNTU4MTcwNDk2MzAx.ZBzeyIF33R_N1wgetCPURPkeQn0m39TcJolOwh6ITMIg.HxyyTwvkqnMnmEK_wivuNwPoovhgvBIZcyWsJ2cACI8g.JPEG.charm27es%2FIMG_5242.JPG" style="border-radius: 30px; border: 3px solid black; width:100%;" />
+						</td>
+						<td height="15%"></td>
+					</tr>
+					<tr>
+						<td style="font-family: 'Nanum Pen Script', sans-serif; font-size: 33px; text-align: left; color: #858F00;">&nbsp;&nbsp;제주닮은 리조또</td>
+					</tr>
+					<tr>
+						<td style="font-family: 'Nanum Pen Script', sans-serif; font-size: 27px; text-align: left; color: #EA202C">&nbsp;&nbsp;&nbsp;17,000원</td>
+					</tr>
+				</table>
+				<br>
+				<table style="width: 100%;">
+					<tr>
+						<td rowspan="3" width="37%">
+							<img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAyMjVfMTY1%2FMDAxNTgyNTg0ODU1MTc4.AAEs_7ZK-0E1kZ0fU6X2vWAsVublO9qhxbr52JQeLbMg.b-zQEPS6RRpd5ftEAVT68o3K2nZp2jXPaDuXB9MOIUcg.JPEG.m0w95%2F8.jpg" style="border-radius: 30px; border: 3px solid black; width:100%;" />
+						</td>
+						<td height="15%"></td>
+					</tr>
+					<tr>
+						<td style="font-family: 'Nanum Pen Script', sans-serif; font-size: 33px; text-align: left; color: #858F00;">&nbsp;&nbsp;그대와 제주라멘</td>
+					</tr>
+					<tr>
+						<td style="font-family: 'Nanum Pen Script', sans-serif; font-size: 27px; text-align: left; color: #EA202C">&nbsp;&nbsp;&nbsp;12,000원</td>
+					</tr>
+				</table>
+				<br>
+				<table style="width: 100%;">
+					<tr>
+						<td rowspan="3" width="37%">
+							<img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210415_183%2F1618473870412tukaF_JPEG%2F1c4fvPBy_8qlFyDsqhTJHSUw.jpeg.jpg" style="border-radius: 30px; border: 3px solid black; width:100%;" />
+						</td>
+						<td height="15%"></td>
+					</tr>
+					<tr>
+						<td style="font-family: 'Nanum Pen Script', sans-serif; font-size: 33px; text-align: left; color: #858F00;">&nbsp;&nbsp;멘보샤</td>
+					</tr>
+					<tr>
+						<td style="font-family: 'Nanum Pen Script', sans-serif; font-size: 27px; text-align: left; color: #EA202C">&nbsp;&nbsp;&nbsp;8,000원</td>
+					</tr>
+				</table>
+				<ul data-inset="true" data-role="listview">
+					<li>
+						<a href="https://m.place.naver.com/restaurant/1974675003/menu/list">
+							<img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210415_99%2F16184737433455FmvX_JPEG%2FPoC3H6mF4yp65Lptl-twroM9.jpg" width="80px" />
+							<h3 style="color: #579B27;">메뉴판</h3>
+							<p style="color: #375F1B;">❤ 목스키친 메뉴판 더보기 ❤</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<ul data-inset="true" data-role="listview">
+				<li data-role="list-divider">Blog Review</li>
+				<li>
+					<a href="https://blog.naver.com/charming_wd/222372146958">
+						<img src="https://s3-ap-northeast-1.amazonaws.com/dcreviewsresized/300_300_20200801091727004_photo_3ae87db83d02.jpg" style="width: 100px; height: 80px;padding: 7px;" />
+						<h3>제주 표선 맛집 목스키친 서귀포 맛집 추천</h3>
+						<p>
+							안녕하세요 매력쟤예요 서귀포 맛집으로 유명한<br>목스키친 제주 가시는 분들 무조건 추천해요 너무 맛있어서...
+						</p>
+					</a>
+				</li>
+				<li>
+					<a href="https://blog.naver.com/PostView.nhn?blogId=offspring84&logNo=222372197651&redirect=Dlog&widgetTypeCall=true">
+						<img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20210412_93%2F1618197920957gX1M5_JPEG%2Fupload_e4ab837dca389cd866da652cc4397937.jpeg" style="width: 100px; height: 80px;padding: 7px;" />
+						<h3>제주 표선 맛집 - 목스키친 : 제주 많은 필라프와 제주 닮은 리조또</h3>
+						<p>
+							제주 표선에 맛집이 있다고 해서 방문해보았다<br>우선 위치가 예술이다 가게 앞으로 보이는 바다뷰가 모든...
+						</p>
+					</a>
+				</li>
+				<li>
+					<a href="https://blog.naver.com/PostView.nhn?blogId=chocojkmm&logNo=222371173690&redirect=Dlog&widgetTypeCall=true">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzjp1HsJA4FDnvJMOpKCF_T_D15TLjYjmhOg&usqp=CAU" style="width: 100px; height: 80px;padding: 7px;" />
+						<h3>[표선] 서귀포 맛집 바닷가 제주 해물라면, 목스키친.</h3>
+						<p>
+							서귀포 맛집 제주 해물라면 목스키친. 이곳도 심쿵<br>외할미 제주 한달살기 하는 집과 아주 가까운 곳. 여기...
+						</p>
+					</a>
+				</li>
+				<li>
+					<a href="https://blog.naver.com/PostView.nhn?blogId=chocobinu215&logNo=222357062025&redirect=Dlog&widgetTypeCall=true">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb_vjFPh20TPOqvaqarfB1UDdRbP15Zq-5EA&usqp=CAU" style="width: 100px; height: 80px;padding: 7px;" />
+						<h3>제주 표선 맛집 : 제주 해물라면 '목스키친'</h3>
+						<p>
+							제주 표선 맛집 [목스키친] 제주도 여행 벌써 4일차 ㅠㅠ<br>역시 놀기만 하면 시간이 순삭이네요 ㅎㅎ 4일차 저녁은...
+						</p>
+					</a>
+				</li>
+				<li>
+					<a href="https://blog.naver.com/PostView.nhn?blogId=viviene90&logNo=222370661809&redirect=Dlog&widgetTypeCall=true">
+						<img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20210319_93%2F1616159100576jclRG_JPEG%2Fupload_323b62c0181e689846762c76489bc006.jpeg" style="width: 100px; height: 80px;padding: 7px;" />
+						<h3>제주 표선 맛집, 서귀포 맛집 - 맛과 뷰가 대박인 '목스키친'</h3>
+						<p>
+							안녕하세요 ~ 오늘은 이번 제주여행에서 진짜 손에<br>꼽을만한 뷰 맛집 식당을 소개해드리려고해욥! 제주 올...
+						</p>
+					</a>
+				</li>
+				<li>
+					<a href="https://blog.naver.com/PostView.nhn?blogId=30338&logNo=222349052028&redirect=Dlog&widgetTypeCall=true">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxoZ9ZHwJE-N6FrcZM6f-mrjPJNE4aTnJt-w&usqp=CAU" style="width: 100px; height: 80px;padding: 7px;" />
+						<h3>제주 표선 맛집 목스키친 맛난 음식 물멍의 끝</h3>
+						<p>
+							제주도 여행 하루는 날씨가 너무 화창했던 반면,<br>그다음날은 비바람이 휘몰아치는 최악의 날씨였어요. 숙소...
+						</p>
+					</a>
+				</li>
+				<li>
+					<a href="https://blog.naver.com/PostView.nhn?blogId=rrsnow&logNo=222325506380&redirect=Dlog&widgetTypeCall=true">
+						<img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20210305_5%2F1614911742174Fry9k_JPEG%2Fupload_15af8d2ed17452bbbb28c07e8f2be01d.jpeg" style="width: 100px; height: 80px;padding: 7px;" />
+						<h3>제주 표선 맛집 목스키친에서 해물라면 흡입</h3>
+						<p>
+							안녕하세요 밍디에요. 제주여행 3일차에 다녀왔던<br>오션뷰 맛집을 소개해 드릴게요. #목스키친 이라고 올레...
+						</p>
+					</a>
+				</li>
+			</ul>
+			<br>
+			<div data-role="content">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.4710165694514!2d126.7816194151956!3d33.30649948081539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350d09dc0566a3b5%3A0xea66495a2de2c9b3!2zbW9rc2tpdGNoZW4t66qp7Iqk7YKk7Lmc!5e0!3m2!1sko!2skr!4v1622807893224!5m2!1sko!2skr" style="border: 3px dashed #B2D732; width: 100%; height: 370px;" allowfullscreen="" loading="lazy"></iframe>
+			</div>
+			
+		</article>
+		<footer data-role="footer" data-position="fixed" style="background-image:url(bg/intro.png)">
+			Copyright ⓒ 2021 Eating
+		</footer>
+	</section>
+
+	<section data-role="page" id="menu" align="center" style="background-color:#FFF9E7;">
+		<header data-role="header" style="background-image:url(bg/intro.png)">
+			<a data-rel="back" data-direction="reverse" data-iconpos="notext" style="background-image:url(bg/choice.png)"><img src="icon/back.png" height="27px"></a>
+			<h1><a href="jeju_western.html" data-ajax='false' style="font-family:'Stylish', sans-serif; font-size: 27px; font-weight: 600; color: #6B8609; text-decoration-line: none;">목 스 키 친</a></h1>
+			<a href="#navigation_menu" data-rel="popup" data-position-to="window" data-transition="flip" style="background-image:url(bg/choice.png)"><img src="icon/menu.png" height="30px"></a>
+		</header>
+		<article data-role="popup">
+			<div data-role="popup" data-overlay-theme="b" id="navigation_menu" class="ui-content" style="background-image:url(bg/button.png);">
+				<div data-role="header" style="background-image:url(bg/button.png);">
+					<h1>EATING</h1>
+					<a href="#" data-rel="back" data-iconpos="notext" data-icon="delete" class="ui-btn-right"></a>
+				</div>
+				<div data-role="content" style="background-image:url(bg/button.png);">
+					<div data-inset="true" data-role="collapsible" data-iconpos="none" data-collapsed="false">
+						<h3>MENU</h3>
+						<ul class="uu" data-role="listview" data-filter="true" data-filter-placeholder="검색어를 입력하세요">
+							<li data-role="list-divider" style="background-color: #ffdf80;">GO</li>
+							<li data-filtertext="명동교자 송죽장 킷사서울 윕성수 플러피도넛"><a href="seoul.html" data-ajax='false' style="background-color:#FFF9E7;">서울</a></li>
+							<li data-filtertext="기린왕곱창 도마29 양자강 다이닝슬로우라이프 게이블루프커피"><a href="daegu.html" data-ajax='false' style="background-color:#FFF9E7;">대구</a></li>
+							<li data-filtertext="토담바다장어 해목 복성반점 매드독스 웨이브온커피"><a href="busan.html" data-ajax='false' style="background-color:#FFF9E7;">부산</a></li>
+							<li data-filtertext="세진회관 가츠연 아중각 가마 그날의온도"><a href="jeonju.html" data-ajax='false' style="background-color:#FFF9E7;">전주</a></li>
+							<li data-filtertext="정동진초당순두부 대관령다이닝스시 연곡반점 강릉수제버거 카페툇마루"><a href="gangneung.html" data-ajax='false' style="background-color:#FFF9E7;">강릉</a></li>
+							<li data-filtertext="목스키친 고쿠텐 섬소나이 칠돈가 하이엔드제주"><a href="jeju.html" data-ajax='false' style="background-color:#FFF9E7;">제주</a></li>
+							<li data-role="list-divider" style="background-color: #ffdf80;">DO</li>
+							<li style="background-color:#ffecb3;"><b>상황별</b></li>
+							<li data-filtertext="조개술찜 갈릭 간장치킨 소고기 간장떡볶이 차돌박이라면 매콤 순대볶음"><a href="midnight_snack.html" data-ajax='false' style="background-color:#FFF9E7;">야식</a></li>
+							<li data-filtertext="라면죽 김치볶음밥 짜파구리 뚝배기치즈밥 김치스팸마요 덮밥"><a href="single_meal.html" data-ajax='false' style="background-color:#FFF9E7;">자취 간편식</a></li>
+							<li data-filtertext="쭈꾸미 샤브샤브 훈제오리 무쌈말이 밀푀유나베 돼지갈비찜 연어 크림치즈롤"><a href="party.html" data-ajax='false' style="background-color:#FFF9E7;">손님 초대</a></li>
+							<li data-filtertext="명란두부찌개 전찌개 진주땡초김밥 김치 만두전골 당면계란만두"><a href="leftover_food.html" data-ajax='false' style="background-color:#FFF9E7;">냉장고 털이</a></li>
+							<li data-filtertext="레몬드레싱 연어샐러드 단호박 에그슬럿 무화과 그래놀라 요거트 렌틸콩 수란 샐러드 월남쌈"><a href="diet.html" data-ajax='false' style="background-color:#FFF9E7;">다이어트</a></li>
+							<li style="background-color:#ffecb3;"><b>국가별</b></li>
+							<li data-filtertext="프랑스 라타투이 이탈리아 라자냐 터키 케밥 인도 탄두리치킨 중국 마라탕 베트남 분짜 호주 미트파이 일본 스키야키 미국 시카고피자 멕시코 파히타"><a href="country.html" data-ajax='false' style="background-color:#FFF9E7;">지도 선택</a></li><!--국가별-->
+							<li data-role="list-divider" style="background-color: #ffdf80;">WATCH</li>
+							<li><a href="ranking.html" data-ajax='false' style="background-color:#FFF9E7;">순위별</a></li>
+							<li data-filtertext="김치찜 톳전복밥 차돌된장찌개 로제 찜닭 떡볶이 로제찜닭 로제떡볶이 비빔밥 갈비찜 마라탕 짜장면 군만두 차돌짬뽕 크림새우 마라샹궈 탕수육 초밥 우동 새우튀김 라멘 텐동 규카츠 오므라이스 타코야끼 새우크림파스타 통베이컨 시카고 딥디쉬 치즈폭탄 피자 로제리조또 해쉬브라운 베이컨크림파스타 파스타 감바스 빠네 크림파스타 모짜렐라치즈 새우 베이컨"><a href="type.html" data-ajax='false' style="background-color:#FFF9E7;">종류별</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</article>
+		<article data-role="content">
+			<div data-role="navbar" data-iconpos="bottom">
+				<ul>
+					<li><a href="#menu" data-icon="grid" class="ui-btn-active ui-state-persist">MENU</a></li>
+					<li><a href="#review" data-icon="star">REVIEW</a></li>
+					<li><a href="#route" data-icon="location">HowToGo</a></li>
+				</ul>
+			</div>
+			<br>
+			<table style="width: 100%;">
+				<tr>
+					<td rowspan="3" width="37%">
+						<img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAyMjVfMTQ4%2FMDAxNTgyNTg0OTExMTAz.bydlZ6l40faawkdvFp8Azo1GPZb9OiSUVcZBoAsOZdMg.QO3guw8Z3mBvJdVlpSGEieGOgcCoFmICT2GtELQtnRAg.JPEG.m0w95%2F9.jpg" style="border-radius: 30px; border: 3px solid black; width:100%;" />
+					</td>
+					<td height="15%"></td>
+				</tr>
+				<tr>
+					<td style="font-family: 'Nanum Pen Script', sans-serif; font-size: 33px; text-align: left; color: #858F00;">&nbsp;&nbsp;제주많은 필라프</td>
+				</tr>
+				<tr>
+					<td style="font-family: 'Nanum Pen Script', sans-serif; font-size: 27px; text-align: left; color: #EA202C">&nbsp;&nbsp;&nbsp;17,000원</td>
+				</tr>
+			</table>
+			<br>
+			<table style="width: 100%;">
+				<tr>
+					<td rowspan="3" width="37%">
+						<img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTA1MThfODQg%2FMDAxNTU4MTcwNDk2MzAx.ZBzeyIF33R_N1wgetCPURPkeQn0m39TcJolOwh6ITMIg.HxyyTwvkqnMnmEK_wivuNwPoovhgvBIZcyWsJ2cACI8g.JPEG.charm27es%2FIMG_5242.JPG" style="border-radius: 30px; border: 3px solid black; width:100%;" />
+					</td>
+					<td height="15%"></td>
+				</tr>
+				<tr>
+					<td style="font-family: 'Nanum Pen Script', sans-serif; font-size: 33px; text-align: left; color: #858F00;">&nbsp;&nbsp;제주닮은 리조또</td>
+				</tr>
+				<tr>
+					<td style="font-family: 'Nanum Pen Script', sans-serif; font-size: 27px; text-align: left; color: #EA202C">&nbsp;&nbsp;&nbsp;17,000원</td>
+				</tr>
+			</table>
+			<br>
+			<table style="width: 100%;">
+				<tr>
+					<td rowspan="3" width="37%">
+						<img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAyMjVfMTY1%2FMDAxNTgyNTg0ODU1MTc4.AAEs_7ZK-0E1kZ0fU6X2vWAsVublO9qhxbr52JQeLbMg.b-zQEPS6RRpd5ftEAVT68o3K2nZp2jXPaDuXB9MOIUcg.JPEG.m0w95%2F8.jpg" style="border-radius: 30px; border: 3px solid black; width:100%;" />
+					</td>
+					<td height="15%"></td>
+				</tr>
+				<tr>
+					<td style="font-family: 'Nanum Pen Script', sans-serif; font-size: 33px; text-align: left; color: #858F00;">&nbsp;&nbsp;그대와 제주라멘</td>
+				</tr>
+				<tr>
+					<td style="font-family: 'Nanum Pen Script', sans-serif; font-size: 27px; text-align: left; color: #EA202C">&nbsp;&nbsp;&nbsp;12,000원</td>
+				</tr>
+			</table>
+			<br>
+			<table style="width: 100%;">
+				<tr>
+					<td rowspan="3" width="37%">
+						<img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210415_183%2F1618473870412tukaF_JPEG%2F1c4fvPBy_8qlFyDsqhTJHSUw.jpeg.jpg" style="border-radius: 30px; border: 3px solid black; width:100%;" />
+					</td>
+					<td height="15%"></td>
+				</tr>
+				<tr>
+					<td style="font-family: 'Nanum Pen Script', sans-serif; font-size: 33px; text-align: left; color: #858F00;">&nbsp;&nbsp;멘보샤</td>
+				</tr>
+				<tr>
+					<td style="font-family: 'Nanum Pen Script', sans-serif; font-size: 27px; text-align: left; color: #EA202C">&nbsp;&nbsp;&nbsp;8,000원</td>
+				</tr>
+			</table>
+			<ul data-inset="true" data-role="listview">
+				<li>
+					<a href="https://m.place.naver.com/restaurant/1974675003/menu/list">
+						<img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210415_99%2F16184737433455FmvX_JPEG%2FPoC3H6mF4yp65Lptl-twroM9.jpg" width="80px" />
+						<h3 style="color: #579B27;">메뉴판</h3>
+						<p style="color: #375F1B;">❤ 목스키친 메뉴판 더보기 ❤</p>
+					</a>
+				</li>
+			</ul>
+			<footer data-role="footer" data-position="fixed" style="background-image:url(bg/intro.png)">
+				Copyright ⓒ 2021 Eating
+			</footer>
+		</article>
+	</section>
+
+	<section data-role="page" id="review" align="center" style="background-color:#FFF9E7;">
+		<header data-role="header" style="background-image:url(bg/intro.png)">
+			<a data-rel="back" data-direction="reverse" data-iconpos="notext" style="background-image:url(bg/choice.png)"><img src="icon/back.png" height="27px"></a>
+			<h1><a href="jeju_western.html" data-ajax='false' style="font-family:'Stylish', sans-serif; font-size: 27px; font-weight: 600; color: #6B8609; text-decoration-line: none;">목 스 키 친</a></h1>
+			<a href="#navigation_review" data-rel="popup" data-position-to="window" data-transition="flip" style="background-image:url(bg/choice.png)"><img src="icon/menu.png" height="30px"></a>
+		</header>
+		<article data-role="popup">
+			<div data-role="popup" data-overlay-theme="b" id="navigation_review" class="ui-content" style="background-image:url(bg/button.png);">
+				<div data-role="header" style="background-image:url(bg/button.png);">
+					<h1>EATING</h1>
+					<a href="#" data-rel="back" data-iconpos="notext" data-icon="delete" class="ui-btn-right"></a>
+				</div>
+				<div data-role="content" style="background-image:url(bg/button.png);">
+					<div data-inset="true" data-role="collapsible" data-iconpos="none" data-collapsed="false">
+						<h3>MENU</h3>
+						<ul class="uu" data-role="listview" data-filter="true" data-filter-placeholder="검색어를 입력하세요">
+							<li data-role="list-divider" style="background-color: #ffdf80;">GO</li>
+							<li data-filtertext="명동교자 송죽장 킷사서울 윕성수 플러피도넛"><a href="seoul.html" data-ajax='false' style="background-color:#FFF9E7;">서울</a></li>
+							<li data-filtertext="기린왕곱창 도마29 양자강 다이닝슬로우라이프 게이블루프커피"><a href="daegu.html" data-ajax='false' style="background-color:#FFF9E7;">대구</a></li>
+							<li data-filtertext="토담바다장어 해목 복성반점 매드독스 웨이브온커피"><a href="busan.html" data-ajax='false' style="background-color:#FFF9E7;">부산</a></li>
+							<li data-filtertext="세진회관 가츠연 아중각 가마 그날의온도"><a href="jeonju.html" data-ajax='false' style="background-color:#FFF9E7;">전주</a></li>
+							<li data-filtertext="정동진초당순두부 대관령다이닝스시 연곡반점 강릉수제버거 카페툇마루"><a href="gangneung.html" data-ajax='false' style="background-color:#FFF9E7;">강릉</a></li>
+							<li data-filtertext="목스키친 고쿠텐 섬소나이 칠돈가 하이엔드제주"><a href="jeju.html" data-ajax='false' style="background-color:#FFF9E7;">제주</a></li>
+							<li data-role="list-divider" style="background-color: #ffdf80;">DO</li>
+							<li style="background-color:#ffecb3;"><b>상황별</b></li>
+							<li data-filtertext="조개술찜 갈릭 간장치킨 소고기 간장떡볶이 차돌박이라면 매콤 순대볶음"><a href="midnight_snack.html" data-ajax='false' style="background-color:#FFF9E7;">야식</a></li>
+							<li data-filtertext="라면죽 김치볶음밥 짜파구리 뚝배기치즈밥 김치스팸마요 덮밥"><a href="single_meal.html" data-ajax='false' style="background-color:#FFF9E7;">자취 간편식</a></li>
+							<li data-filtertext="쭈꾸미 샤브샤브 훈제오리 무쌈말이 밀푀유나베 돼지갈비찜 연어 크림치즈롤"><a href="party.html" data-ajax='false' style="background-color:#FFF9E7;">손님 초대</a></li>
+							<li data-filtertext="명란두부찌개 전찌개 진주땡초김밥 김치 만두전골 당면계란만두"><a href="leftover_food.html" data-ajax='false' style="background-color:#FFF9E7;">냉장고 털이</a></li>
+							<li data-filtertext="레몬드레싱 연어샐러드 단호박 에그슬럿 무화과 그래놀라 요거트 렌틸콩 수란 샐러드 월남쌈"><a href="diet.html" data-ajax='false' style="background-color:#FFF9E7;">다이어트</a></li>
+							<li style="background-color:#ffecb3;"><b>국가별</b></li>
+							<li data-filtertext="프랑스 라타투이 이탈리아 라자냐 터키 케밥 인도 탄두리치킨 중국 마라탕 베트남 분짜 호주 미트파이 일본 스키야키 미국 시카고피자 멕시코 파히타"><a href="country.html" data-ajax='false' style="background-color:#FFF9E7;">지도 선택</a></li><!--국가별-->
+							<li data-role="list-divider" style="background-color: #ffdf80;">WATCH</li>
+							<li><a href="ranking.html" data-ajax='false' style="background-color:#FFF9E7;">순위별</a></li>
+							<li data-filtertext="김치찜 톳전복밥 차돌된장찌개 로제 찜닭 떡볶이 로제찜닭 로제떡볶이 비빔밥 갈비찜 마라탕 짜장면 군만두 차돌짬뽕 크림새우 마라샹궈 탕수육 초밥 우동 새우튀김 라멘 텐동 규카츠 오므라이스 타코야끼 새우크림파스타 통베이컨 시카고 딥디쉬 치즈폭탄 피자 로제리조또 해쉬브라운 베이컨크림파스타 파스타 감바스 빠네 크림파스타 모짜렐라치즈 새우 베이컨"><a href="type.html" data-ajax='false' style="background-color:#FFF9E7;">종류별</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</article>
+		<article data-role="content">
+			<div data-role="navbar" data-iconpos="bottom">
+				<ul>
+					<li><a href="#menu" data-icon="grid">MENU</a></li>
+					<li><a href="#review" data-icon="star" class="ui-btn-active ui-state-persist">REVIEW</a></li>
+					<li><a href="#route" data-icon="location">HowToGo</a></li>
+				</ul>
+			</div>
+			<br>
+			<ul data-inset="true" data-role="listview">
+				<li>
+					<a href="https://blog.naver.com/charming_wd/222372146958">
+						<img src="https://s3-ap-northeast-1.amazonaws.com/dcreviewsresized/300_300_20200801091727004_photo_3ae87db83d02.jpg" style="width: 100px; height: 80px;padding: 7px;" />
+						<h3>제주 표선 맛집 목스키친 서귀포 맛집 추천</h3>
+						<p>
+							안녕하세요 매력쟤예요 서귀포 맛집으로 유명한<br>목스키친 제주 가시는 분들 무조건 추천해요 너무 맛있어서...
+						</p>
+					</a>
+				</li>
+				<br>
+				<li>
+					<a href="https://blog.naver.com/PostView.nhn?blogId=offspring84&logNo=222372197651&redirect=Dlog&widgetTypeCall=true">
+						<img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20210412_93%2F1618197920957gX1M5_JPEG%2Fupload_e4ab837dca389cd866da652cc4397937.jpeg" style="width: 100px; height: 80px;padding: 7px;" />
+						<h3>제주 표선 맛집 - 목스키친 : 제주 많은 필라프와 제주 닮은 리조또</h3>
+						<p>
+							제주 표선에 맛집이 있다고 해서 방문해보았다<br>우선 위치가 예술이다 가게 앞으로 보이는 바다뷰가 모든...
+						</p>
+					</a>
+				</li>
+				<br>
+				<li>
+					<a href="https://blog.naver.com/PostView.nhn?blogId=chocojkmm&logNo=222371173690&redirect=Dlog&widgetTypeCall=true">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzjp1HsJA4FDnvJMOpKCF_T_D15TLjYjmhOg&usqp=CAU" style="width: 100px; height: 80px;padding: 7px;" />
+						<h3>[표선] 서귀포 맛집 바닷가 제주 해물라면, 목스키친.</h3>
+						<p>
+							서귀포 맛집 제주 해물라면 목스키친. 이곳도 심쿵<br>외할미 제주 한달살기 하는 집과 아주 가까운 곳. 여기...
+						</p>
+					</a>
+				</li>
+				<br>
+				<li>
+					<a href="https://blog.naver.com/PostView.nhn?blogId=chocobinu215&logNo=222357062025&redirect=Dlog&widgetTypeCall=true">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb_vjFPh20TPOqvaqarfB1UDdRbP15Zq-5EA&usqp=CAU" style="width: 100px; height: 80px;padding: 7px;" />
+						<h3>제주 표선 맛집 : 제주 해물라면 '목스키친'</h3>
+						<p>
+							제주 표선 맛집 [목스키친] 제주도 여행 벌써 4일차 ㅠㅠ<br>역시 놀기만 하면 시간이 순삭이네요 ㅎㅎ 4일차 저녁은...
+						</p>
+					</a>
+				</li>
+				<br>
+				<li>
+					<a href="https://blog.naver.com/PostView.nhn?blogId=viviene90&logNo=222370661809&redirect=Dlog&widgetTypeCall=true">
+						<img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20210319_93%2F1616159100576jclRG_JPEG%2Fupload_323b62c0181e689846762c76489bc006.jpeg" style="width: 100px; height: 80px;padding: 7px;" />
+						<h3>제주 표선 맛집, 서귀포 맛집 - 맛과 뷰가 대박인 '목스키친'</h3>
+						<p>
+							안녕하세요 ~ 오늘은 이번 제주여행에서 진짜 손에<br>꼽을만한 뷰 맛집 식당을 소개해드리려고해욥! 제주 올...
+						</p>
+					</a>
+				</li>
+				<br>
+				<li>
+					<a href="https://blog.naver.com/PostView.nhn?blogId=30338&logNo=222349052028&redirect=Dlog&widgetTypeCall=true">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxoZ9ZHwJE-N6FrcZM6f-mrjPJNE4aTnJt-w&usqp=CAU" style="width: 100px; height: 80px;padding: 7px;" />
+						<h3>제주 표선 맛집 목스키친 맛난 음식 물멍의 끝</h3>
+						<p>
+							제주도 여행 하루는 날씨가 너무 화창했던 반면,<br>그다음날은 비바람이 휘몰아치는 최악의 날씨였어요. 숙소...
+						</p>
+					</a>
+				</li>
+				<br>
+				<li>
+					<a href="https://blog.naver.com/PostView.nhn?blogId=rrsnow&logNo=222325506380&redirect=Dlog&widgetTypeCall=true">
+						<img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20210305_5%2F1614911742174Fry9k_JPEG%2Fupload_15af8d2ed17452bbbb28c07e8f2be01d.jpeg" style="width: 100px; height: 80px;padding: 7px;" />
+						<h3>제주 표선 맛집 목스키친에서 해물라면 흡입</h3>
+						<p>
+							안녕하세요 밍디에요. 제주여행 3일차에 다녀왔던<br>오션뷰 맛집을 소개해 드릴게요. #목스키친 이라고 올레...
+						</p>
+					</a>
+				</li>
+			</ul>
+			<footer data-role="footer" data-position="fixed" style="background-image:url(bg/intro.png)">
+				Copyright ⓒ 2021 Eating
+			</footer>
+		</article>
+	</section>
+
+	<section data-role="page" id="route" align="center" style="background-color:#FFF9E7;">
+		<header data-role="header" style="background-image:url(bg/intro.png)">
+			<a data-rel="back" data-direction="reverse" data-iconpos="notext" style="background-image:url(bg/choice.png)"><img src="icon/back.png" height="27px"></a>
+			<h1><a href="jeju_western.html" data-ajax='false' style="font-family:'Stylish', sans-serif; font-size: 27px; font-weight: 600; color: #6B8609; text-decoration-line: none;">목 스 키 친</a></h1>
+			<a href="#navigation_route" data-rel="popup" data-position-to="window" data-transition="flip" style="background-image:url(bg/choice.png)"><img src="icon/menu.png" height="30px"></a>
+		</header>
+		<article data-role="popup">
+			<div data-role="popup" data-overlay-theme="b" id="navigation_route" class="ui-content" style="background-image:url(bg/button.png);">
+				<div data-role="header" style="background-image:url(bg/button.png);">
+					<h1>EATING</h1>
+					<a href="#" data-rel="back" data-iconpos="notext" data-icon="delete" class="ui-btn-right"></a>
+				</div>
+				<div data-role="content" style="background-image:url(bg/button.png);">
+					<div data-inset="true" data-role="collapsible" data-iconpos="none" data-collapsed="false">
+						<h3>MENU</h3>
+						<ul class="uu" data-role="listview" data-filter="true" data-filter-placeholder="검색어를 입력하세요">
+							<li data-role="list-divider" style="background-color: #ffdf80;">GO</li>
+							<li data-filtertext="명동교자 송죽장 킷사서울 윕성수 플러피도넛"><a href="seoul.html" data-ajax='false' style="background-color:#FFF9E7;">서울</a></li>
+							<li data-filtertext="기린왕곱창 도마29 양자강 다이닝슬로우라이프 게이블루프커피"><a href="daegu.html" data-ajax='false' style="background-color:#FFF9E7;">대구</a></li>
+							<li data-filtertext="토담바다장어 해목 복성반점 매드독스 웨이브온커피"><a href="busan.html" data-ajax='false' style="background-color:#FFF9E7;">부산</a></li>
+							<li data-filtertext="세진회관 가츠연 아중각 가마 그날의온도"><a href="jeonju.html" data-ajax='false' style="background-color:#FFF9E7;">전주</a></li>
+							<li data-filtertext="정동진초당순두부 대관령다이닝스시 연곡반점 강릉수제버거 카페툇마루"><a href="gangneung.html" data-ajax='false' style="background-color:#FFF9E7;">강릉</a></li>
+							<li data-filtertext="목스키친 고쿠텐 섬소나이 칠돈가 하이엔드제주"><a href="jeju.html" data-ajax='false' style="background-color:#FFF9E7;">제주</a></li>
+							<li data-role="list-divider" style="background-color: #ffdf80;">DO</li>
+							<li style="background-color:#ffecb3;"><b>상황별</b></li>
+							<li data-filtertext="조개술찜 갈릭 간장치킨 소고기 간장떡볶이 차돌박이라면 매콤 순대볶음"><a href="midnight_snack.html" data-ajax='false' style="background-color:#FFF9E7;">야식</a></li>
+							<li data-filtertext="라면죽 김치볶음밥 짜파구리 뚝배기치즈밥 김치스팸마요 덮밥"><a href="single_meal.html" data-ajax='false' style="background-color:#FFF9E7;">자취 간편식</a></li>
+							<li data-filtertext="쭈꾸미 샤브샤브 훈제오리 무쌈말이 밀푀유나베 돼지갈비찜 연어 크림치즈롤"><a href="party.html" data-ajax='false' style="background-color:#FFF9E7;">손님 초대</a></li>
+							<li data-filtertext="명란두부찌개 전찌개 진주땡초김밥 김치 만두전골 당면계란만두"><a href="leftover_food.html" data-ajax='false' style="background-color:#FFF9E7;">냉장고 털이</a></li>
+							<li data-filtertext="레몬드레싱 연어샐러드 단호박 에그슬럿 무화과 그래놀라 요거트 렌틸콩 수란 샐러드 월남쌈"><a href="diet.html" data-ajax='false' style="background-color:#FFF9E7;">다이어트</a></li>
+							<li style="background-color:#ffecb3;"><b>국가별</b></li>
+							<li data-filtertext="프랑스 라타투이 이탈리아 라자냐 터키 케밥 인도 탄두리치킨 중국 마라탕 베트남 분짜 호주 미트파이 일본 스키야키 미국 시카고피자 멕시코 파히타"><a href="country.html" data-ajax='false' style="background-color:#FFF9E7;">지도 선택</a></li><!--국가별-->
+							<li data-role="list-divider" style="background-color: #ffdf80;">WATCH</li>
+							<li><a href="ranking.html" data-ajax='false' style="background-color:#FFF9E7;">순위별</a></li>
+							<li data-filtertext="김치찜 톳전복밥 차돌된장찌개 로제 찜닭 떡볶이 로제찜닭 로제떡볶이 비빔밥 갈비찜 마라탕 짜장면 군만두 차돌짬뽕 크림새우 마라샹궈 탕수육 초밥 우동 새우튀김 라멘 텐동 규카츠 오므라이스 타코야끼 새우크림파스타 통베이컨 시카고 딥디쉬 치즈폭탄 피자 로제리조또 해쉬브라운 베이컨크림파스타 파스타 감바스 빠네 크림파스타 모짜렐라치즈 새우 베이컨"><a href="type.html" data-ajax='false' style="background-color:#FFF9E7;">종류별</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</article>
+		<article data-role="content">
+			<div data-role="navbar" data-iconpos="bottom">
+				<ul>
+					<li><a href="#menu" data-icon="grid">MENU</a></li>
+					<li><a href="#review" data-icon="star">REVIEW</a></li>
+					<li><a href="#route" data-icon="location" class="ui-btn-active ui-state-persist">HowToGo</a></li>
+				</ul>
+			</div>
+			<br>
+			<div data-role="content">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.4710165694514!2d126.7816194151956!3d33.30649948081539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350d09dc0566a3b5%3A0xea66495a2de2c9b3!2zbW9rc2tpdGNoZW4t66qp7Iqk7YKk7Lmc!5e0!3m2!1sko!2skr!4v1622807893224!5m2!1sko!2skr" style="border: 3px dashed #B2D732; width: 100%; height: 370px;" allowfullscreen="" loading="lazy"></iframe>
+			</div>
+			<footer data-role="footer" data-position="fixed" style="background-image:url(bg/intro.png)">
+				Copyright ⓒ 2021 Eating
+			</footer>
+		</article>
+	</section>
+</body>
+</html>

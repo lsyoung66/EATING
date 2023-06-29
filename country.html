@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>EATING 이팅</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="jquery.mobile.inline-svg-1.4.5.min.css">
+   
+   <script src="jquery-1.11.3.min.js"></script>
+   <script src="jquery.mobile-1.4.5.js"></script>
+
+   <script src="map.js"></script>
+   <script src="jquery.rwdImageMaps.min.js"></script>
+   <script>
+      $(document).ready(function(e) {
+         $('img[usemap]').rwdImageMaps();
+      });
+   </script>
+
+   <style>
+      img[usemap] {
+         border: none;
+         height: auto;
+         max-width: 100%;
+         width: auto;
+      }
+      li img {
+         width: 77px;
+         height: 100%;
+      }
+   </style>
+
+   <script src="like.js"></script>
+   <script src="likelist.js"></script>
+
+   <link rel="stylesheet" type="text/css" href="table.css">
+   <link rel="stylesheet" type="text/css" href="font.css">
+   <link href="http://fonts.googleapis.com/earlyaccess/jejuhallasan.css" rel="stylesheet">
+
+</head>
+<body onload="init(); loadlist_recipe();">
+   <section data-role="page" align="center" style="background-color:#FFF9E7;">
+      <header data-role="header" style="background-image:url(bg/intro.png)">
+         <a href="#navigation" data-rel="popup" data-position-to="window" data-transition="slidedown" style="background-image:url(bg/choice.png)"><br><br><br><img src="icon/menu.png" height="50px"><br><br><br></a>
+         <h1><br><a href="main.html" data-ajax='false'><img src="char/logo.png" height="120px"></a></h1>
+         <a href="#like" data-rel="popup" data-position-to="window" data-transition="flow" style="background-image:url(bg/choice.png)"><br><br><br><img src="icon/like.png" height="50px"><br><br><br></a>
+      </header>
+      <article data-role="popup">
+         <div data-role="popup" data-overlay-theme="b" id="navigation" class="ui-content" style="background-image:url(bg/button.png);">
+            <div data-role="header" style="background-image:url(bg/button.png);">
+               <h1>EATING</h1>
+               <a href="#" data-rel="back" data-iconpos="notext" data-icon="delete" class="ui-btn-right"></a>
+            </div>
+            <div data-role="content" style="background-image:url(bg/button.png);">
+               <div data-inset="true" data-role="collapsible" data-iconpos="none" data-collapsed="false">
+                  <h3>MENU</h3>
+                  <ul class="uu" data-role="listview" data-filter="true" data-filter-placeholder="검색어를 입력하세요">
+                     <li data-role="list-divider" style="background-color: #ffdf80;">GO</li>
+                     <li data-filtertext="명동교자 송죽장 킷사서울 윕성수 플러피도넛"><a href="seoul.html" data-ajax='false' style="background-color:#FFF9E7;">서울</a></li>
+                     <li data-filtertext="기린왕곱창 도마29 양자강 다이닝슬로우라이프 게이블루프커피"><a href="daegu.html" data-ajax='false' style="background-color:#FFF9E7;">대구</a></li>
+                     <li data-filtertext="토담바다장어 해목 복성반점 매드독스 웨이브온커피"><a href="busan.html" data-ajax='false' style="background-color:#FFF9E7;">부산</a></li>
+                     <li data-filtertext="세진회관 가츠연 아중각 가마 그날의온도"><a href="jeonju.html" data-ajax='false' style="background-color:#FFF9E7;">전주</a></li>
+                     <li data-filtertext="정동진초당순두부 대관령다이닝스시 연곡반점 강릉수제버거 카페툇마루"><a href="gangneung.html" data-ajax='false' style="background-color:#FFF9E7;">강릉</a></li>
+                     <li data-filtertext="목스키친 고쿠텐 섬소나이 칠돈가 하이엔드제주"><a href="jeju.html" data-ajax='false' style="background-color:#FFF9E7;">제주</a></li>
+                     <li data-role="list-divider" style="background-color: #ffdf80;">DO</li>
+                     <li style="background-color:#ffecb3;"><b>상황별</b></li>
+                     <li data-filtertext="조개술찜 갈릭 간장치킨 소고기 간장떡볶이 차돌박이라면 매콤 순대볶음"><a href="midnight_snack.html" data-ajax='false' style="background-color:#FFF9E7;">야식</a></li>
+                     <li data-filtertext="라면죽 김치볶음밥 짜파구리 뚝배기치즈밥 김치스팸마요 덮밥"><a href="single_meal.html" data-ajax='false' style="background-color:#FFF9E7;">자취 간편식</a></li>
+                     <li data-filtertext="쭈꾸미 샤브샤브 훈제오리 무쌈말이 밀푀유나베 돼지갈비찜 연어 크림치즈롤"><a href="party.html" data-ajax='false' style="background-color:#FFF9E7;">손님 초대</a></li>
+                     <li data-filtertext="명란두부찌개 전찌개 진주땡초김밥 김치 만두전골 당면계란만두"><a href="leftover_food.html" data-ajax='false' style="background-color:#FFF9E7;">냉장고 털이</a></li>
+                     <li data-filtertext="레몬드레싱 연어샐러드 단호박 에그슬럿 무화과 그래놀라 요거트 렌틸콩 수란 샐러드 월남쌈"><a href="diet.html" data-ajax='false' style="background-color:#FFF9E7;">다이어트</a></li>
+                     <li style="background-color:#ffecb3;"><b>국가별</b></li>
+                     <li data-filtertext="프랑스 라타투이 이탈리아 라자냐 터키 케밥 인도 탄두리치킨 중국 마라탕 베트남 분짜 호주 미트파이 일본 스키야키 미국 시카고피자 멕시코 파히타"><a href="country.html" data-ajax='false' style="background-color:#FFF9E7;">지도 선택</a></li><!--국가별-->
+                     <li data-role="list-divider" style="background-color: #ffdf80;">WATCH</li>
+                     <li><a href="ranking.html" data-ajax='false' style="background-color:#FFF9E7;">순위별</a></li>
+                     <li data-filtertext="김치찜 톳전복밥 차돌된장찌개 로제 찜닭 떡볶이 로제찜닭 로제떡볶이 비빔밥 갈비찜 마라탕 짜장면 군만두 차돌짬뽕 크림새우 마라샹궈 탕수육 초밥 우동 새우튀김 라멘 텐동 규카츠 오므라이스 타코야끼 새우크림파스타 통베이컨 시카고 딥디쉬 치즈폭탄 피자 로제리조또 해쉬브라운 베이컨크림파스타 파스타 감바스 빠네 크림파스타 모짜렐라치즈 새우 베이컨"><a href="type.html" data-ajax='false' style="background-color:#FFF9E7;">종류별</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div data-role="popup" data-overlay-theme="b" id="like" align="center" style="min-width:300px; ">
+            <div id="list" style="width:100%; align-content: center;">
+               <table style="border:10px dashed #ffcc66; black; background-color: #FEE68B; width: 100%; text-align: center; font-family:'Stylish', sans-serif; font-size: 27px; font-weight: 600; color: #9E8600;" id="recipe_likes"></table>
+            </div>
+         </div>
+      </article>
+      <article data-role="content">
+         <img src="map/world_map.png" usemap="#world_map-map" border="2" />
+         <map name="world_map-map">
+            <area alt="프랑스" title="프랑스" href="https://in.naver.com/mildek/contents/233942267324896?query=%EB%9D%BC%ED%83%80%ED%88%AC%EC%9D%B4+%EB%A0%88%EC%8B%9C%ED%94%BC" coords="68,177,88,165,74,139,82,122,99,115,112,121,119,137,108,170,113,177,109,192,117,199,119,218,92,210,77,199" shape="poly">
+
+            <area alt="이탈리아" title="이탈리아" href="https://in.naver.com/sunshine_table/contents/250894268685728?query=%EB%9D%BC%EC%9E%90%EB%83%90+%EB%A0%88%EC%8B%9C%ED%94%BC" coords="112,188,125,185,117,163,118,148,138,139,159,147,159,159,141,202,152,216,140,227,140,216,114,195" shape="poly">
+            <area alt="터키" title="터키" href="https://www.10000recipe.com/recipe/6891286" coords="183,216,196,210,218,206,207,174,214,158,230,152,245,161,251,173,238,210,251,213,256,225,213,242,191,231" shape="poly">
+            <area alt="인도" title="인도" href="https://www.10000recipe.com/recipe/6947875" coords="357,289,364,269,379,258,387,246,406,238,418,244,426,264,421,274,439,276,444,296,416,327,414,352,399,362,379,302,365,304" shape="poly">
+            <area alt="중국" title="중국" href="https://blog.naver.com/yummycook/221795921151" coords="368,215,388,208,382,192,418,165,434,172,442,162,519,171,512,157,534,154,557,178,579,181,580,205,554,221,571,269,562,293,552,296,548,282,533,274,515,281,509,289,488,299,481,282,484,272,459,265,448,271,430,264,426,248,416,236,401,233,392,236,373,231" shape="poly">
+            <area alt="베트남" title="베트남" href="https://www.10000recipe.com/recipe/6889108" coords="514,349,523,334,507,302,510,291,516,284,529,278,545,282,551,298,535,349,516,360" shape="poly">
+            <area alt="호주" title="호주" href="https://www.10000recipe.com/recipe/6930286" coords="554,491,577,462,604,440,624,456,622,475,633,480,643,469,643,455,653,458,679,515,677,536,635,577,604,573,602,553,589,557,580,548,517,563,512,555,520,541,520,506" shape="poly">
+            <area alt="일본" title="일본" href="https://www.10000recipe.com/recipe/6898386" coords="600,239,613,236,621,226,606,189,609,175,625,166,645,171,652,186,634,225,635,237,619,246,602,258,598,249" shape="poly">
+            <area alt="미국" title="미국" href="https://www.10000recipe.com/recipe/6951233" coords="750,213,782,175,819,174,827,161,843,153,859,164,862,175,886,175,919,187,920,199,929,195,945,190,966,190,974,184,982,184,983,192,907,254,905,283,896,281,894,259,849,262,833,282,829,265,833,252,825,233,808,228,790,236,783,252,764,249,750,238,697" shape="poly">
+            <area alt="멕시코" title="멕시코" href="https://www.10000recipe.com/recipe/6891531" coords="762,249,785,251,790,241,807,230,824,239,828,251,824,265,834,281,826,290,836,310,851,309,858,300,869,301,871,311,854,316,854,323,845,329,797,314,780,268,783,299,765,273" shape="poly">
+         </map>
+         <div class="ui-grid-solo ui-corner-all">
+            <div class="ui-block-a">
+               <div class="ui-bar ui-bar-a" style="background-image:url(bg/button.png)">
+                  <ul data-role="listview" data-inset="true" data-mini="true" data-split-icon="heart" width="50%">
+                     <li>
+                        <a href="https://in.naver.com/mildek/contents/233942267324896?query=%EB%9D%BC%ED%83%80%ED%88%AC%EC%9D%B4+%EB%A0%88%EC%8B%9C%ED%94%BC" data-ajax='false'>
+                           <img src="http://hana1qm.com/wp-content/uploads/2021/02/1-57.jpg"/>
+                           <h3>France</h3>
+                           <p>라타투이</p>
+                        </a>
+                        <a href="#France" data-rel="popup" data-position-to="window" data-transition="pop">brief information</a>
+                     </li>
+                     <li>
+                        <a href="https://in.naver.com/sunshine_table/contents/250894268685728?query=%EB%9D%BC%EC%9E%90%EB%83%90+%EB%A0%88%EC%8B%9C%ED%94%BC" data-ajax='false'>
+                           <img src="https://m.yorivery.com/data/goods/21/02/05//1000001013/1000001013_detail_287.jpg"/>
+                           <h3>Italy</h3>
+                           <p>라자냐</p>
+                        </a>
+                        <a href="#Italy" data-rel="popup" data-position-to="window" data-transition="pop">brief information</a>
+                     </li>
+                     <li>
+                        <a href="https://www.10000recipe.com/recipe/6891286" data-ajax='false'>
+                           <img src="https://img.medicalreport.kr/resources/2019/02/02/CMBbwKcvaWZHMfPT.jpg" />
+                           <h3>Turkey</h3>
+                           <p>케밥</p>
+                        </a>
+                        <a href="#Turkey" data-rel="popup" data-position-to="window" data-transition="pop">brief information</a>
+                     </li>
+                     <li>
+                        <a href="https://www.10000recipe.com/recipe/6947875" data-ajax='false'>
+                           <img src="https://s3-ap-northeast-1.amazonaws.com/dcreviewsresized/300_300_20201218095649_photo1_9b1b25fe8c40.jpg" />
+                           <h3>India</h3>
+                           <p>탄두리 치킨</p>
+                        </a>
+                        <a href="#India" data-rel="popup" data-position-to="window" data-transition="pop">brief information</a>
+                     </li>
+                     <li>
+                        <a href="https://blog.naver.com/yummycook/221795921151" data-ajax='false'>
+                           <img src="http://t1.daumcdn.net/brunch/service/user/8fXh/image/24KT-qPHIoSxln_JMFADtQYoIb4.jpg" />
+                           <h3>China</h3>
+                           <p>마라탕</p>
+                        </a>
+                        <a href="#China" data-rel="popup" data-position-to="window" data-transition="pop">brief information</a>
+                     </li>
+                     <li>
+                        <a href="https://www.10000recipe.com/recipe/6889108" data-ajax='false'>
+                           <img src="http://openimage.interpark.com/goods_image_big/0/7/6/0/7730190760c_l.jpg" />
+                           <h3>Vietnam</h3>
+                           <p>분짜</p>
+                        </a>
+                        <a href="#Vietnam" data-rel="popup" data-position-to="window" data-transition="pop">brief information</a>
+                     </li>
+                     <li>
+                        <a href="https://www.10000recipe.com/recipe/6930286" data-ajax='false'>
+                           <img src="https://previews.123rf.com/images/bhofack2/bhofack21710/bhofack2171000593/88655736-%ED%9C%B4%EC%9D%BC%EC%9D%84%EC%9C%84%ED%95%9C-%EB%8B%AC%EC%BD%A4%ED%95%9C-%EC%88%98%EC%A0%9C-%EB%AF%BC%EC%8A%A4-%EB%AF%B8%ED%8A%B8-%ED%8C%8C%EC%9D%B4.jpg" />
+                           <h3>Australia</h3>
+                           <p>미트파이</p>
+                        </a>
+                        <a href="#Australia" data-rel="popup" data-position-to="window" data-transition="pop">brief information</a>
+                     </li>
+                     <li>
+                        <a href="https://www.10000recipe.com/recipe/6898386" data-ajax='false'>
+                           <img src="https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/00/a0000346/img/basic/a0000346_main.jpg" />
+                           <h3>Japan</h3>
+                           <p>스키야키</p>
+                        </a>
+                        <a href="#Japan" data-rel="popup" data-position-to="window" data-transition="pop">brief information</a>
+                     </li>
+                     <li>
+                        <a href="https://www.10000recipe.com/recipe/6951233" data-ajax='false'>
+                           <img src="https://blog.kakaocdn.net/dn/c2x0hr/btqDmUPDbyF/xgc3isVCBxdjJeMwKOsIk0/img.jpg" />
+                           <h3>United States of America</h3>
+                           <p>시카고피자</p>
+                        </a>
+                        <a href="#USA" data-rel="popup" data-position-to="window" data-transition="pop">brief information</a>
+                     </li>
+                     <li>
+                        <a href="https://www.10000recipe.com/recipe/6891531" data-ajax='false'>
+                           <img src="https://mblogthumb-phinf.pstatic.net/MjAxOTEyMTZfMzIg/MDAxNTc2NDc2MzM3MDY2.WX9EQKyMTAaivV3kk3Oi4qzCojCEksM-8QJCCVkR08Yg.p5X6VIAF8KUziEExxeeddtKq8-3h55SkjG6tKRhnEkEg.JPEG.tkdaks555/SE-b4d63f3b-3431-4c6d-84cf-32528fbbcc8e.jpg?type=w800" />
+                           <h3>Mexico</h3>
+                           <p>파히타</p>
+                        </a>
+                        <a href="#Mexico" data-rel="popup" data-position-to="window" data-transition="pop">brief information</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div data-role="popup" data-overlay-theme="b" id="France" class="ui-content" style="max-width:287px;">
+         <div class="ui-grid-solo" align="center">
+            <table class="world_food">
+               <tr><td class="food_image"><img src="http://hana1qm.com/wp-content/uploads/2021/02/1-57.jpg"/></td></tr>
+            </table>
+            <table class="info_do_world" style="width: 100%;">
+               <tr>
+                  <td style="font-size: 55px; font-weight: 500; font-family: 'Nanum Pen Script'; text-align: center;">프랑스 『라타투이』</td>
+               </tr>
+            </table>
+            <table class="info_do_world">
+               <tr>
+                  <td><img src="icon/difficulty.png"/></td>
+                  <td width="20%">초급</td>
+                  <td width="10%"><img src="icon/cooking_time.png"/></td>
+                  <td>1시간 이내</td>
+               </tr>
+            </table>
+            <table class="info_do_world">
+               <tr>
+                  <td><img src="icon/ingredient.png"/></td>
+                  <td style="font-size: 13px">호박 3/4개, 가지, 토마토, 파프리카, 로즈마리, 그라나치즈</td>
+               </tr>
+               <tr>
+                  <td colspan="2" style="font-family: 'Nanum Pen Script'">#프랑스요리 #라타투이 #라타투이레시피 #프랑스대표음식</td>
+               </tr>
+               <tr>
+                  <td>
+                     <img src="icon/b_like.png" class="France like" name="라타투이" onclick="France_like()" style="width: 50px;"/>
+                  </td>
+                  <td colspan="2">찜</td>
+               </tr>
+            </table>
+         </div>
+         <div class="ui-grid-solo">
+            <div class="ui-bar ui-bar-a">
+               <button onclick="location.href='https://in.naver.com/mildek/contents/233942267324896?query=%EB%9D%BC%ED%83%80%ED%88%AC%EC%9D%B4+%EB%A0%88%EC%8B%9C%ED%94%B'">More</button>
+            </div>
+         </div><!--프랑스 팝업 끝-->
+         <div data-role="popup" data-overlay-theme="b" id="Italy" class="ui-content" style="max-width:350px;">
+         <div class="ui-grid-solo" align="center">
+            <table class="world_food">
+               <tr><td class="food_image"><img src="https://m.yorivery.com/data/goods/21/02/05//1000001013/1000001013_detail_287.jpg"/></td></tr>
+            </table>
+            <table class="info_do_world" style="width: 100%;">
+               <tr>
+                  <td style="font-size: 55px; font-weight: 500; font-family: 'Nanum Pen Script'; text-align: center;">이탈리아 『라자냐』</td>
+               </tr>
+            </table>
+            <table class="info_do_world">
+               <tr>
+                  <td><img src="icon/difficulty.png"/></td>
+                  <td width="20%">초급</td>
+                  <td width="10%"><img src="icon/cooking_time.png"/></td>
+                  <td>1시간 이내</td>
+               </tr>
+            </table>
+            <table class="info_do_world">
+               <tr>
+                  <td><img src="icon/ingredient.png"/></td>
+                  <td style="font-size: 13px">라자냐 면 9장, 모짜렐라치즈, 밀가루, 토마토페이스트</td>
+               </tr>
+               <tr>
+                  <td colspan="2" style="font-family: 'Nanum Pen Script'">#이탈리아요리 #라자냐 #라자냐레시피 #홈파티요리</td>
+               </tr>
+               <tr>
+                  <td>
+                     <img src="icon/b_like.png" class="Italy like" name="라자냐" onclick="Italy_like()" style="width: 50px;"/>
+                  </td>
+                  <td colspan="2">찜</td>
+               </tr>
+            </table>
+         </div>
+         <div class="ui-grid-solo">
+            <div class="ui-bar ui-bar-a">
+               <button onclick="location.href='https://in.naver.com/sunshine_table/contents/250894268685728?query=%EB%9D%BC%EC%9E%90%EB%83%90+%EB%A0%88%EC%8B%9C%ED%94%BC'">More</button>
+            </div>
+         </div><!--이탈리아 팝업 끝-->
+         <div data-role="popup" data-overlay-theme="b" id="Turkey" class="ui-content" style="max-width:350px;">
+         <div class="ui-grid-solo" align="center">
+            <table class="world_food">
+               <tr><td class="food_image"><img src="https://img.medicalreport.kr/resources/2019/02/02/CMBbwKcvaWZHMfPT.jpg"/></td></tr>
+            </table>
+            <table class="info_do_world" style="width: 100%;">
+               <tr>
+                  <td style="font-size: 55px; font-weight: 500; font-family: 'Nanum Pen Script'; text-align: center;">터키 『케밥』</td>
+               </tr>
+            </table>
+            <table class="info_do_world">
+               <tr>
+                  <td><img src="icon/difficulty.png"/></td>
+                  <td width="20%">중급</td>
+                  <td width="10%"><img src="icon/cooking_time.png"/></td>
+                  <td>15분 이내</td>
+               </tr>
+            </table>
+            <table class="info_do_world">
+               <tr>
+                  <td><img src="icon/ingredient.png"/></td>
+                  <td style="font-size: 13px">또띠아 2장, 닭가슴살, 할리피뇨, 파프리카 1/2개</td>
+               </tr>
+               <tr>
+                  <td colspan="2" style="font-family: 'Nanum Pen Script'">#터키요리 #케밥 #케밥레시피 #다이어트식단</td>
+               </tr>
+               <tr>
+                  <td>
+                     <img src="icon/b_like.png" class="Turkey like" name="케밥" onclick="Turkey_like()" style="width: 50px;"/>
+                  </td>
+                  <td colspan="2">찜</td>
+               </tr>
+            </table>
+         </div>
+         <div class="ui-grid-solo">
+            <div class="ui-bar ui-bar-a">
+               <button onclick="location.href='https://www.10000recipe.com/recipe/6891286'">More</button>
+            </div>
+         </div><!--터키 팝업 끝-->
+         <div data-role="popup" data-overlay-theme="b" id="India" class="ui-content" style="max-width:350px;">
+         <div class="ui-grid-solo" align="center">
+            <table class="world_food">
+               <tr><td class="food_image"><img src="https://s3-ap-northeast-1.amazonaws.com/dcreviewsresized/300_300_20201218095649_photo1_9b1b25fe8c40.jpg"/></td></tr>
+            </table>
+            <table class="info_do_world" style="width: 100%;">
+               <tr>
+                  <td style="font-size: 55px; font-weight: 500; font-family: 'Nanum Pen Script'; text-align: center;">인도 『탄두리 치킨』</td>
+               </tr>
+            </table>
+            <table class="info_do_world">
+               <tr>
+                  <td><img src="icon/difficulty.png"/></td>
+                  <td width="20%">초급</td>
+                  <td width="10%"><img src="icon/cooking_time.png"/></td>
+                  <td>2시간 이</td>
+               </tr>
+            </table>
+            <table class="info_do_world">
+               <tr>
+                  <td><img src="icon/ingredient.png"/></td>
+                  <td style="font-size: 13px">닭다리 , 칠리파우더, 투메릭, 큐민, 코리앤더, 요거트, 후추</td>
+               </tr>
+               <tr>
+                  <td colspan="2" style="font-family: 'Nanum Pen Script'">#인도요리 #탄두리치킨 #탄두리치킨레시피 #점심메뉴추천</td>
+               </tr>
+               <tr>
+                  <td>
+                     <img src="icon/b_like.png" class="India like" name="탄두리 치킨" onclick="India_like()" style="width: 50px;"/>
+                  </td>
+                  <td colspan="2">찜</td>
+               </tr>
+            </table>
+         </div>
+         <div class="ui-grid-solo">
+            <div class="ui-bar ui-bar-a">
+               <button onclick="location.href='https://www.10000recipe.com/recipe/6947875'">More</button>
+            </div>
+         </div><!--인도 팝업 끝-->
+         <div data-role="popup" data-overlay-theme="b" id="China" class="ui-content" style="max-width:350px;">
+         <div class="ui-grid-solo" align="center">
+            <table class="world_food">
+               <tr><td class="food_image"><img src="http://t1.daumcdn.net/brunch/service/user/8fXh/image/24KT-qPHIoSxln_JMFADtQYoIb4.jpg"/></td></tr>
+            </table>
+            <table class="info_do_world" style="width: 100%;">
+               <tr>
+                  <td style="font-size: 55px; font-weight: 500; font-family: 'Nanum Pen Script'; text-align: center;">중국 『마라탕』</td>
+               </tr>
+            </table>
+            <table class="info_do_world">
+               <tr>
+                  <td><img src="icon/difficulty.png"/></td>
+                  <td width="20%">초급</td>
+                  <td width="10%"><img src="icon/cooking_time.png"/></td>
+                  <td>1시간 이내</td>
+               </tr>
+            </table>
+            <table class="info_do_world">
+               <tr>
+                  <td><img src="icon/ingredient.png"/></td>
+                  <td style="font-size: 13px">청경채 1/4팩, 팽이버섯 1/2팩, 넓적당면, 하이디라오소스</td>
+               </tr>
+               <tr>
+                  <td colspan="2" style="font-family: 'Nanum Pen Script'">#중국요리 #마라탕 #마라탕레시피 #중국대표음식</td>
+               </tr>
+               <tr>
+                  <td>
+                     <img src="icon/b_like.png" class="China like" name="마라탕" onclick="China_like()" style="width: 50px;"/>
+                  </td>
+                  <td colspan="2">찜</td>
+               </tr>
+            </table>
+         </div>
+         <div class="ui-grid-solo">
+            <div class="ui-bar ui-bar-a">
+               <button onclick="location.href='https://blog.naver.com/yummycook/221795921151'">More</button>
+            </div>
+         </div><!--중국 팝업 끝-->
+         <div data-role="popup" data-overlay-theme="b" id="Vietnam" class="ui-content" style="max-width:350px;">
+         <div class="ui-grid-solo" align="center">
+            <table class="world_food">
+               <tr><td class="food_image"><img src="http://openimage.interpark.com/goods_image_big/0/7/6/0/7730190760c_l.jpg"/></td></tr>
+            </table>
+            <table class="info_do_world" style="width: 100%;">
+               <tr>
+                  <td style="font-size: 55px; font-weight: 500; font-family: 'Nanum Pen Script'; text-align: center;">베트남 『분짜』</td>
+               </tr>
+            </table>
+            <table class="info_do_world">
+               <tr>
+                  <td><img src="icon/difficulty.png"/></td>
+                  <td width="20%">초급</td>
+                  <td width="10%"><img src="icon/cooking_time.png"/></td>
+                  <td>1시간 이내</td>
+               </tr>
+            </table>
+            <table class="info_do_world">
+               <tr>
+                  <td><img src="icon/ingredient.png"/></td>
+                  <td style="font-size: 13px">버미셀리 200g, 삼겹살 200g, 고수, 피쉬소스</td>
+               </tr>
+               <tr>
+                  <td colspan="2" style="font-family: 'Nanum Pen Script'">#베트남요리 #분짜 #분짜레시피 #베트남대표음식</td>
+               </tr>
+               <tr>
+                  <td>
+                     <img src="icon/b_like.png" class="Vietnam like" name="분짜" onclick="Vietnam_like()" style="width: 50px;"/>
+                  </td>
+                  <td colspan="2">찜</td>
+               </tr>
+            </table>
+         </div>
+         <div class="ui-grid-solo">
+            <div class="ui-bar ui-bar-a">
+               <button onclick="location.href='https://www.10000recipe.com/recipe/6889108'">More</button>
+            </div>
+         </div><!--베트남 팝업 끝-->
+         <div data-role="popup" data-overlay-theme="b" id="Australia" class="ui-content" style="max-width:350px;">
+         <div class="ui-grid-solo" align="center">
+            <table class="world_food">
+               <tr><td class="food_image"><img src="https://previews.123rf.com/images/bhofack2/bhofack21710/bhofack2171000593/88655736-%ED%9C%B4%EC%9D%BC%EC%9D%84%EC%9C%84%ED%95%9C-%EB%8B%AC%EC%BD%A4%ED%95%9C-%EC%88%98%EC%A0%9C-%EB%AF%BC%EC%8A%A4-%EB%AF%B8%ED%8A%B8-%ED%8C%8C%EC%9D%B4.jpg"/></td></tr>
+            </table>
+            <table class="info_do_world" style="width: 100%;">
+               <tr>
+                  <td style="font-size: 55px; font-weight: 500; font-family: 'Nanum Pen Script'; text-align: center;">호주 『미트파이』</td>
+               </tr>
+            </table>
+            <table class="info_do_world">
+               <tr>
+                  <td><img src="icon/difficulty.png"/></td>
+                  <td width="20%">초급</td>
+                  <td width="10%"><img src="icon/cooking_time.png"/></td>
+                  <td>30 이내</td>
+               </tr>
+            </table>
+            <table class="info_do_world">
+               <tr>
+                  <td><img src="icon/ingredient.png"/></td>
+                  <td style="font-size: 13px">소고기다짐육 150g, 양파 1/4개, 토마토소스, 만두피, 피망</td>
+               </tr>
+               <tr>
+                  <td colspan="2" style="font-family: 'Nanum Pen Script'">#호주요리 #미트파이 #미트파이레시피 #초간단홈쿡</td>
+               </tr>
+               <tr>
+                  <td>
+                     <img src="icon/b_like.png" class="Australia like" name="미트파이" onclick="Australia_like()" style="width: 50px;"/>
+                  </td>
+                  <td colspan="2">찜</td>
+               </tr>
+            </table>
+         </div>
+         <div class="ui-grid-solo">
+            <div class="ui-bar ui-bar-a">
+               <button onclick="location.href='https://www.10000recipe.com/recipe/6930286'">More</button>
+            </div>
+         </div><!--호주 팝업 끝-->
+         <div data-role="popup" data-overlay-theme="b" id="Japan" class="ui-content" style="max-width:350px;">
+         <div class="ui-grid-solo" align="center">
+            <table class="world_food">
+               <tr><td class="food_image"><img src="https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/00/a0000346/img/basic/a0000346_main.jpg"/></td></tr>
+            </table>
+            <table class="info_do_world" style="width: 100%;">
+               <tr>
+                  <td style="font-size: 55px; font-weight: 500; font-family: 'Nanum Pen Script'; text-align: center;">일본 『스키야키』</td>
+               </tr>
+            </table>
+            <table class="info_do_world">
+               <tr>
+                  <td><img src="icon/difficulty.png"/></td>
+                  <td width="20%">초급</td>
+                  <td width="10%"><img src="icon/cooking_time.png"/></td>
+                  <td>30분 이내</td>
+               </tr>
+            </table>
+            <table class="info_do_world">
+               <tr>
+                  <td><img src="icon/ingredient.png"/></td>
+                  <td style="font-size: 13px">스키야키용소스, 소고기샤브샤브 300g, 배추, 우동면, 쑥갓</td>
+               </tr>
+               <tr>
+                  <td colspan="2" style="font-family: 'Nanum Pen Script'">#일본요리 #스키야키 #스키야키레시피 #일본전통요리</td>
+               </tr>
+               <tr>
+                  <td>
+                     <img src="icon/b_like.png" class="Japan like" name="스키야키" onclick="Japan_like()" style="width: 50px;"/>
+                  </td>
+                  <td colspan="2">찜</td>
+               </tr>
+            </table>
+         </div>
+         <div class="ui-grid-solo">
+            <div class="ui-bar ui-bar-a">
+               <button onclick="location.href='https://www.10000recipe.com/recipe/6898386'">More</button>
+            </div>
+         </div><!--일본 팝업 끝-->
+         <div data-role="popup" data-overlay-theme="b" id="USA" class="ui-content" style="max-width:350px;">
+         <div class="ui-grid-solo" align="center">
+            <table class="world_food">
+               <tr><td class="food_image"><img src="https://blog.kakaocdn.net/dn/c2x0hr/btqDmUPDbyF/xgc3isVCBxdjJeMwKOsIk0/img.jpg"/></td></tr>
+            </table>
+            <table class="info_do_world" style="width: 100%;">
+               <tr>
+                  <td style="font-size: 55px; font-weight: 500; font-family: 'Nanum Pen Script'; text-align: center;">미국 『시카고피자』</td>
+               </tr>
+            </table>
+            <table class="info_do_world">
+               <tr>
+                  <td><img src="icon/difficulty.png"/></td>
+                  <td width="20%">초급</td>
+                  <td width="10%"><img src="icon/cooking_time.png"/></td>
+                  <td>30분 이내</td>
+               </tr>
+            </table>
+            <table class="info_do_world">
+               <tr>
+                  <td><img src="icon/ingredient.png"/></td>
+                  <td style="font-size: 13px">피자도우, 모짜렐라치즈 100g, 그라노파다노, 소세지</td>
+               </tr>
+               <tr>
+                  <td colspan="2" style="font-family: 'Nanum Pen Script'">#미국요리 #시카고피자 #시카고피자레시피 #홈파티요리</td>
+               </tr>
+               <tr>
+                  <td>
+                     <img src="icon/b_like.png" class="USA like" name="시카고피자" onclick="USA_like()" style="width: 50px;"/>
+                  </td>
+                  <td colspan="2">찜</td>
+               </tr>
+            </table>
+         </div>
+         <div class="ui-grid-solo">
+            <div class="ui-bar ui-bar-a">
+               <button onclick="location.href='https://www.10000recipe.com/recipe/6951233'">More</button>
+            </div>
+         </div><!--미국 팝업 끝-->
+         <div data-role="popup" data-overlay-theme="b" id="Mexico" class="ui-content" style="max-width:350px;">
+         <div class="ui-grid-solo" align="center">
+            <table class="world_food">
+               <tr><td class="food_image"><img src="https://mblogthumb-phinf.pstatic.net/MjAxOTEyMTZfMzIg/MDAxNTc2NDc2MzM3MDY2.WX9EQKyMTAaivV3kk3Oi4qzCojCEksM-8QJCCVkR08Yg.p5X6VIAF8KUziEExxeeddtKq8-3h55SkjG6tKRhnEkEg.JPEG.tkdaks555/SE-b4d63f3b-3431-4c6d-84cf-32528fbbcc8e.jpg?type=w800"/></td></tr>
+            </table>
+            <table class="info_do_world" style="width: 100%;">
+               <tr>
+                  <td style="font-size: 55px; font-weight: 500; font-family: 'Nanum Pen Script'; text-align: center;">멕시코 『파히타』</td>
+               </tr>
+            </table>
+            <table class="info_do_world">
+               <tr>
+                  <td><img src="icon/difficulty.png"/></td>
+                  <td width="20%">초급</td>
+                  <td width="10%"><img src="icon/cooking_time.png"/></td>
+                  <td>60분 이내</td>
+               </tr>
+            </table>
+            <table class="info_do_world">
+               <tr>
+                  <td><img src="icon/ingredient.png"/></td>
+                  <td style="font-size: 13px">간 소고기 500g, 새우 300g, 마늘, 또띠아, 할라피뇨</td>
+               </tr>
+               <tr>
+                  <td colspan="2" style="font-family: 'Nanum Pen Script'">#멕시코요리 #파히타 #파히타레시피 #멕시코대표요리</td>
+               </tr>
+               <tr>
+                  <td>
+                     <img src="icon/b_like.png" class="Mexico like" name="파히타" onclick="Mexico_like()" style="width: 50px;"/>
+                  </td>
+                  <td colspan="2">찜</td>
+               </tr>
+            </table>
+         </div>
+         <div class="ui-grid-solo">
+            <div class="ui-bar ui-bar-a">
+               <button onclick="location.href='https://www.10000recipe.com/recipe/6891531'">More</button>
+            </div>
+         </div><!--멕시코 팝업 끝-->
+
+
+      </article>         
+      <footer data-role="footer" data-position="fixed" style="background-image:url(bg/intro.png)">
+         Copyright ⓒ 2021 Eating
+      </footer>
+   </section>
+</body>
+</html>
